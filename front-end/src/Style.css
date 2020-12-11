@@ -1,0 +1,35 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font-family-title: 'East Sea Dokdo', cursive;
+    --font-family-content: 'Source Code Pro', monospace;
+  }
+/* universal custom css */
+.font-title{
+  font-family: var(--font-family-title);
+}
+.font-content{
+  font-family: var(--font-family-content);
+}
+
+
+
+/* media responsive small screen default*/
+@media only screen and (max-width: 600px) {
+}
+
+/* media responsive small screen overide - control custom p responsive*/
+@media only screen and (max-width: 800px) {
+}
+
+/* media responsive large screen default*/
+@media only screen and (min-width: 600px) {
+}
+
+/* media responsive large screen overide - control custom side nav based on bootstrap*/
+@media only screen and (min-width: 800px) {
+}
