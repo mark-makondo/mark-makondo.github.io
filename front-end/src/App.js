@@ -20,6 +20,16 @@ function App() {
   const sendEmailTo = (e) =>{
     e.preventDefault();
 
+    const getInputEmail = document.getElementById("user_email").value;
+
+    if(getInputEmail == ""){
+      alert('Email is Empty!');
+      return;
+    }
+    else if(msgContent == ""){
+      alert('Message is Empty!');
+      return;
+    }
     EmailJs.sendForm('service_u42oleh', 'template_tyjup4j', e.target, 'user_gr1f018CTjT0uaHTHKdiV')
       .then((result) => {
           if(result.text == 'OK'){
@@ -42,8 +52,7 @@ function App() {
     // gsap.set(".loading__percent", {display:"block", opacity: 1});
 
     gsap.set("#loadingPageCont", {display:"none"});
-    gsap.set("#contentPageCont", {display:"block", opacity: 1});
-  
+    gsap.set("#contentPageCont", {display:"block", opacity: 1, y:"0"});
 
     ContentPageAnimations();
     // LoadingPageAnimations();
@@ -58,6 +67,7 @@ function App() {
 
       <div id="contentPageCont">
         <ContentPage
+            // footer email me props
             handleTextOnChange = {handleTextOnChange}
             msgContent ={msgContent}
             sendEmailTo = {sendEmailTo}

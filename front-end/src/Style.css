@@ -7,6 +7,7 @@
     box-sizing: border-box;
     --font-family-title: 'East Sea Dokdo', cursive;
     --font-family-content: 'Source Code Pro', monospace;
+    letter-spacing: 3px;
   }
 /* universal custom css */
 .font-title{
@@ -144,6 +145,7 @@
   transform: translate(-100%, 0rem);
 }
 
+.hintQuote,
 .loading__percent,
 .loadingSVG,
 #greetContainer__text
@@ -156,18 +158,10 @@
 /* - - - - - setup reset for Content Page - - - - - */
 #contentPageCont{
   display: none;
+  transform: translate(0,-100vh);
   opacity: 0;
-  width: 100vw;
-  height: 100vh;   /*this is a test, finish nav first*/
+  color: white;
 } 
-.contentPageBox{
-  width: 100%;
-  height: 100%;
-}
-.contentPage__data__children{
-  width: 100%;
-  height: 100%;
-}
 
 /* - - - - - navigation bar - - - - - */
 .contentPage__nav{
@@ -220,49 +214,299 @@
 }
 
 /* - - - - - Body & Footer - - - - - */
-/* body */
+/* body - - -*/
 .contentPage__data{
-  width: 100%;
-  height: 100%;
-  background-color: gray;
+  position: relative;
+  display: block;
+  height: auto;
+  background-color: black;
 }
 .contentPage__data__body{
-  flex-grow: 1;
+  position: relative;
+  /* flex-grow: 1; */
 }
-/* footer */
+.page__bgCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+  margin: 0 3rem;
+  padding: 10rem 0;
+  background-color: #a55555;
+  color: white;
+  border: 2px solid #d2a9a9;
+  border-radius: .5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* section one - about one*/
+.body__aboutOne__container{
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+.body__aboutOne{
+  padding: 1rem;
+}
+.body__aboutOne__title{
+  font-weight: bold;
+  font-size: 5rem;
+}
+.body__aboutOne__desc{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.custom-hr-about{
+  width: 30%;
+}
+.btn__getStarted{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5rem;
+  border: 1px solid white;
+  padding: 1rem;
+  font-size: 1rem;
+  max-width: 12rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+}
+
+/* used in section two to four for button animation on click */
+.btn__container{
+  width: 100%;
+  color: white;
+  box-shadow: 1px 2px 9px 4px rgb(0 0 0 / 4%);
+  background-color: #a55555c9;
+}
+.btn__position{
+  position: absolute;
+  max-width: 12rem;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  background-color: #a55555;
+  box-shadow: 1px 2px 9px 4px rgb(0 0 0 / 4%);
+}
+#hr__aboutTwo,
+#hr__skills,
+#hr__projects{
+  width: 0vw;
+  border-color: rgb(252, 72, 72);
+  border-style: dashed;
+  border-width: 10px;
+}
+
+/* section two - four reset display for animation */
+.body__aboutTwo,
+.body__skills,
+.body__projects{
+  display: none;
+  opacity: 0;
+  margin-top: -5rem;
+}
+
+/* section two - about two*/
+/* content */
+.body__aboutTwo__container{
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+.body__aboutTwo{
+  position: relative;
+  max-width: 75rem;
+  padding: 5rem 0;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+}
+.body__aboutTwo__title{
+  font-size: 4rem;
+}
+.body__aboutTwo__desc{
+  font-size: 1rem;
+  line-height: 23px;
+}
+
+
+/* section three - skills*/
+/* content */
+.body__skills__container{
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+.body__skills{
+  position: relative;
+  max-width: 30rem;
+  box-shadow: 1px 2px 9px 4px rgba(0,0,0,0.23);
+  padding: 5rem 0;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+}
+.body__skills__title{
+  width: 100%;
+}
+.body__skills__title span{
+  font-size: 2.5rem;
+}
+.body__skills__content{
+  position: relative;
+  width: 100%;
+}
+.body__skills__content span{
+  font-weight: bold;
+  color:#007bff;
+}
+
+.body__skills__content ul {
+  list-style: none;
+}
+.body__skills__content__design,
+.body__skills__content__framework,
+.body__skills__content__database{
+  margin: 2rem;
+}
+
+/* section four - projects*/
+/* content */
+.body__projects__container{
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+.body__projects{
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+/* footer - - -*/
 .contentPage__data__footer{
+  position: relative;
   width: 100%;
   height: auto;
-  background-color: rgb(219, 203, 203);
-  padding: 1rem;
+  color: white;
 }
 .contentPage__data__footer__children{
   position: relative;
+  background-color: black;
 }
+/* box one */
 .contentPage__data__footer__boxOne{
   position: absolute;
-  top: -62px;
-  padding: 1rem;
+  top: -3.5rem;
+  padding: 1.3rem;
   font-size: 3rem;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
-  border: 1px solid black;
+  background: gray;
+  box-shadow: 1px 2px 9px 4px rgba(0,0,0,0.23);
+  border-radius: 3rem;
+  left: 0;
+  right: 0;
+  width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
 }
+.contentPage__data__footer__boxOne:hover{
+  background: rgb(252, 72, 72);
+  width: 15rem;
+  color: black;
+}
+/* box two */
 .contentPage__data__footer__boxTwo{
   margin-top: 4rem;
+  padding: 3rem;
+  height: 30vh;
+}
+.form__email,
+.form__textArea{
+  background: transparent;
+  border: 1px solid white;
+  outline-width: 0;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.form__email::placeholder,
+.form__textArea::placeholder{
+  text-align: center;
+  color: white;
+  opacity: 1; /* Firefox */
+}
+.form__textArea{
+  margin: .3rem 0;
 }
 .boxTwo{
   width: 100%;
   height: 100%;
 }
-.boxTwo__contactMe__title{
-  margin-bottom: 1rem;
+.contentPage__data__footer__boxTwo:hover{
+  border: 1px solid white;
+  border-radius: 10rem;
+  background-color: gray;
 }
+.form__submit{
+  padding: .5rem;
+  background: transparent;
+  color: white;
+  border-style: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.contentPage__data__footer__boxTwo:hover .form__email,
+.contentPage__data__footer__boxTwo:hover .form__textArea{
+  color: black;
+}
+.contentPage__data__footer__boxTwo:hover .form__submit{
+ background: gray;
+ border: 1px solid white;
+ border-radius: 1rem;
+}
+.form__submit:hover{
+  background: transparent;
+  color: white;
+  border-style: none;
+}
+/* box three */
 .contentPage__data__footer__boxThree{
   margin-top: 4rem;
 }
+/* box four */
 .contentPage__data__footer__boxFour{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 4rem;
+}
+.contentPage__data__footer__boxFour__social{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.contentPage__data__footer__boxFour__crtag{
+  margin-top: 1rem;
+}
+/* font awesome resize */
+.fab{
+  margin-bottom: .5rem;
+  color: rgb(167, 164, 164);
+  font-size: 3rem;
+}
+.fab:hover{
+  color: white;
 }
 
 /* ------------------------------------------------------------------- Responsive ----------------------------------------------------------------------*/

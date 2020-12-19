@@ -51,7 +51,7 @@ const loadingPage = () =>{
             </div>
 
             <div className="hintQuote font-title">
-                <span id="hintQuoteId">"Click circle when it appears."</span>
+                <span id="hintQuoteId">"Click to Skip or Wait for the Circle to Click."</span>
             </div>
         </div>
     );

@@ -4,16 +4,18 @@ import { gsap } from 'gsap';
 const loadingPageAnimations = () => {
 
     const tlm__loading = gsap.timeline({
-      defaults:{
-        duration:2, opacity:"1", display:"block", ease:"none"
-      }
-    });
+      defaults:{ duration:2, opacity:"1", display:"block", ease:"none"
+    }});
+    const tlm__greetings = gsap.timeline({
+      defaults:{ duration:2, opacity:"1", display:"block", ease:"none"
+    }});
     const tlm__circleArrowAnimate = gsap.timeline({
-      paused:true, reversed:true
+      paused:true
     });
     const tlm__quoteHintAnimate = gsap.timeline({
       defaults:{ duration:.5, yoyo:true, repeat:-1
     }});
+    const tlm__skipAnimate = gsap.timeline({});
   
     
     const animatingContainer = () => {
@@ -35,7 +37,9 @@ const loadingPageAnimations = () => {
         .to(Cont,{ percent:newPercent, roundProps:"percent", onUpdate:() => {
             loadingPercent.innerHTML=Cont.percent+"%"
           }}, "load1")
-        .to(".loading",{ duration:1, opacity:0, display:"none" }, ">.5");
+        .to(".loading",{ duration:1, opacity:0, display:"none" }, "load01")
+        // show hint quoute for skipping animation
+        .to(".hintQuote",{ duration:.5, opacity:1, display:"block" }, ">.5");
     }
 
     const showGreetingsAnimate = () => {
@@ -46,8 +50,8 @@ const loadingPageAnimations = () => {
       const greet__2 = "I Am Mark Albert D. Makondo.";
       const greet__3 = "Welcome to my Portfolio!";
   
-      tlm__loading
-        .call(getTextValue, [greet__1],">.5")
+      tlm__greetings
+        .call(getTextValue, [greet__1],"+=5")
         .to(getGreetContainerId, {})
         .to(getGreetContainerId, { opacity:0 })
         .call(getTextValue, [greet__2])
@@ -68,7 +72,7 @@ const loadingPageAnimations = () => {
       // circle arrow animation
       let getCircleArrowId = document.getElementById("circleArrowSvg");
   
-      tlm__loading
+      tlm__greetings
         .to("#circleArrowSvg__parent",{x:"0" ,ease:"bounce.out"},"-=1")
         .to("#circleArrowSvg__parent",{
           onComplete:() =>{
@@ -84,7 +88,7 @@ const loadingPageAnimations = () => {
         // dismiss loading page - put display none and opacity 0
         .to("#loadingPageCont",{ y:"-100vh", ease:"circ.in" ,opacity:0, display:"none" },">.6")
         // show content page - remove display none on content page
-        .to("#contentPageCont", {display:"block", opacity:1},">.5");
+        .to("#contentPageCont", {duration:"2",display:"block",y:"0", opacity:1},">.5");
   
       //circle on click animation
       getCircleArrowId.addEventListener('click', () =>{
@@ -96,10 +100,22 @@ const loadingPageAnimations = () => {
       });
     }
 
-    const quoteHintAnimate= () => {
+    const quoteHintAnimate = () => {
       tlm__quoteHintAnimate
-       .fromTo("#hintQuoteId", {opacity: .3, ease:"power2.out"}, {opacity: 0, ease: "power2.in"})
-  
+       .fromTo("#hintQuoteId", {opacity: .5, ease:"power2.out"}, {opacity: 0, ease: "power2.in"})
+    }
+
+    const skipAnimation = () =>{
+      let hintQuote = document.getElementById("hintQuoteId");
+
+      hintQuote.addEventListener("click", () => {
+        tlm__greetings.pause();
+        tlm__skipAnimate
+           // dismiss loading page - put display none and opacity 0
+           .to("#loadingPageCont",{ y:"-100vh", ease:"circ.in" ,opacity:0, display:"none" })
+           // show content page - remove display none on content page
+           .to("#contentPageCont", {duration:"2",display:"block",y:"0", opacity:1},">.5");
+      })
     }
 
     return(
@@ -107,7 +123,8 @@ const loadingPageAnimations = () => {
         loadingTextAnimate(),
         showGreetingsAnimate(),
         circleArrowAnimate(),
-        quoteHintAnimate()
+        quoteHintAnimate(),
+        skipAnimation()
     );
   }
 
