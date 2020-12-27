@@ -43,6 +43,11 @@
 .w-100{
   width: 100%;
 }
+.vertical-text{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
 
 /* ------------------------------------------------------------------- loadingPage -------------------------------------------------------------------*/
 #loadingPageCont{
@@ -385,6 +390,7 @@
   border-radius: 1rem;
   backdrop-filter: blur(5px);
 }
+
 /* 
 .body__skills__title{
   width: 100%;
@@ -424,7 +430,8 @@
 }
 .rects__path{
   stroke-miterlimit:10;
-  stroke-width:0.5px;
+  stroke-width: 2px;
+  stroke: black;
 }
 /* section four - projects*/
 /* content */

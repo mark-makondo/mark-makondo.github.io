@@ -11,6 +11,7 @@ const contentPageAnimations = () => {
   class Animate{
     constructor(selector){
       this.element = selector;
+
       // used for returning inidividual animations
       this.master = gsap.timeline({paused:true, reversed:true, defaults:{
         duration:.3
@@ -18,12 +19,11 @@ const contentPageAnimations = () => {
     }
 
     fillAnimateByOffset(el, offset){
-      this.master.fromTo(el,{ attr: { offset: offset } }, {
-        attr: { offset: "100%" },
-        duration: .5,
+      this.master.to(el,{
+        attr: { offset: offset },
         ease: "none",
+        overwrite:"auto"
       })
-
       return this.master;
     }
 
@@ -127,14 +127,30 @@ const contentPageAnimations = () => {
     }
 
     fillAnimateTimeline(el1, el2, el3, el4, el5, offset1, offset2, offset3, offset4, offset5){
-      this.master
-        .add(this.fillAnimateByOffset(el1, offset1), "b1")
-        .add(this.fillAnimateByOffset(el2, offset2), "b2")
-        .add(this.fillAnimateByOffset(el3, offset3), "b3")
-        .add(this.fillAnimateByOffset(el4, offset4), "b4")
-        .add(this.fillAnimateByOffset(el5, offset5), "b5")
+      let el__list = [el1,el2,el3,el4,el5];
+      let offset;
+      let i;
 
+      for (i = 0; i < el__list.length; i++) {
+        
+        if (i == 0 ){
+          offset = offset1;
+        }else if (i == 1){
+          offset = offset2;
+        }else if (i == 2){
+          offset = offset3;
+        }else if (i == 3){
+          offset = offset4;
+        }else if (i == 4){
+          offset = offset5;
+        }
+
+        this.master
+          .add(this.fillAnimateByOffset(el__list[i], offset), 1)
+         
+      }
       return this.master;
+     
     }
   }
 
@@ -168,9 +184,9 @@ const contentPageAnimations = () => {
 
 
     // variables non queries
-    let aboutTwo = "body__aboutTwo__container", 
-        skills = "body__skills__container",
-        projects = "body__projects__container";
+    let aboutTwo = "aboutTwo", 
+        skills = "skills",
+        projects = "projects";
 
     // contants used in animation
     let unset = "unset",
@@ -244,7 +260,7 @@ const contentPageAnimations = () => {
         // reverse page
         pa_pageContAnimate.reverse()
         // reverse inside if some of them is clicked
-        gsap.utils.toArray(".sect-select").forEach(item => {
+        gsap.utils.toArray(".btn__position").forEach(item => {
       
           if(item.classList.contains(aboutTwo) && item.classList.contains("clicked")){
             item.click();
@@ -263,11 +279,25 @@ const contentPageAnimations = () => {
     // #endregion
 
     // #region event listener for button containers
-    gsap.utils.toArray(".sect-select").forEach(item => {
-      // declaration
-      let targetBody = item.querySelectorAll(".bodyC"),
-          targetHr = item.querySelectorAll(".custom-hr"),
-          targetBtn = item.querySelectorAll(".btn__position");
+
+    gsap.utils.toArray(".btn__position").forEach(el => {
+      let targetBody, targetHr, targetBtn;
+
+      if(el.classList.contains("aboutTwo")){
+        targetBody = sectionAbout;
+        targetHr = sectionAboutHr;
+        targetBtn = sectionAboutBtn;
+
+      }else if(el.classList.contains("skills")){
+        targetBody = sectionSkill;
+        targetHr = sectionSkillHr;
+        targetBtn = sectionSkillBtn;
+
+      }else if(el.classList.contains("projects")){
+        targetBody = sectionProject;
+        targetHr = sectionProjectHr
+        targetBtn = sectionProjectBtn;
+      }
 
       // animation
       let buttonAnimate = new Animate();
@@ -275,37 +305,41 @@ const contentPageAnimations = () => {
         targetBtn, targetHr,targetBody, 
         lightRed2, white, unset, black, lightRed, lightRed, fromLineWidth, toLineWidth, unset, unset
       );
-     
+      
       let skillAnimate = skillsAnimateFunction();
 
-      // on click
-      item.addEventListener("click", (e) => {
+      let tl__skill = gsap.timeline({paused:true, reversed:true})
+        .add( ba_animate.play() )
+        .add( skillAnimate.pause() )
+
+      el.addEventListener("click", (e)=>{
         e.preventDefault();
+        el.classList.toggle("clicked");
 
-        item.classList.toggle("clicked");
-
-        if(item.classList.contains(aboutTwo)){
+        // animation for section about two
+        if(el.classList.contains(aboutTwo)){
           sectionAbout.classList.toggle("clicked");
         }
-        if(item.classList.contains(skills)){
+        // animation for section skills
+        if(el.classList.contains(skills)){
           sectionSkill.classList.toggle("clicked");
 
-          skillAnimate.reversed() ? skillAnimate.play() : skillAnimate.reverse();
+          skillAnimate.play();
         }
-
-        if(item.classList.contains(projects)){
+        // animation for section projects
+        if(el.classList.contains(projects)){
           sectionProject.classList.toggle("clicked");
         }
-        
-        ba_animate.reversed() ? ba_animate.play() : ba_animate.reverse();
-      })
 
+        tl__skill.reversed() ? tl__skill.play() : tl__skill.reverse();
+      })
     })
+
     // #endregion
 
   }
 
-  // section three skills animation
+  // section two skills animation
   const skillsAnimateFunction = () => {
     let boxOne    = document.querySelectorAll("#theGradientRect01 stop"),
         boxTwo    = document.querySelectorAll("#theGradientRect02 stop"),
@@ -321,11 +355,11 @@ const contentPageAnimations = () => {
 
     let fillAnimate = new Animate();
     let fill = fillAnimate.fillAnimateTimeline(
-      boxOne, boxTwo, boxThree, boxFour, boxFive, boxOne__perc, boxTwo__perc, boxThree__perc, boxFour__perc, boxFive__perc
+      boxOne, boxTwo, boxThree, boxFour, boxFive, 
+      boxOne__perc, boxTwo__perc, boxThree__perc, boxFour__perc, boxFive__perc
     )
 
     fillAnimate.master.paused(false);
-    fillAnimate.master.reversed(false);
 
    return fill;
   }

@@ -24,7 +24,7 @@ const contentPage__data__body = (props) => {
                     <section className="body__aboutTwo__container flex-column-center sect-select">
                         <div className="btn__container flex-column-center">
                             <hr className="custom-hr" id="hr__aboutTwo"/>
-                            <div className="btn__position flex-column-center" id="aboutTwo">
+                            <div className="btn__position flex-column-center aboutTwo" id="aboutTwo">
                                 <span className="font-title">About</span>
                             </div>
 
@@ -35,7 +35,7 @@ const contentPage__data__body = (props) => {
                     <section className="body__skills__container flex-column-center sect-select">
                         <div className="btn__container flex-column-center">
                             <hr className="custom-hr" id="hr__skills"/>
-                            <div className="btn__position flex-column-center" id="skills">
+                            <div className="btn__position flex-column-center skills" id="skills">
                                 <span className="font-title">Skills</span>
                             </div>
                         </div>
@@ -44,7 +44,7 @@ const contentPage__data__body = (props) => {
                     <section className="body__projects__container flex-column-center sect-select">
                         <div className="btn__container flex-column-center">
                             <hr className="custom-hr" id="hr__projects"/>
-                            <div className="btn__position flex-column-center" id="projects">
+                            <div className="btn__position flex-column-center projects" id="projects">
                                 <span className="font-title">Projects</span>
                             </div>
                         </div>
