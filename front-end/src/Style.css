@@ -230,15 +230,21 @@
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
-  margin: 0 3rem;
-  padding: 10rem 0;
+  padding: 8rem 0;
   background-color: #a55555;
   color: white;
-  border: 2px solid #d2a9a9;
-  border-radius: .5rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+}
+.trigger-container{
+  border: 2px solid #d2a9a9;
+  margin: 0 3rem;
+  margin-top: 5rem;
+  border-radius: .5rem;
+}
+.g-body-cont{
+  margin-top: 3rem;
 }
 /* section one - about one*/
 .body__aboutOne__container{
@@ -262,14 +268,34 @@
 }
 .btn__getStarted{
   position: absolute;
-  bottom: 0;
-  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 100px;
   border: 1px solid white;
   padding: 1rem;
-  font-size: 1rem;
-  max-width: 12rem;
+  font-size: 2rem;
+  max-width: 16rem;
   text-transform: uppercase;
-  border-radius: .5rem;
+  border-radius: 3rem;
+  font-weight: bolder;
+}
+.btn__getStarted a{
+  text-decoration: none;
+  color: unset;
+}
+.btn__arrow{
+  font-size: 2rem;
+  margin-left: 5px;
+}
+/* used in gsap animation toggle on click */
+.active__onClick{
+  background:rgb(252, 72, 72) !important;
+  color: black !important;
+  border-color:rgb(252, 72, 72) !important;
+}
+.active__getStarted__symbol{
+  transform: rotate(90deg) !important;
 }
 
 /* used in section two to four for button animation on click */
@@ -295,6 +321,11 @@
   background-color: #a55555;
   box-shadow: 1px 2px 9px 4px rgb(0 0 0 / 4%);
 }
+.btn__position:hover{
+  background-color: rgb(252, 72, 72) !important;
+  color: black !important;
+  border-color: rgb(252, 72, 72) !important;
+}
 #hr__aboutTwo,
 #hr__skills,
 #hr__projects{
@@ -308,9 +339,13 @@
 .body__aboutTwo,
 .body__skills,
 .body__projects{
-  display: none;
-  opacity: 0;
   margin-top: -5rem;
+}
+
+/* reset this initially */
+.bodyC,
+.custom-hr{
+  display: none;
 }
 
 /* section two - about two*/
@@ -335,7 +370,6 @@
   line-height: 23px;
 }
 
-
 /* section three - skills*/
 /* content */
 .body__skills__container{
@@ -351,6 +385,7 @@
   border-radius: 1rem;
   backdrop-filter: blur(5px);
 }
+/* 
 .body__skills__title{
   width: 100%;
 }
@@ -373,8 +408,24 @@
 .body__skills__content__framework,
 .body__skills__content__database{
   margin: 2rem;
+} */
+/* svg skills */
+.rect__skills__cont{
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 2rem
 }
-
+.v__rects{
+  width: 100%;
+  height: auto;
+}
+.rects__path{
+  stroke-miterlimit:10;
+  stroke-width:0.5px;
+}
 /* section four - projects*/
 /* content */
 .body__projects__container{

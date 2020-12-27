@@ -18,37 +18,39 @@ const contentPage__data__body = (props) => {
             <section className="body__aboutOne__container flex-column-center">
                 <Body__aboutOne/>
             </section>
+            
+            <div className="trigger-container">
+                <div className="page__bgCont">
+                    <section className="body__aboutTwo__container flex-column-center sect-select">
+                        <div className="btn__container flex-column-center">
+                            <hr className="custom-hr" id="hr__aboutTwo"/>
+                            <div className="btn__position flex-column-center" id="aboutTwo">
+                                <span className="font-title">About</span>
+                            </div>
 
-            <div className="page__bgCont">
-                <section className="body__aboutTwo__container flex-column-center sect-select">
-                    <div className="btn__container flex-column-center">
-                        <hr className="custom-hr" id="hr__aboutTwo"/>
-                        <div className="btn__position flex-column-center" id="aboutTwo">
-                            <span className="font-title">About</span>
                         </div>
+                        <Body__aboutTwo/>
+                    </section>
 
-                    </div>
-                    <Body__aboutTwo/>
-                </section>
-
-                <section className="body__skills__container flex-column-center sect-select">
-                    <div className="btn__container flex-column-center">
-                        <hr className="custom-hr" id="hr__skills"/>
-                        <div className="btn__position flex-column-center" id="skills">
-                            <span className="font-title">Skills</span>
+                    <section className="body__skills__container flex-column-center sect-select">
+                        <div className="btn__container flex-column-center">
+                            <hr className="custom-hr" id="hr__skills"/>
+                            <div className="btn__position flex-column-center" id="skills">
+                                <span className="font-title">Skills</span>
+                            </div>
                         </div>
-                    </div>
-                    <Body__skills/>
-                </section> 
-                <section className="body__projects__container flex-column-center sect-select">
-                    <div className="btn__container flex-column-center">
-                        <hr className="custom-hr" id="hr__projects"/>
-                        <div className="btn__position flex-column-center" id="projects">
-                            <span className="font-title">Projects</span>
+                        <Body__skills/>
+                    </section> 
+                    <section className="body__projects__container flex-column-center sect-select">
+                        <div className="btn__container flex-column-center">
+                            <hr className="custom-hr" id="hr__projects"/>
+                            <div className="btn__position flex-column-center" id="projects">
+                                <span className="font-title">Projects</span>
+                            </div>
                         </div>
-                    </div>
-                    <Body__projects/>
-                </section>
+                        <Body__projects/>
+                    </section>
+                </div>
             </div>
 
             <section className="body__footer__container flex-column-center">
