@@ -1,7 +1,7 @@
 import React from 'react';
 
 // sub components
-import Footer_emailMe from './body__footer__EmailMe.js';
+import Footer_emailMe from './body__EmailMe.js';
 
 const contentPage__data__footer= (props) => {
     // footer email me props
