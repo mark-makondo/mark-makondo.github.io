@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/mark-makondo/mark-makondo.github.io/static/css/main.4f1e77bf.chunk.css",
+    "main.js": "/mark-makondo/mark-makondo.github.io/static/js/main.45b6d49f.chunk.js",
+    "main.js.map": "/mark-makondo/mark-makondo.github.io/static/js/main.45b6d49f.chunk.js.map",
+    "runtime-main.js": "/mark-makondo/mark-makondo.github.io/static/js/runtime-main.3ef277d7.js",
+    "runtime-main.js.map": "/mark-makondo/mark-makondo.github.io/static/js/runtime-main.3ef277d7.js.map",
+    "static/js/2.a8aa33a1.chunk.js": "/mark-makondo/mark-makondo.github.io/static/js/2.a8aa33a1.chunk.js",
+    "static/js/2.a8aa33a1.chunk.js.map": "/mark-makondo/mark-makondo.github.io/static/js/2.a8aa33a1.chunk.js.map",
+    "index.html": "/mark-makondo/mark-makondo.github.io/index.html",
+    "static/css/main.4f1e77bf.chunk.css.map": "/mark-makondo/mark-makondo.github.io/static/css/main.4f1e77bf.chunk.css.map",
+    "static/js/2.a8aa33a1.chunk.js.LICENSE.txt": "/mark-makondo/mark-makondo.github.io/static/js/2.a8aa33a1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ef277d7.js",
+    "static/js/2.a8aa33a1.chunk.js",
+    "static/css/main.4f1e77bf.chunk.css",
+    "static/js/main.45b6d49f.chunk.js"
+  ]
+}
