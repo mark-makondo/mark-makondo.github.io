@@ -86,6 +86,7 @@
 .loadingButtons{
   display: flex;
   gap: 3rem;
+  margin-top: 3rem;
 }
 .loadingButtons .load-btn{
   border: 1px solid #1f1d1d;

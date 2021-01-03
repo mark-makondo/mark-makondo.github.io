@@ -103,7 +103,7 @@ const loadingPageAnimations = () => {
     transparentGlassEffect(value, label){
       this.master
         .add( this.backDropFilterBlur( "blur("+value+"px)", label ) )
-        .add( this.changeBackgroundColor(unset , label ) )
+        .add( this.changeBackgroundColor( unset , label ) )
 
       return this.master;
     }
@@ -154,7 +154,8 @@ const loadingPageAnimations = () => {
     lbTakeAPeak = document.querySelector(".takeAPeak"),
     lbReveal = document.querySelector(".reveal"),
 
-    contentPageContainer = document.querySelector("#contentPageCont");
+    contentPageContainer = document.querySelector("#contentPageCont"),
+    fastForwardBtn = document.querySelector(".fastForward");
 
   let 
     tl, setElements,
@@ -271,6 +272,7 @@ const loadingPageAnimations = () => {
       loadingPageSetDisplay = new Animate("", yoyoFalse, repeatFalse, 1);
       lpsd = loadingPageSetDisplay.alternateDisplay(contentPageContainer, loadingPageContainer);
 
+
     //#endregion
     
     tl
@@ -293,10 +295,10 @@ const loadingPageAnimations = () => {
       .add( lbsd , "showButtons")
 
     // event listeners
-    onEventAnimationHandler(hover, lbTakeAPeak, hcbpc);
-    onEventAnimationHandler(hover, lbReveal, hcbrc);
-    onEventAnimationHandler(click, lbTakeAPeak, cpb);
-    onEventAnimationHandler(click, lbReveal,lpsd);
+    onEventAnimationHandler(hover, lbTakeAPeak,hcbpc );
+    onEventAnimationHandler(hover, lbReveal   ,hcbrc );
+    onEventAnimationHandler(click, lbTakeAPeak,cpb );
+    onEventAnimationHandler(click, lbReveal   ,lpsd );
 
     tl.play()
   }
@@ -333,7 +335,7 @@ const loadingPageAnimations = () => {
           if(target.classList.contains("takeAPeak")){
             tween.reversed() ? tween.play() : tween.reverse();
           }
-            // reveal btn onclick
+          // reveal btn onclick
           if(target.classList.contains("reveal")){
             tween.play();
           }
