@@ -7,19 +7,21 @@ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 // note: instead of querySelectorAll, gsap.utils.toArray is used for ie9 support for using foreach
 const contentPageAnimations = () => { 
-  // master timeline animation constructor
+
+  // #region master timeline animation constructor
   class Animate{
     constructor(selector){
       this.element = selector;
 
-      // used for returning inidividual animations
+      // used for returning individual animations
       this.master = gsap.timeline({paused:true, reversed:true, defaults:{
-        duration:.3
+        duration:.5
       }});
     }
 
     fillAnimateByOffset(el, offset){
       this.master.to(el,{
+        duration:.3,
         attr: { offset: offset },
         ease: "none",
         overwrite:"auto"
@@ -53,6 +55,7 @@ const contentPageAnimations = () => {
 
     rotateSymbol(el, rotate){
       this.master.fromTo(el, {rotate: 0}, {
+        duration:.2,
         rotate:rotate,
         ease: "power1.out",
         overwrite: "auto"
@@ -73,6 +76,7 @@ const contentPageAnimations = () => {
 
     changeColor(el, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor){
       this.master.fromTo(el, {background:fromBgColor ,color: fromColor, borderColor: fromborderColor}, {
+        duration:.2,
         background: toBgColor,
         color: toColor,
         borderColor: toborderColor,
@@ -84,7 +88,6 @@ const contentPageAnimations = () => {
 
     lineWidthChangeTo(el, widthFrom, widthTo, disp){
       this.master.fromTo(el, {width: widthFrom, display: "none", autoAlpha: 0}, {
-        duration: 1,
         autoAlpha: 1,
         width: widthTo,
         stagger: .1,
@@ -100,19 +103,16 @@ const contentPageAnimations = () => {
       this.master
         .add(this.heightShrink(page), 0)
         .add(this.lineWidthChangeTo(btnCont, widthFrom, widthTo, lineDisp), "same")
-        // .add(this.setDisplay(body, bodyDisp), "same")
         .add(this.moveDown(btnPos, yPercent), "same")
-     
-      
+
       return this.master;
     }
 
     changeColorAndLineWidth(
-      btn, line, body, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor, widthFrom, widthTo, disp, lineDisp
+      line, body, widthFrom, widthTo, disp, lineDisp
     ){
       this.master
-        .add(this.changeColor(btn, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor),0) 
-        .add(this.lineWidthChangeTo(line, widthFrom, widthTo, lineDisp), 0)
+        .add(this.lineWidthChangeTo(line, widthFrom, widthTo, lineDisp),0)
         .add(this.setDisplay(body, disp),0)
       
       return this.master;
@@ -126,10 +126,15 @@ const contentPageAnimations = () => {
       return this.master;
     }
 
-    fillAnimateTimeline(el1, el2, el3, el4, el5, offset1, offset2, offset3, offset4, offset5){
-      let el__list = [el1,el2,el3,el4,el5];
+    fillAnimateTimeline(el1, el2, el3, el4, el5, offset1, offset2, offset3, offset4, offset5,
+      el_perc1,el_perc2,el_perc3,el_perc4,el_perc5){
+
+      let el__list  = [el1,el2,el3,el4,el5];
+      let el__percs = [el_perc1,el_perc2,el_perc3,el_perc4,el_perc5];
       let offset;
       let i;
+      let convertStringToNumber;
+      let replacePercentWithNone;
 
       for (i = 0; i < el__list.length; i++) {
         
@@ -145,14 +150,50 @@ const contentPageAnimations = () => {
           offset = offset5;
         }
 
+        // convert string % to actual number because percentAnimate will not accept string values
+        replacePercentWithNone = offset.replace("%",'');
+        convertStringToNumber = replacePercentWithNone*1;
+
         this.master
-          .add(this.fillAnimateByOffset(el__list[i], offset), 1)
-         
+          .add("fillLabel")
+          .add(this.fillAnimateByOffset(el__list[i], offset), "fillLabel")
+          .add(this.percentAnimate(el__percs[i], convertStringToNumber), "fillLabel")
+
       }
       return this.master;
+    }
      
+    percentAnimate(el, perTarget){
+      let percentBase = {percent: 0};
+      let percentTarget = perTarget;
+
+      this.master
+        .to(percentBase, { 
+          percent:percentTarget, 
+          duration:.1,
+          roundProps:"percent", 
+          onUpdate: () =>{
+            el.innerHTML=percentBase.percent+"%"
+          }
+        })
+
+      return this.master;
+    }
+
+    movingXaxis (){
+      this.master
+        .fromTo(this.element, {xPercent: -25}, {
+          duration: 2,
+          xPercent: 25,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        })
+
+      return this.master
     }
   }
+  //#endregion
 
   //#region Global Variables
     // variables queries
@@ -172,6 +213,7 @@ const contentPageAnimations = () => {
         sectionProjectBtn = document.querySelector("#projects"),
 
         customHr = document.querySelectorAll(".custom-hr"),
+        customHrAbout = document.querySelector(".custom-hr-about"),
         sectionAboutHr = document.querySelector("#hr__aboutTwo"),
         sectionSkillHr = document.querySelector("#hr__skills"),
         sectionProjectHr = document.querySelector("#hr__projects"),
@@ -180,7 +222,17 @@ const contentPageAnimations = () => {
         bodyContInside = document.querySelectorAll(".g-body-cont"),
         sectionAbout= document.querySelector(".body__aboutTwo"),
         sectionSkill = document.querySelector(".body__skills"),
-        sectionProject = document.querySelector(".body__projects");
+        sectionProject = document.querySelector(".body__projects"),
+
+        sectionSkillGroupedSvg = document.querySelector(".rect__skills__cont"), 
+        sectionSkillPercOne = document.querySelector("#skill__perc1"),
+        sectionSkillPercTwo = document.querySelector("#skill__perc2"),
+        sectionSkillPercThree = document.querySelector("#skill__perc3"),
+        sectionSkillPercFour = document.querySelector("#skill__perc4"),
+        sectionSkillPercFive = document.querySelector("#skill__perc5"),
+
+        footerSayhello = document.querySelector(".contentPage__data__footer__boxOne"),
+        footerEmailCont = document.querySelector(".contentPage__data__footer__boxTwo");
 
 
     // variables non queries
@@ -209,7 +261,34 @@ const contentPageAnimations = () => {
 
   //#endregion
 
-  // functions - event listeners
+  
+  // section two skills animation
+  const skillsAnimateFunction = () => {
+    let basic   = document.querySelectorAll("#theGradientRect01 stop"),
+        reactjs = document.querySelectorAll("#theGradientRect02 stop"),
+        laravel = document.querySelectorAll("#theGradientRect03 stop"),
+        mongodb = document.querySelectorAll("#theGradientRect04 stop"),
+        mysql   = document.querySelectorAll("#theGradientRect05 stop");
+
+    let basic__perc     = "80%",
+        reactjs__perc   = "70%",
+        laravel__perc   = "50%",
+        mongodb__perc   = "40%",
+        mysql__perc     = "60%";
+
+    let fillAnimate = new Animate();
+    let fill = fillAnimate.fillAnimateTimeline(
+      basic, reactjs, laravel, mongodb, mysql, 
+      basic__perc, reactjs__perc, laravel__perc, mongodb__perc, mysql__perc,
+      sectionSkillPercOne,sectionSkillPercTwo,sectionSkillPercThree,sectionSkillPercFour,sectionSkillPercFive
+    )
+
+    fillAnimate.master.paused(false);
+
+   return fill;
+  }
+
+  // animation handlers
   const onClickHoverHandler = () => {
 
     // #region event listener for get started button
@@ -279,33 +358,26 @@ const contentPageAnimations = () => {
     // #endregion
 
     // #region event listener for button containers
-
     gsap.utils.toArray(".btn__position").forEach(el => {
-      let targetBody, targetHr, targetBtn;
+      let targetBody, targetHr; 
 
       if(el.classList.contains("aboutTwo")){
         targetBody = sectionAbout;
         targetHr = sectionAboutHr;
-        targetBtn = sectionAboutBtn;
-
       }else if(el.classList.contains("skills")){
         targetBody = sectionSkill;
         targetHr = sectionSkillHr;
-        targetBtn = sectionSkillBtn;
-
       }else if(el.classList.contains("projects")){
         targetBody = sectionProject;
         targetHr = sectionProjectHr
-        targetBtn = sectionProjectBtn;
       }
 
       // animation
       let buttonAnimate = new Animate();
       let ba_animate = buttonAnimate.changeColorAndLineWidth(
-        targetBtn, targetHr,targetBody, 
-        lightRed2, white, unset, black, lightRed, lightRed, fromLineWidth, toLineWidth, unset, unset
+        targetHr,targetBody, fromLineWidth, toLineWidth, unset, unset
       );
-      
+
       let skillAnimate = skillsAnimateFunction();
 
       let tl__skill = gsap.timeline({paused:true, reversed:true})
@@ -315,7 +387,8 @@ const contentPageAnimations = () => {
       el.addEventListener("click", (e)=>{
         e.preventDefault();
         el.classList.toggle("clicked");
-
+        el.classList.toggle("active__onClick");
+       
         // animation for section about two
         if(el.classList.contains(aboutTwo)){
           sectionAbout.classList.toggle("clicked");
@@ -323,8 +396,15 @@ const contentPageAnimations = () => {
         // animation for section skills
         if(el.classList.contains(skills)){
           sectionSkill.classList.toggle("clicked");
+          let skillSvgContainer = getComputedStyle(sectionSkillGroupedSvg)
 
-          skillAnimate.play();
+          if(skillSvgContainer.display == "none"){
+            skillAnimate.clear();
+            skillAnimate.invalidate();
+          }else{
+            skillAnimate.play();
+          }
+
         }
         // animation for section projects
         if(el.classList.contains(projects)){
@@ -334,37 +414,31 @@ const contentPageAnimations = () => {
         tl__skill.reversed() ? tl__skill.play() : tl__skill.reverse();
       })
     })
-
     // #endregion
+
+    //#region footer
+    // box one
+    let sayhello = new Animate();
+    let showContact = sayhello.setDisplay(footerEmailCont, unset);
+    let logo__madSvg = document.querySelector("#mad");
+
+    footerSayhello.addEventListener("click", ()=> {
+      footerSayhello.classList.toggle("active__onClick");
+      logo__madSvg.classList.toggle("stroke-red");
+      
+      showContact.reversed() ? showContact.play() : showContact.reverse();
+    })
+    //#endregion
 
   }
 
-  // section two skills animation
-  const skillsAnimateFunction = () => {
-    let boxOne    = document.querySelectorAll("#theGradientRect01 stop"),
-        boxTwo    = document.querySelectorAll("#theGradientRect02 stop"),
-        boxThree  = document.querySelectorAll("#theGradientRect03 stop"),
-        boxFour   = document.querySelectorAll("#theGradientRect04 stop"),
-        boxFive   = document.querySelectorAll("#theGradientRect05 stop");
-
-    let boxOne__perc    = "40%",
-        boxTwo__perc    = "20%",
-        boxThree__perc  = "40%",
-        boxFour__perc   = "10%",
-        boxFive__perc   = "70%";
-
-    let fillAnimate = new Animate();
-    let fill = fillAnimate.fillAnimateTimeline(
-      boxOne, boxTwo, boxThree, boxFour, boxFive, 
-      boxOne__perc, boxTwo__perc, boxThree__perc, boxFour__perc, boxFive__perc
-    )
-
-    fillAnimate.master.paused(false);
-
-   return fill;
+  const animationPermanentOn = () => {
+    let aboutOne__permaAnimate = new Animate(customHrAbout);
+    aboutOne__permaAnimate.movingXaxis().play();
   }
 
   const allContentPageAnimations = () =>{
+    animationPermanentOn();
     onClickHoverHandler();
   }
 

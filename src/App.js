@@ -1,5 +1,5 @@
 import './Style.css';
-import React, { useEffect,useState }from 'react'
+import React, { useEffect,useState } from 'react'
 import { gsap } from 'gsap';
 import EmailJs from 'emailjs-com';
 
@@ -51,11 +51,11 @@ function App() {
     // gsap.set(".loadingSVG", {display:"block", opacity: 1});
     // gsap.set(".loading__percent", {display:"block", opacity: 1});
 
-    gsap.set("#loadingPageCont", {display:"none"});
-    gsap.set("#contentPageCont", {display:"block", opacity: 1, y:"0"});
+    // gsap.set("#loadingPageCont", {display:"none"});
+    // gsap.set("#contentPageCont", {display:"block", opacity: 1, y:"0"});
 
     ContentPageAnimations();
-    // LoadingPageAnimations();
+    LoadingPageAnimations();
   
   },[])
 

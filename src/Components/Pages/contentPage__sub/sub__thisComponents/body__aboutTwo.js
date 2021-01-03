@@ -6,10 +6,12 @@ const body__aboutTwo = () =>{
             <div className="g-body-cont">
                 <span className="body__aboutTwo__title font-title">Hello,</span>
                 <p className="body__aboutTwo__desc font-content">
-                I'm a Computer Engineer, that is interested on being a web developer. I really like the 
-                field since I'v been enjoying my time thinking and building the projects that I want to
-                make. I'v been practicing a lot and started making different projects that I can show later
-                on the Project Section. It has been very fun for me. 
+                Thinking on how to build a website is fun and also at the same time quite challenging, 
+                which is the reason why it is very interesting. I've been trying a lot of stuff which is 
+                never completed. This portfolio is the first project that I completed using React. I'm using gsap
+                on the animation which is very fun and easy to use. I hope you like the things that you see 
+                on my website, you can tell me the feedback on the footer section. Right now I am just a 
+                front-end developer, but my goal is to become a full-stack developer. 
                 </p>
 
                 <img src="" alt="imhgere hre"/>
