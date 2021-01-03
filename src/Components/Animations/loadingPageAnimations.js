@@ -77,7 +77,7 @@ const loadingPageAnimations = () => {
     }
     
     changeBackgroundColor(bgColor, label){
-      this.master.to(this.element, { background: bgColor }, label);
+      this.master.fromTo(this.element, { background: "black"},{ background: bgColor }, label);
 
       return this.master;
     }
@@ -103,7 +103,7 @@ const loadingPageAnimations = () => {
     transparentGlassEffect(value, label){
       this.master
         .add( this.backDropFilterBlur( "blur("+value+"px)", label ) )
-        .add( this.changeBackgroundColor( unset , label ) )
+        .add( this.changeBackgroundColor( "rgba(0, 0, 0, 0.75)" , label ) )
 
       return this.master;
     }
@@ -119,7 +119,7 @@ const loadingPageAnimations = () => {
 
     blurLoadingPageBackground(contentToUnset, value){
       this.master
-        .to(contentToUnset, { display: unset }, "blbp" )
+        .to(contentToUnset, { display: unset, position: fixed }, "blbp" )
         .add( this.transparentGlassEffect( value, "blbp" ) )
 
       return this.master;
@@ -127,7 +127,7 @@ const loadingPageAnimations = () => {
 
     alternateDisplay(elToShow, elToHide){
       this.master 
-        .to(elToShow, { display:unset , autoAlpha: alphaTrue }, "ad")
+        .to(elToShow, { display:unset , autoAlpha: alphaTrue , position: unset}, "ad")
         .to(elToHide, { display:none , autoAlpha: alphaFalse }, "ad")
 
         return this.master;
@@ -178,6 +178,7 @@ const loadingPageAnimations = () => {
   let
     // custom variables
     unset = "unset",
+    fixed = "fixed",
     none = "none", flex = "flex",
     backgroundClr = "rgb(252, 72, 72)", fontClr = "black", borderClr = "rgb(252, 72, 72)",
     alphaTrue = "1", alphaFalse  = "0",
@@ -269,7 +270,8 @@ const loadingPageAnimations = () => {
       contentPageBlured = new Animate(loadingPageContainer, yoyoFalse, repeatFalse, .5);
       cpb = contentPageBlured.blurLoadingPageBackground(contentPageContainer,7);
       
-      loadingPageSetDisplay = new Animate("", yoyoFalse, repeatFalse, 1);
+      loadingPageSetDisplay = new Animate(loadingPageContainer, yoyoFalse, repeatFalse, 1);
+      lpsd = loadingPageSetDisplay.backDropFilterBlur(unset, "ad");
       lpsd = loadingPageSetDisplay.alternateDisplay(contentPageContainer, loadingPageContainer);
 
 
