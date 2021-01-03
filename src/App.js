@@ -47,13 +47,7 @@ function App() {
   }
 
   useEffect(() =>{
-    // temporarily set value for testing
-    // gsap.set(".loadingSVG", {display:"block", opacity: 1});
-    // gsap.set(".loading__percent", {display:"block", opacity: 1});
-
-    // gsap.set("#loadingPageCont", {display:"none"});
-    // gsap.set("#contentPageCont", {display:"block", opacity: 1, y:"0"});
-
+    
     ContentPageAnimations();
     LoadingPageAnimations();
   
