@@ -14,7 +14,7 @@ const body__aboutTwo = () =>{
                 front-end developer, but my goal is to become a full-stack developer. 
                 </p>
 
-                <img src="" alt="imhgere hre"/>
+                {/* <img src="" alt="imhgere hre"/> */}
             </div>
         </div>
     )
