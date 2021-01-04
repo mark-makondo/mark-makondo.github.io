@@ -136,7 +136,7 @@ const body__skils = () =>{
                         <div className="skill__description font-content">
                             <p>
                                 Proficientcy percent 60%. I've been using this database since I started programming
-                                which is during my college days. That's why I am kind of comfortable with using it.
+                                which is during my college days. So I'm kind of used to it already.
                             </p>
                         </div>
                     </div>
