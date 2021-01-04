@@ -1,6 +1,5 @@
 import './Style.css';
 import React, { useEffect,useState } from 'react'
-import { gsap } from 'gsap';
 import EmailJs from 'emailjs-com';
 
 // components - pages
@@ -10,6 +9,9 @@ import ContentPage from './Components/Pages/contentPage.js';
 // components - animations
 import LoadingPageAnimations from './Components/Animations/loadingPageAnimations.js';
 import ContentPageAnimations from './Components/Animations/contentPageAnimations.js';
+
+// images
+import gif from './Collection/mob.gif';
 
 function App() { 
 
@@ -61,6 +63,8 @@ function App() {
 
       <div id="contentPageCont">
         <ContentPage
+            // about two 
+            gif = {gif}
             // footer email me props
             handleTextOnChange = {handleTextOnChange}
             msgContent ={msgContent}

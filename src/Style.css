@@ -43,6 +43,11 @@
 .w-100{
   width: 100%;
 }
+.responsive-image{
+  width: 100%; 
+  max-width: 100%; 
+  height: auto;
+}
 /* ------------------------------------------------------------------- loadingPage -------------------------------------------------------------------*/
 #loadingPageCont{
   position: fixed;
@@ -356,6 +361,16 @@
   font-size: 1.2rem;
   line-height: 23px;
 }
+.about__logo{
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.about__logo img{
+  border-radius: 50%;
+}
 
 /* section three - skills*/
 /* content */
@@ -381,7 +396,7 @@
   padding: 0 .5rem;
 }
 .skill__desc span {
-  font-size: 2rem;
+  font-size: 1.8em;
   text-transform: uppercase;
   color: #fc4848;
  }
@@ -411,6 +426,34 @@
   height: 100%;
   display: flex;
   justify-content: center;
+}
+.skill__circle{
+  border-radius: 50%;
+  padding: .3em;
+  background: black;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+.skill__circle span{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+.skill__title{
+  width: 100%;
+  background: black;
+}
+.s-border{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*svg*/
 .rect__skills__cont{
@@ -643,10 +686,6 @@
   .rect__skills__cont{
     display: none;
    }
-  .skill__perc,
-  .skill__divider{
-    display: none;
-  }
  }
 
 /* media responsive large screen overide */

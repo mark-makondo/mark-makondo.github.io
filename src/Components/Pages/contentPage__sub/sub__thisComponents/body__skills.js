@@ -37,81 +37,110 @@ const body__skils = () =>{
                 <div className="skill__desc">
                     <div className="skill__basic s-border">
                         <div className="skill__title font-title">
-                            <span>Html, CSS, JavaScript (Basics)</span>
-                            <span className="skill__divider"> - </span>
-                            <span className="skill__perc" id="skill__perc1">0%</span>
                             <hr/>
                         </div>
-                        <div className="skill__description font-content">
+                        <div className="skill__description font-content skill__reminder">
                             <p>
-                                Learning this skill is easy, because they are just the basics and also
-                                the documentation is very well done and easy to understand. It's been a 
-                                while now ever since I started web development. And I always use this, 
-                                that's why I am very comfortable with it now.
+                                You might think that, puting a percent on skill is not a good practice on 
+                                showing the capabilities of the person. But I still did it. Why? Because 
+                                I just kinda of feel like it and It's an additional aesthetics to the page,
+                                so why not right? I added a description so that you guys can understand on 
+                                how I feel about the specific skill. 
                             </p>
                         </div>
                     </div>
+                    
+                    <div className="skill__basic s-border">
+                        <div className="skill__title font-title">
+                            <span>Html, CSS, JavaScript (Basics)</span>
+                            <hr/>
+                        </div>
+                        <div className="skill__circle">
+                            <span className="skill__perc" id="skill__perc1">0%</span>
+                        </div>
+                        <div className="skill__description font-content">
+                            <p>
+                                Proficiency percent 80%. I'm very used to using this skill because I always use it daily.
+                                And also they are simple and easy to learn because of their respective documentations. Especially
+                                JavaScript since I use ReactJS as my main framework on making my projects.
+                            </p>
+                        </div>
+                    </div>
+
                     <div className="skill__react s-border">
                         <div className="skill__title font-title">
-                            <span>React</span>
-                            <span className="skill__divider"> - </span>
-                            <span className="skill__perc" id="skill__perc2">0%</span>
+                            <span>ReactJs</span>
                             <hr/>
+                        </div>
+                        <div className="skill__circle">
+                            <span className="skill__perc" id="skill__perc2">0%</span>
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                This is the reason why I am now comfortable with using JavaScript
-                                and I also had a alot of fun when I'm using ReactJs. And It is now
-                                my main framework whenever I build a Project. I am planning on 
-                                switching to TypeScript soon.
+                                Proficiency percent 70%. This is the framework that I am currently using, and I love
+                                this framework. I've been making and trying different kinds of projects (which never finished)
+                                using this framework, and its been fun for me. Planning to make more finished project
+                                other than this portfolio using this framework. 
                             </p>
                         </div>
                     </div>
+
                     <div className="skill__laravel s-border">
                         <div className="skill__title font-title">
                             <span>Laravel</span>
-                            <span className="skill__divider"> - </span>
-                            <span className="skill__perc" id="skill__perc3">0%</span>
                             <hr/>
+                        </div>
+                        <div className="skill__circle">
+                            <span className="skill__perc" id="skill__perc3">0%</span>
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                This is the first framework that I learned, since It is the one that
-                                I used during my OJT. I am not very proficient with it.
-                                But I understand on how It works and on how to use it with PHP.
+                               Proficiency percent 50%. This is the first framework that I used, and I used it
+                               during my OJT, I also took a liking in this. I got to the point where I can understand
+                               on how to make a website with it and on how to use it with database using PHP. So if I
+                               ever get back on this framework it will be easy for me to recall things. I switched to react because 
+                               I like on how you can pass data from one things to another and make multiple components
+                               and combine it to make a website. 
                             </p>
                         </div>
                     </div>
+
                     <div className="skill__mongodb s-border">
                         <div className="skill__title font-title">
-                            <span>MongoDB</span>
-                            <span className="skill__divider"> - </span>
-                            <span className="skill__perc" id="skill__perc4">0%</span>
+                            <span>MongoDB (NoSQL Database)</span>
                             <hr/>
+                        </div>
+                        <div className="skill__circle">
+                            <span className="skill__perc" id="skill__perc4">0%</span>
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                This is the current database that I am currently learning and using. It is
-                                my first time using a NoSQL database since I always use MySQL. I kinda
-                                like this database that's why I switched to it.
+                                Proficientcy percent 40%. My proficiency on mongoDB is not that high because 
+                                I still didn't do enough practice/projects that involves using it. But 
+                                I already understands on how it works. The only things that I needed is to 
+                                manipulate data using it. I kinda like this because It passes a data in json format
+                                and setting up the database is kinda different compared to MySQL. Which is really 
+                                interesting.
                             </p>
                         </div>
                     </div>
+                    
                     <div className="skill__mysql s-border">
                         <div className="skill__title font-title">
-                            <span>MYSQL</span>
-                            <span className="skill__divider"> - </span>
-                            <span className="skill__perc" id="skill__perc5">0%</span>
+                            <span>MYSQL Database</span>
                             <hr/>
+                        </div>
+                        <div className="skill__circle">
+                            <span className="skill__perc" id="skill__perc5">0%</span>
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                I am quite comfortable with this since It is the one that I always use 
-                                before I started using mongoDB. This is also the one that I used during
-                                college days.
+                                Proficientcy percent 60%. I've been using this database since I started programming
+                                which is during my college days. That's why I am kind of comfortable with using it.
                             </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

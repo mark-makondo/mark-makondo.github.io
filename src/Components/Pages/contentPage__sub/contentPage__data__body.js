@@ -8,6 +8,8 @@ import Body__projects from './sub__thisComponents/body__projects.js';
 import Body__footer from './sub__thisComponents/body__footer.js';
 
 const contentPage__data__body = (props) => {
+    // about Two
+    let gif = props.gif;
     // footer email me props
     let sendEmailTo = props.sendEmailTo;
     let msgContent = props.msgContent;
@@ -29,7 +31,9 @@ const contentPage__data__body = (props) => {
                             </div>
 
                         </div>
-                        <Body__aboutTwo/>
+                        <Body__aboutTwo
+                            gif = {gif}
+                        />
                     </section>
 
                     <section className="body__skills__container flex-column-center sect-select">

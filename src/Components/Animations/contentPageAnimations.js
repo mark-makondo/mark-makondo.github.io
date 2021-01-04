@@ -10,22 +10,27 @@ const contentPageAnimations = () => {
 
   // #region master timeline animation constructor
   class Animate{
-    constructor(selector){
+    constructor(selector, yoyo, repeat, duration){
       this.element = selector;
 
+      if(duration == null || duration == ""){
+        this.newDuration = .5
+      }else{
+        this.newDuration = duration;
+      }
+
       // used for returning individual animations
-      this.master = gsap.timeline({paused:true, reversed:true, defaults:{
-        duration:.5
+      this.master = gsap.timeline({paused:true, reversed:true, yoyo: yoyo, repeat: repeat, defaults:{
+        duration: this.newDuration
       }});
     }
 
-    fillAnimateByOffset(el, offset){
+    fillAnimateByOffset(el, offset, label){
       this.master.to(el,{
-        duration:.3,
         attr: { offset: offset },
         ease: "none",
         overwrite:"auto"
-      })
+      }, label)
       return this.master;
     }
 
@@ -53,13 +58,13 @@ const contentPageAnimations = () => {
       return this.master;
     }
 
-    rotateSymbol(el, rotate){
+    rotateSymbol(el, rotate, label){
       this.master.fromTo(el, {rotate: 0}, {
-        duration:.2,
+        // duration:.2,
         rotate:rotate,
-        ease: "power1.out",
+        ease: "none",
         overwrite: "auto"
-      })
+      }, label)
     
       return this.master;
     }
@@ -74,14 +79,14 @@ const contentPageAnimations = () => {
       return this.master;
     }
 
-    changeColor(el, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor){
+    changeColor(el, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor, label){
       this.master.fromTo(el, {background:fromBgColor ,color: fromColor, borderColor: fromborderColor}, {
         duration:.2,
         background: toBgColor,
         color: toColor,
         borderColor: toborderColor,
         overwrite: "auto",
-      })
+      }, label)
     
       return this.master;
     }
@@ -120,8 +125,8 @@ const contentPageAnimations = () => {
 
     changeColorAndRotate = (btn, symb, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor, rotate) => {
       this.master
-        .add(this.changeColor(btn, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor), 0) 
-        .add(this.rotateSymbol(symb, rotate), 0)
+        .add(this.changeColor(btn, fromBgColor ,fromColor, fromborderColor,toColor, toBgColor, toborderColor, "ccar")) 
+        .add(this.rotateSymbol(symb, rotate, "ccar"))
 
       return this.master;
     }
@@ -156,42 +161,47 @@ const contentPageAnimations = () => {
 
         this.master
           .add("fillLabel")
-          .add(this.fillAnimateByOffset(el__list[i], offset), "fillLabel")
-          .add(this.percentAnimate(el__percs[i], convertStringToNumber), "fillLabel")
+          .add(this.fillAnimateByOffset(el__list[i], offset, "fillLabel" ))
+          .add(this.percentAnimate(el__percs[i], convertStringToNumber, "fillLabel") )
 
       }
       return this.master;
     }
      
-    percentAnimate(el, perTarget){
+    percentAnimate(el, perTarget, label){
       let percentBase = {percent: 0};
       let percentTarget = perTarget;
 
       this.master
         .to(percentBase, { 
-          percent:percentTarget, 
-          duration:.1,
+          percent:percentTarget,
           roundProps:"percent", 
           onUpdate: () =>{
             el.innerHTML=percentBase.percent+"%"
           }
-        })
+        }, label)
 
       return this.master;
     }
 
-    movingXaxis (){
+    movingXaxis (fromPercent, toPercent, label){
       this.master
-        .fromTo(this.element, {xPercent: -25}, {
-          duration: 2,
-          xPercent: 25,
-          repeat: -1,
-          yoyo: true,
+        .fromTo(this.element, {xPercent: fromPercent}, {
+          xPercent: toPercent,
           ease: "none"
-        })
+        },label)
 
       return this.master
     }
+
+    movingXRotate (fromtPercent, toPercent, rotate) {
+      this.master
+        .add( this.movingXaxis(fromtPercent, toPercent, "mxr") )
+        .add( this.rotateSymbol(this.element, rotate, "mxr") )
+
+      return this.master
+    }
+
   }
   //#endregion
 
@@ -230,6 +240,7 @@ const contentPageAnimations = () => {
         sectionSkillPercThree = document.querySelector("#skill__perc3"),
         sectionSkillPercFour = document.querySelector("#skill__perc4"),
         sectionSkillPercFive = document.querySelector("#skill__perc5"),
+        sectionSkillCircle = document.querySelectorAll(".skill__circle"),
 
         footerSayhello = document.querySelector(".contentPage__data__footer__boxOne"),
         footerEmailCont = document.querySelector(".contentPage__data__footer__boxTwo");
@@ -276,7 +287,7 @@ const contentPageAnimations = () => {
         mongodb__perc   = "40%",
         mysql__perc     = "60%";
 
-    let fillAnimate = new Animate();
+    let fillAnimate = new Animate("", false, 0, .4);
     let fill = fillAnimate.fillAnimateTimeline(
       basic, reactjs, laravel, mongodb, mysql, 
       basic__perc, reactjs__perc, laravel__perc, mongodb__perc, mysql__perc,
@@ -293,7 +304,7 @@ const contentPageAnimations = () => {
 
     // #region event listener for get started button
     // get started button
-    let buttonAnimate = new Animate()
+    let buttonAnimate = new Animate("", false, 0, .5 )
     let ba_animate = buttonAnimate.changeColorAndRotate( 
       startButton, startButton_Symbol, black, white, white, black, lightRed, lightRed, rotate
     );
@@ -378,11 +389,18 @@ const contentPageAnimations = () => {
         targetHr,targetBody, fromLineWidth, toLineWidth, unset, unset
       );
 
+      // fill animation
       let skillAnimate = skillsAnimateFunction();
+
+      // skill circle perma animation
+      let skillCircleAnimate = new Animate(sectionSkillCircle,true,-1, 8);
+      let sca = skillCircleAnimate.movingXRotate(-50, 50, 365);
+
 
       let tl__skill = gsap.timeline({paused:true, reversed:true})
         .add( ba_animate.play() )
         .add( skillAnimate.pause() )
+        .add( sca.paused() )
 
       el.addEventListener("click", (e)=>{
         e.preventDefault();
@@ -401,8 +419,11 @@ const contentPageAnimations = () => {
           if(skillSvgContainer.display == "none"){
             skillAnimate.clear();
             skillAnimate.invalidate();
+            sca.clear();
+            sca.invalidate();
           }else{
             skillAnimate.play();
+            sca.play()
           }
 
         }
@@ -433,8 +454,8 @@ const contentPageAnimations = () => {
   }
 
   const animationPermanentOn = () => {
-    let aboutOne__permaAnimate = new Animate(customHrAbout);
-    aboutOne__permaAnimate.movingXaxis().play();
+    let aboutOne__permaAnimate = new Animate(customHrAbout,true, -1, 2);
+    aboutOne__permaAnimate.movingXaxis(-25, 25).play();
   }
 
   const allContentPageAnimations = () =>{
