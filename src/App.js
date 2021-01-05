@@ -44,7 +44,7 @@ function App() {
           alert(error.text);
       });
   }
-  
+
   const handleTextOnChange = (e) => {
     setMsgContent(e.target.value)
   }
@@ -68,11 +68,10 @@ function App() {
             gif = {gif}
             // footer email me props
             handleTextOnChange = {handleTextOnChange}
-            msgContent ={msgContent}
+            msgContent = {msgContent}
             sendEmailTo = {sendEmailTo}
         />
       </div> 
-      
     </div>
   );
 }
