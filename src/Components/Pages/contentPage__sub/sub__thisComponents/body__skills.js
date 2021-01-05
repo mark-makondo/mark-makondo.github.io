@@ -41,11 +41,8 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content skill__reminder">
                             <p>
-                                You might think that, puting a percent on skill is not a good practice on 
-                                showing the capabilities of the person. But I still did it. Why? Because 
-                                I just kinda of feel like it and It's an additional aesthetics to the page,
-                                so why not right? I added a description so that you guys can understand on 
-                                how I feel about the specific skill. 
+                                The percent that you see is not accurate and it's just based on how I feel when
+                                I used them in my projects.
                             </p>
                         </div>
                     </div>
@@ -60,9 +57,9 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                Proficiency percent 80%. I'm very used to using this skill because I always use it daily.
-                                And also they are simple and easy to learn because of their respective documentations. Especially
-                                JavaScript since I use ReactJS as my main framework on making my projects.
+                                I am proficient in HTML, CSS and JavaScript langauge. I use these languages
+                                daily. For me, it is simple to learn because of their respective documentations. 
+                                Especially JavaScript since I use ReactJs as my main framework on making my projects. 
                             </p>
                         </div>
                     </div>
@@ -77,10 +74,8 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                Proficiency percent 70%. This is the framework that I am currently using, and I love
-                                this framework. I've been making and trying different kinds of projects (which never finished)
-                                using this framework, and its been fun for me. Planning to make more finished project
-                                other than this portfolio using this framework. 
+                                I am currently using and enjoying this framework. I've been making and trying
+                                diffrent kinds of projects using it. 
                             </p>
                         </div>
                     </div>
@@ -95,7 +90,7 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                               Proficiency percent 50%. This is the first framework that I used, and I used it
+                               This is the first framework that I used, and I used it
                                during my OJT, I also took a liking in this. I got to the point where I can understand
                                on how to make a website with it and on how to use it with database using PHP. So if I
                                ever get back on this framework it will be easy for me to recall things. I switched to react because 
@@ -115,7 +110,7 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                Proficientcy percent 40%. My proficiency on mongoDB is not that high because 
+                                My proficiency on mongoDB is not that high because 
                                 I still didn't do enough practice/projects that involves using it. But 
                                 I already understands on how it works. The only things that I needed is to 
                                 manipulate data using it. I kinda like this because It passes a data in json format
@@ -135,7 +130,7 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                Proficientcy percent 60%. I've been using this database since I started programming
+                                I've been using this database since I started programming
                                 which is during my college days. So I'm kind of used to it already.
                             </p>
                         </div>

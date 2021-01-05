@@ -20,9 +20,11 @@ const contentPageAnimations = () => {
       }
 
       // used for returning individual animations
-      this.master = gsap.timeline({paused:true, reversed:true, yoyo: yoyo, repeat: repeat, defaults:{
-        duration: this.newDuration
-      }});
+      this.master = gsap.timeline({paused:true, reversed:true, yoyo: yoyo, repeat: repeat, 
+        defaults:{
+          duration: this.newDuration
+        }
+      });
     }
 
     fillAnimateByOffset(el, offset, label){
@@ -242,6 +244,7 @@ const contentPageAnimations = () => {
         sectionSkillPercFive = document.querySelector("#skill__perc5"),
         sectionSkillCircle = document.querySelectorAll(".skill__circle"),
 
+        footerContainer = document.querySelector(".body__footer__container"),
         footerSayhello = document.querySelector(".contentPage__data__footer__boxOne"),
         footerEmailCont = document.querySelector(".contentPage__data__footer__boxTwo");
 
@@ -272,7 +275,20 @@ const contentPageAnimations = () => {
 
   //#endregion
 
-  
+  // set href id 
+  const addHrefId = (targetOne, id, targetTwo, val1, val2) => {
+    // set id
+    targetOne.id =  id;
+
+    // remove attribute
+    targetTwo.setAttribute(val1, val2);
+
+    // pageTrigger.id = 'page'
+    // startButton_a.setAttribute("href", "#page")
+
+    // pageTrigger.removeAttribute('id');
+    //     startButton_a.setAttribute("href", "#getStarted")
+  }
   // section two skills animation
   const skillsAnimateFunction = () => {
     let basic   = document.querySelectorAll("#theGradientRect01 stop"),
@@ -363,6 +379,7 @@ const contentPageAnimations = () => {
           }
         })
       }
+
       gsap.to(window, {duration: 1, scrollTo: startButton_a.getAttribute("href")});
     })
 

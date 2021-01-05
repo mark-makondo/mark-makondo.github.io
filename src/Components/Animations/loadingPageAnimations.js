@@ -279,21 +279,21 @@ const loadingPageAnimations = () => {
     
     tl
       // loading  
-      .add( lca  , "load0" )
-      .add( lsa  , "load0" )
-      .add( lssd , "load0" )
-      .add( lspa , "load1" )
-      .add( bra  , "load1" )
-      .add( lsd  , ">" ) 
-      // end of loading 
-      // greetings
-      .call(setGreetText, [greet__1], "greet1")
-      .add( sgd__1  , "greet1") 
-      .call(setGreetText, [greet__2], "greet2")
-      .add( sgd__2  , "greet2") 
-      .call(setGreetText, [greet__3], "greet3")
-      .add( sgd__3  , "greet3") 
-       // end of greetings 
+      // .add( lca  , "load0" )
+      // .add( lsa  , "load0" )
+      // .add( lssd , "load0" )
+      // .add( lspa , "load1" )
+      // .add( bra  , "load1" )
+      // .add( lsd  , ">" ) 
+      // // end of loading 
+      // // greetings
+      // .call(setGreetText, [greet__1], "greet1")
+      // .add( sgd__1  , "greet1") 
+      // .call(setGreetText, [greet__2], "greet2")
+      // .add( sgd__2  , "greet2") 
+      // .call(setGreetText, [greet__3], "greet3")
+      // .add( sgd__3  , "greet3") 
+      //  // end of greetings 
       .add( lbsd , "showButtons")
 
     // event listeners
