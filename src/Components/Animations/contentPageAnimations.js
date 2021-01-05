@@ -275,20 +275,6 @@ const contentPageAnimations = () => {
 
   //#endregion
 
-  // set href id 
-  const addHrefId = (targetOne, id, targetTwo, val1, val2) => {
-    // set id
-    targetOne.id =  id;
-
-    // remove attribute
-    targetTwo.setAttribute(val1, val2);
-
-    // pageTrigger.id = 'page'
-    // startButton_a.setAttribute("href", "#page")
-
-    // pageTrigger.removeAttribute('id');
-    //     startButton_a.setAttribute("href", "#getStarted")
-  }
   // section two skills animation
   const skillsAnimateFunction = () => {
     let basic   = document.querySelectorAll("#theGradientRect01 stop"),

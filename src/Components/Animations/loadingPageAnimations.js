@@ -297,10 +297,10 @@ const loadingPageAnimations = () => {
       .add( lbsd , "showButtons")
 
     // event listeners
-    onEventAnimationHandler(hover, lbTakeAPeak,hcbpc );
-    onEventAnimationHandler(hover, lbReveal   ,hcbrc );
-    onEventAnimationHandler(click, lbTakeAPeak,cpb );
-    onEventAnimationHandler(click, lbReveal   ,lpsd );
+    onEventAnimationHandler(hover, lbTakeAPeak, hcbpc );
+    onEventAnimationHandler(hover, lbReveal   , hcbrc );
+    onEventAnimationHandler(click, lbTakeAPeak, cpb );
+    onEventAnimationHandler(click, lbReveal   , lpsd );
 
     tl.play();
   }

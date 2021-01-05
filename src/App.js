@@ -3,11 +3,11 @@ import React, { useEffect,useState } from 'react'
 import EmailJs from 'emailjs-com';
 
 // components - pages
-import LoadingPage from './Components/Pages/loadingPage.js';
+// import LoadingPage from './Components/Pages/loadingPage.js';
 import ContentPage from './Components/Pages/contentPage.js';
 
 // components - animations
-import LoadingPageAnimations from './Components/Animations/loadingPageAnimations.js';
+// import LoadingPageAnimations from './Components/Animations/loadingPageAnimations.js';
 import ContentPageAnimations from './Components/Animations/contentPageAnimations.js';
 
 // images
@@ -52,15 +52,15 @@ function App() {
   useEffect(() =>{
     
     ContentPageAnimations();
-    LoadingPageAnimations();
+    // LoadingPageAnimations();
   
   },[])
 
   return (
     <div className="App">
-      <div id="loadingPageCont">
+      {/* <div id="loadingPageCont">
         <LoadingPage/>
-      </div>
+      </div> */}
 
       <div id="contentPageCont">
         <ContentPage
