@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.eaab4e1f.chunk.css",
-    "main.js": "/static/js/main.8f09b2dd.chunk.js",
-    "main.js.map": "/static/js/main.8f09b2dd.chunk.js.map",
+    "main.css": "/static/css/main.b7a2cbd7.chunk.css",
+    "main.js": "/static/js/main.30054071.chunk.js",
+    "main.js.map": "/static/js/main.30054071.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ea2caa95.js",
     "runtime-main.js.map": "/static/js/runtime-main.ea2caa95.js.map",
     "static/js/2.d1da3a61.chunk.js": "/static/js/2.d1da3a61.chunk.js",
     "static/js/2.d1da3a61.chunk.js.map": "/static/js/2.d1da3a61.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.eaab4e1f.chunk.css.map": "/static/css/main.eaab4e1f.chunk.css.map",
+    "static/css/main.b7a2cbd7.chunk.css.map": "/static/css/main.b7a2cbd7.chunk.css.map",
     "static/js/2.d1da3a61.chunk.js.LICENSE.txt": "/static/js/2.d1da3a61.chunk.js.LICENSE.txt",
     "static/media/omni-with-img-filtered.5f31cc5e.gif": "/static/media/omni-with-img-filtered.5f31cc5e.gif",
     "static/media/Style.css": "/static/media/space.5eb2e208.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.ea2caa95.js",
     "static/js/2.d1da3a61.chunk.js",
-    "static/css/main.eaab4e1f.chunk.css",
-    "static/js/main.8f09b2dd.chunk.js"
+    "static/css/main.b7a2cbd7.chunk.css",
+    "static/js/main.30054071.chunk.js"
   ]
 }
