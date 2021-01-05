@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9d501f6.chunk.css",
+    "main.css": "/static/css/main.af572570.chunk.css",
     "main.js": "/static/js/main.50f4fbe7.chunk.js",
     "main.js.map": "/static/js/main.50f4fbe7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ea2caa95.js",
@@ -8,7 +8,7 @@
     "static/js/2.d1da3a61.chunk.js": "/static/js/2.d1da3a61.chunk.js",
     "static/js/2.d1da3a61.chunk.js.map": "/static/js/2.d1da3a61.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a9d501f6.chunk.css.map": "/static/css/main.a9d501f6.chunk.css.map",
+    "static/css/main.af572570.chunk.css.map": "/static/css/main.af572570.chunk.css.map",
     "static/js/2.d1da3a61.chunk.js.LICENSE.txt": "/static/js/2.d1da3a61.chunk.js.LICENSE.txt",
     "static/media/omni-with-img-filtered.5f31cc5e.gif": "/static/media/omni-with-img-filtered.5f31cc5e.gif",
     "static/media/Style.css": "/static/media/space.5eb2e208.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.ea2caa95.js",
     "static/js/2.d1da3a61.chunk.js",
-    "static/css/main.a9d501f6.chunk.css",
+    "static/css/main.af572570.chunk.css",
     "static/js/main.50f4fbe7.chunk.js"
   ]
 }
