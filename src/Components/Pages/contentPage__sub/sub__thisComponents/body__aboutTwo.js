@@ -11,7 +11,7 @@ const body__aboutTwo = (props) =>{
                     I am a web developer that focuses on front-end and back-end development. I am enthusiastic
                     about learning web development and toook the chance to study it to widen my knowledge. I enjoy
                     building websites; it is interesting and challenging. The library I'm using in making
-                    the animation of my webstie is gsap3. You can send me your feedback through the footer
+                    the animation of my website is gsap3. You can send me your feedback through the footer
                     section. I hope to hear from you soon!
                 </p>
 
