@@ -312,9 +312,8 @@
   width: 100%;
   color: white;
   box-shadow: 1px 2px 9px 4px rgb(0 0 0 / 4%);
-  background-color: #211717;
+  background-color: #151313;
   height: 3vh;
-  border: 1px solid rgb(43, 30, 30);
 }
 .btn__position{
   position: absolute;
