@@ -211,7 +211,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* gap: 6rem;  this doesnt work on safari */
+  gap: 6rem;
   padding: 8rem 0;
   background-color: #211717;
   color: white;
@@ -251,7 +251,8 @@
   font-size: 5rem;
 }
 .body__aboutOne__desc{
-  margin-top: 1rem;
+  margin: 1rem;
+  max-width: 65rem;
   font-size: 1.5rem;
 }
 .custom-hr-about{
@@ -262,7 +263,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 100px;
+  bottom: 9rem;
   border: 1px solid white;
   padding: 1rem;
   font-size: 2rem;
@@ -366,7 +367,7 @@
 .about__logo{
   position: relative;
   display: inline-block;
-  width: 15rem;
+  max-width: 15rem;
   text-align: center;
   margin-top: 3rem;
 }
@@ -386,7 +387,6 @@
   box-shadow: 1px 2px 9px 4px rgba(0,0,0,0.23);
   padding: 5rem 0;
   border-radius: 1rem;
-  margin: 5rem 0;
 }
 .skill__desc{
   position: relative;
@@ -523,7 +523,7 @@
   border-radius: 3rem;
   left: 0;
   right: 0;
-  width: 15rem;
+  max-width: 15rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -670,27 +670,56 @@
   .loadingButtons .load-btn span{
     font-size: .8rem;
   }
-  /* skill section */
-  .skill__text{
-   position: unset;
+
+  /* content page */
+  .trigger-container {
+    margin: 0 1rem;
+    margin-top: 5rem;
   }
-  .btn__getStarted{
-    bottom: 2rem;
+  /* skill section */
+  .body__skills__container{
+    margin: 5rem 0;
+  }
+  .rect__skills__cont{
+    gap: unset;
+    height: 15rem;
+  }
+
+  /* page section */
+  .page__bgCont{
+    gap: unset; 
   }
   /* about one */
   .body__aboutOne__title{
     font-size: 4.2rem;
   }
   .body__aboutOne__desc{
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  /* about two */
+  
+  .body__aboutTwo__desc{
+   font-size: 1rem; 
   }
 }
 @media only screen and (max-width: 380px) {
-  .rect__skills__cont{
-    display: none;
-   }
- }
+}
+@media only screen and (max-width: 360px) {
+  /* get started */
+  .btn__getStarted a{
+    font-size: 1rem;
+  }
+  .btn__getStarted {
+    bottom: 4rem;
+  }
 
+  /* footer hello */
+  .contentPage__data__footer__boxOne{
+    font-size: 1rem; 
+    max-width: 8rem;
+    top: -2rem;
+  }
+}
 /* media responsive large screen overide */
 @media only screen and (min-width: 800px) {
 }
