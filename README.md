@@ -6,6 +6,5 @@ Gsap
 EmailJs-com
 Github-pages
 
-### How?
-Push any changes
-Run yarn deploy
+### Best Experience
+Open this on a wide screen for best experience
