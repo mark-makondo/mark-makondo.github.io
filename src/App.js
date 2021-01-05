@@ -11,7 +11,7 @@ import LoadingPageAnimations from './Components/Animations/loadingPageAnimations
 import ContentPageAnimations from './Components/Animations/contentPageAnimations.js';
 
 // images
-import gif from './Collection/mob.gif';
+import gif from './Collection/omni-with-img-filtered.gif';
 
 function App() { 
 
@@ -44,6 +44,7 @@ function App() {
           alert(error.text);
       });
   }
+  
   const handleTextOnChange = (e) => {
     setMsgContent(e.target.value)
   }
