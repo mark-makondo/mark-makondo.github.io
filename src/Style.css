@@ -48,8 +48,9 @@
   max-width: 100%; 
   height: auto;
 }
+/* search loading and uncomment all if loadingpageAnimation will be used on the page */
 /* ------------------------------------------------------------------- loadingPage -------------------------------------------------------------------*/
-#loadingPageCont{
+/* #loadingPageCont{
   position: fixed;
   background-color: black;
   width: 100%;
@@ -135,11 +136,11 @@
 }
 
 /* set display */
-.loadingButtons,
+/* .loadingButtons,
 .loading__percent,
 .loadingSVG{
   display: none;
-}
+}  */
 
 /* ------------------------------------------------------------------- Content Page -------------------------------------------------------------------*/
 /* - - - - - setup reset for Content Page - - - - - */
@@ -289,6 +290,7 @@
   font-weight: bolder;
   margin-top: 5rem;
 }
+
 .btn__getStarted a{
   text-decoration: none;
   color: unset;
@@ -663,30 +665,30 @@
 /* media responsive small screen overide */
 @media only screen and (max-width: 900px) {
   /* loading page */
-  .loading__percent{
+  /* .loading__percent{
     font-size: 5rem;
-  }
+  } */
 }
 @media only screen and (max-width: 600px) {
   /* loading page */
-  .loading__percent{
+  /* .loading__percent{
    font-size: 4rem;
- }
+ } */
   /* section 2 skill page */
-  .rect__skills__cont{
+  /* .rect__skills__cont{
     font-size: .75rem;
-  }
+  } */
 }
 @media only screen and (max-width: 435px) {
   /* loading page */
-  .greetContainer{
+  /* .greetContainer{
     font-size: 1.3rem;
   }
   .loadingButtons{
   }
   .loadingButtons .load-btn span{
     font-size: .8rem;
-  }
+  } */
 
   /* content page */
   .trigger-container {

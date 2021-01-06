@@ -453,7 +453,6 @@ const contentPageAnimations = () => {
       showContact.reversed() ? showContact.play() : showContact.reverse();
     })
     //#endregion
-
   }
 
   const animationPermanentOn = () => {
