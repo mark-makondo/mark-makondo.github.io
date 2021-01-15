@@ -8,3 +8,6 @@ Github-pages
 
 ### Best Experience
 Open this on a wide screen for best experience
+
+#### Note
+This is not final
