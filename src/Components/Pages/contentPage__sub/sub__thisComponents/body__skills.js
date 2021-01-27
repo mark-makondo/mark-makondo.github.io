@@ -57,7 +57,7 @@ const body__skils = () =>{
                         </div>
                         <div className="skill__description font-content">
                             <p>
-                                I am proficient in HTML, CSS and JavaScript langauge. I use these languages
+                                I am proficient in HTML, CSS and JavaScript language. I use these languages
                                 daily. For me, it is simple to learn because of their respective documentations. 
                                 Especially JavaScript since I use ReactJs as my main framework on making my projects. 
                             </p>
