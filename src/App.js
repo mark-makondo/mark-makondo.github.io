@@ -1,17 +1,6 @@
-import './Style.css';
+import './dist/css/style.css';
 import React, { useEffect,useState } from 'react'
 import EmailJs from 'emailjs-com';
-
-// components - pages
-// import LoadingPage from './Components/Pages/loadingPage.js';
-import ContentPage from './Components/Pages/contentPage.js';
-
-// components - animations
-// import LoadingPageAnimations from './Components/Animations/loadingPageAnimations.js';
-import ContentPageAnimations from './Components/Animations/contentPageAnimations.js';
-
-// images
-import gif from './Collection/omni-with-img-filtered.gif';
 
 function App() { 
 
@@ -51,22 +40,13 @@ function App() {
 
   useEffect(() =>{
     
-    ContentPageAnimations();
-    // LoadingPageAnimations();
-  
   },[])
 
   return (
     <div className="App">
-      {/* <div id="loadingPageCont">
-        <LoadingPage/>
-      </div> */}
 
       <div id="contentPageCont">
         <ContentPage
-            // about two 
-            gif = {gif}
-            // footer email me props
             handleTextOnChange = {handleTextOnChange}
             msgContent = {msgContent}
             sendEmailTo = {sendEmailTo}

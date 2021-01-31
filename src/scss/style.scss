@@ -1,0 +1,13 @@
+// initializations
+@import 'init';
+@import 'variables';
+
+// components
+@import '../components/email/email';
+@import '../components/navbar/navbar';
+@import '../components/footer/footer';
+@import '../components/p-item_holder/p-item_holder';
+@import '../components/s-item_holder/s-item_holder';
+
+// pages
+@import '../pages/home/home';
