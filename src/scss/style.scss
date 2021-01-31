@@ -1,6 +1,7 @@
 // initializations
-@import 'init';
 @import 'variables';
+@import 'init';
+@import 'functions';
 
 // components
 @import '../components/email/email';
@@ -10,4 +11,4 @@
 @import '../components/s-item_holder/s-item_holder';
 
 // pages
-@import '../pages/home/home';
+@import '../pages/home/home'; 

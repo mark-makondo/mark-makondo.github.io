@@ -1,17 +1,18 @@
 {
     "version": 3,
-    "mappings": "ACAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AACD,AAAA,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;CACxB;;AACD,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,IAAI;CACnB",
+    "mappings": "AEAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AACD,AAAA,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;CACxB;;AACD,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,IAAI;CACnB",
     "sources": [
-        "../../scss/Style.scss",
-        "../../scss/_init.scss",
+        "../../scss/style.scss",
         "../../scss/_variables.scss",
+        "../../scss/_init.scss",
+        "../../scss/_functions.scss",
         "../../components/email/_email.scss",
         "../../components/navbar/_navbar.scss",
         "../../components/footer/_footer.scss",
-        "../../components/p-item_holder/p-item_holder.scss",
-        "../../components/s-item_holder/s-item_holder.scss",
+        "../../components/p-item_holder/_p-item_holder.scss",
+        "../../components/s-item_holder/_s-item_holder.scss",
         "../../pages/home/_home.scss"
     ],
     "names": [],
-    "file": "Style.css"
+    "file": "style.css"
 }
