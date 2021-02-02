@@ -1,10 +1,23 @@
 import React from 'react';
 
+//components
+import ProjectHolder from '../../components/p-item_holder/p-item_holderContainer.js'
+
 const project = () => {
     return(
-        <div className="project">
-
-        </div>
+        <section className="project">
+            <div className="project__cont">
+                <header className="project__cont__header">
+                    <h1 className="project__cont__header-title">projects</h1>
+                    <span className="project__cont__header-info normal-1">
+                        i build anything, to master my craft.
+                    </span>
+                </header>
+                <div className="project__cont__body">
+                    <ProjectHolder/>
+                </div>
+            </div>
+        </section>
     )
 }
 

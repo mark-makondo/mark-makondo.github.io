@@ -1,0 +1,34 @@
+.footer{
+    padding: 3rem 0;
+    background: getColors(primary-solid);
+    text-align: center;
+    height: 100vh;
+    color: getColors(secondary-light);
+    &__cont{
+        @include setFlex(column, center, center);
+        max-width: getMaxWidth(s);
+        height: 100%;
+        margin: auto;
+        &-logo{
+            max-width: 15rem;
+            svg{
+                width: 100%;
+                fill: getColors(secondary-light);
+            }
+        }
+        &-contact{
+            margin: 2rem 0;
+            &-icons{
+                @include setFlex(row, space-evenly, center);
+                font-size: 3rem;
+            }
+            span{
+                font-weight: 600;
+                font-style: italic;
+            }
+        }
+        &-arrow{
+            margin-top: 2rem;
+        }
+    }
+}

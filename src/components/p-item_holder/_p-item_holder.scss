@@ -1,0 +1,27 @@
+.project-holder{
+    display: grid;
+    grid-template-columns: auto;
+    &__items{
+        position: relative;
+        border: 1px solid;
+        max-width: 100%;
+        height: 10rem;
+        margin-bottom: 1rem;
+        background: black;
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+        span{
+            position: absolute;
+            z-index: 2;
+            background: getColors(primary-solid);
+            color: getColors(secondary-light);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: .3rem 0;
+        }
+      
+    }
+}

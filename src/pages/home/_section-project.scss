@@ -1,0 +1,26 @@
+.project{
+    position: relative;
+    height: auto;
+    background-color: white;
+    padding: 2rem 0;
+    &__cont{
+        position: inherit;
+        max-width: getMaxWidth(s);
+        margin: auto;
+        text-align: center;
+        &__header{
+            color: getColors(primary-light);
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            &-title{
+                font-family: $sub;
+                margin-bottom: .5rem;
+            }
+            &-info{
+                text-transform: capitalize;
+                font-style: italic;
+                font-weight: 600;
+            }
+        }
+    }
+}
