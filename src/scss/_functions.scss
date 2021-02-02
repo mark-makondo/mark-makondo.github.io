@@ -14,16 +14,16 @@
 };
 @mixin setFontSize($type){
     h1{
-        font-size: getFontSize($type, h1)
+        font-size: getFontSize($type, h1);
     }
     h2{
-        font-size: getFontSize($type, h2)
+        font-size: getFontSize($type, h2);
     }
     .normal-1{
-        font-size: getFontSize($type, normal-1)
+        font-size: getFontSize($type, normal-1);
     }
     .normal-2{
-        font-size: getFontSize($type, normal-2)
+        font-size: getFontSize($type, normal-2);
     }
 };
 
@@ -35,28 +35,30 @@
 // responsive mixin
 @mixin media-md{
     @media screen and (min-width: 768px){
-        @include setFontSize(m);
         @content;
     }
 };
 @mixin media-lg{
     @media screen and (min-width: 1200px){
-        @include setFontSize(l);
         @content;
     }
 };
 @mixin media-xl{
     @media screen and (min-width: 1900px){
-        @include setFontSize(xl);
         @content;
     }
 };
 
 // display flex
-@mixin setFlex($direction, $align1, $align2, $align3){
+@mixin setFlex($direction, $align1, $align2){
     display: flex;
     flex-direction: $direction;
     justify-content: $align1;
     align-items: $align2;
-    align-content: $align3;
-}
+    align-content: $align2;
+};
+
+// get colors
+@function getColors($target){
+    @return map-get($colors, $target)
+};

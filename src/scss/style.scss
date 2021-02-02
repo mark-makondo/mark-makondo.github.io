@@ -9,6 +9,10 @@
 @import '../components/footer/footer';
 @import '../components/p-item_holder/p-item_holder';
 @import '../components/s-item_holder/s-item_holder';
+@import '../components/status/status';
 
 // pages
 @import '../pages/home/home'; 
+
+// responsive
+@import 'responsive';

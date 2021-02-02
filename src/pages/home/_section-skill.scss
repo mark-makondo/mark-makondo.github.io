@@ -1,0 +1,65 @@
+.skill{
+    position: relative;
+    background: getColors(primary-solid);
+    min-height: 25rem;
+    padding: 1rem 0;
+    &__cont{
+        position: relative;
+        max-width: getMaxWidth(s);
+        margin: auto;
+        &__header{
+            text-transform: capitalize;
+            text-align: center;
+            color: getColors(secondary-light);
+            margin-bottom: 5rem;
+            letter-spacing: 1px;
+            svg{
+                fill: getColors(primary-semi-solid);
+                height: 1.5625rem;
+            }
+        }
+        &__body{
+            position: relative;
+            &__title{
+                position: relative;
+                width: 10rem;
+                height: 10rem;
+                margin: 0 auto;
+                border-radius: 50%;
+                background: getColors(primary-semi-solid);
+                &-svg{
+                    svg{
+                        max-width: 90%;
+                        height: 100%;
+                        &:nth-of-type(1){
+                            max-width: 50%;
+                            position: absolute;
+                            z-index: 1;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                        &:nth-of-type(2){
+                            position: absolute;
+                            z-index: 2;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                h1{
+                    position: relative;
+                    z-index: 3;
+                    color: getColors(secondary-light);
+                    font-family: $sub;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.skill-holder{
+    button{
+        position: absolute;
+        padding: .5rem;
+        min-width: 5rem;
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+        color: getColors(secondary-solid);
+        background: getColors(primary-semi-solid);
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: 1px;
+
+        &:nth-of-type(1){
+            top: -3rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        &:nth-of-type(2){
+            top: 0;
+            left: 0;
+        }
+        &:nth-of-type(3){
+            top: 0;
+            right: 0;
+        }
+        &:nth-of-type(4){
+            bottom: 0;
+            left: 0;
+        }
+        &:nth-of-type(5){
+            bottom: -3rem;
+            left: 0;
+            margin-left: 3rem;
+        }
+        &:nth-of-type(6){
+            bottom: 0;
+            right: 0;
+        }
+        &:nth-of-type(7){
+            bottom: -3rem;
+            right: 0;
+            margin-right: 3rem;
+        }
+    }
+}

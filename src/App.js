@@ -1,58 +1,29 @@
+import React from 'react'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './dist/css/style.css';
-import React, { useEffect,useState } from 'react'
-import EmailJs from 'emailjs-com';
+import './fonts/stylesheet.css';
+
+// components
+import Navbar from './components/navbar/navbar_container.js';
+import Footer from './components/footer/footer.js';
+
+// page
+import Home from './pages/home/homeContainer.js';
+// import Blog from './pages/blog/blog.js';
 
 function App() { 
 
-  // states - set msg text empty
-  const [msgContent, setMsgContent] = useState('');
-
-  // Send Email using EmailJS
-  const sendEmailTo = (e) =>{
-    e.preventDefault();
-
-    const getInputEmail = document.getElementById("user_email").value;
-
-    if(getInputEmail == ""){
-      alert('Email is Empty!');
-      return;
-    }
-    else if(msgContent == ""){
-      alert('Message is Empty!');
-      return;
-    }
-    EmailJs.sendForm('service_u42oleh', 'template_tyjup4j', e.target, 'user_gr1f018CTjT0uaHTHKdiV')
-      .then((result) => {
-          if(result.text == 'OK'){
-            setMsgContent("");
-            alert('Message Sent!');
-          }else{
-            alert('Message Failed!');
-          }
-      }, (error) => {
-          alert(error.text);
-      });
-  }
-
-  const handleTextOnChange = (e) => {
-    setMsgContent(e.target.value)
-  }
-
-  useEffect(() =>{
-    
-  },[])
-
   return (
-    <div className="App">
-
-      <div id="contentPageCont">
-        <ContentPage
-            handleTextOnChange = {handleTextOnChange}
-            msgContent = {msgContent}
-            sendEmailTo = {sendEmailTo}
-        />
-      </div> 
-    </div>
+    <Router>
+      <div className="App">
+          <Navbar/>
+            <Switch>  
+              <Route path="/" exact component={Home} />
+              {/* <Route path="/blog" component={Blog} /> */}
+            </Switch>
+          <Footer/>
+      </div>
+    </Router>
   );
 }
 

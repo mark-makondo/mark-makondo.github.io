@@ -1,22 +1,22 @@
 import React from 'react';
 
 // sections
-import Hero from './_section-hero.js';
-import Skill from './_section-skill.js';
-import Project from './_section-project.js';
+import Hero from './section-hero.js';
+import Skill from './section-skill.js';
+import Project from './section-project.js';
 
-// components
-import Nav from '../../components/navbar/navbar.js';
-import Footer from '../../components/footer/footer.js';
+const Home = (props) => {
+    let statusColor = props.color;
+    let statusText = props.text;
 
-const Home = () => {
     return(
         <div className="home">
-            <Nav/>
-            <Hero/>
+            <Hero 
+                statusColor = {statusColor} 
+                statusText = {statusText}
+            />
             <Skill/>
             <Project/>
-            <Footer/>
         </div>
     )
 }

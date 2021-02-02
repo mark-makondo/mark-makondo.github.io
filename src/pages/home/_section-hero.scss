@@ -1,0 +1,92 @@
+.hero{
+    position: relative;
+    height: 90vh;
+    @include setFlex(column, center, center);
+    &__arrow{
+        max-width: 5rem;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        svg{
+           max-width: 100%;
+           height: 100%;
+        }
+    }
+    &__cont{
+        flex-grow: 1;
+        @include setFlex(column, center, center);
+        max-width: getMaxWidth(s);
+        margin: 0 auto;
+        text-align: center;
+        &__img{
+            @include setFlex(column, center, center);
+            background: getColors(white-pink);
+            max-width: 11.5rem;
+            min-height: 13rem;
+            padding-bottom: .5rem;
+            border-radius: 0.75rem;
+            box-shadow: $little-shadow;
+           
+            img{
+                transform: translateY(10px);
+                max-width: 100%;
+                mix-blend-mode: luminosity;
+                padding: 0 1rem;
+            }
+            .status{
+                visibility: hidden;
+            }
+        }
+        h2{
+            font-weight: 600;
+            font-style: italic;
+            color: getColors(primary-light);
+            margin-top: 1rem;
+        }
+        &__info{
+            @include setFlex(column, center, center);
+            margin: 1.5rem 0;
+            span{
+                &:nth-of-type(1){
+                    font-family: $sub;
+                    color: getColors(secondary-solid);
+                    text-transform: uppercase;
+                }
+                &:nth-of-type(2){
+                    font-family: $main;
+                    color: getColors(secondary-light);
+                    text-transform: capitalize;
+                }
+            }   
+        }     
+        &__buttons{
+            @include setFlex(row, space-evenly, center);
+            width: 100%;
+            span{
+                padding: .3rem;
+                border-radius: 1.875rem;
+                border: 3px solid;
+                width: 6.25rem;
+                border-color: getColors(secondary-light);
+                color: getColors(secondary-solid);
+                transition: 300ms all linear;
+                &.active{
+                    border: unset;
+                    color: getColors(secondary-light);
+                    background: getColors(primary-light);
+                }
+            }
+        }
+    }
+    &__bottom{
+        position: relative;
+        border-top: 5px solid black;
+        width: 100%;
+        background: getColors(primary-solid);
+        border-radius: 5rem 5rem 0 0;
+        min-height: 3rem;
+    }
+}
