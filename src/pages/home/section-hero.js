@@ -29,7 +29,8 @@ const hero = (props) => {
                     </div>
                     <div className="hero__cont__buttons normal-2">
                         <span>@status</span>
-                        <span className="active">@projects</span>
+                        <span>@projects</span>
+                        <span className="active">@contact</span>
                     </div>
                 </div>
                 

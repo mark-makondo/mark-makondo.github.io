@@ -15,7 +15,7 @@
                 border: none;
                 font-weight: 600;
                 color: getColors(primary-solid);
-                transition: 150ms all linear;
+                
             }
             &:nth-of-type(2){
                 position: absolute;
@@ -25,13 +25,12 @@
                 margin-bottom: .6rem;
                 border-radius: 15rem;
                 padding: .2rem .5rem;
-                border: 1px solid;
                 font-weight: 600;
                 font-style: italic;
                 color: getColors(primary-light);
                 border-color: getColors(primary-light);
                 background: white;
-                transition: 150ms all linear;
+                
             }
         }
         textarea{
@@ -46,7 +45,7 @@
             letter-spacing: 1px;
             color: getColors(primary-solid);
             font-weight: 600;
-            transition: 150ms all linear;
+            
             &::placeholder{
                 opacity: .3;
             }

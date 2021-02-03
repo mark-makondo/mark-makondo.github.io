@@ -62,8 +62,8 @@
                     text-align: center;
                     @include setFlex(row, flex-start, flex-start);
                     span{
-                        &:nth-of-type(1){
-                            margin-right: 2rem;
+                        &:nth-of-type(2){
+                            margin: 0 2rem;
                         }
                     }
                 }
@@ -83,6 +83,7 @@
             }
         } // end of section skills
         .project{
+            padding: 7rem 0;
             &__cont{
                 max-width: getMaxWidth(l);
                 &__header{

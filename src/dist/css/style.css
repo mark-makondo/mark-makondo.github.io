@@ -69,8 +69,6 @@ body {
   border: none;
   font-weight: 600;
   color: #07192D;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .email form input:nth-of-type(2) {
@@ -81,14 +79,11 @@ body {
   margin-bottom: .6rem;
   border-radius: 15rem;
   padding: .2rem .5rem;
-  border: 1px solid;
   font-weight: 600;
   font-style: italic;
   color: #016685;
   border-color: #016685;
   background: white;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .email form textarea {
@@ -103,8 +98,6 @@ body {
   letter-spacing: 1px;
   color: #07192D;
   font-weight: 600;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .email form textarea::-webkit-input-placeholder {
@@ -140,8 +133,6 @@ body {
   font-family: "norwesterregular", sans-serif;
   height: 10vh;
   width: 100%;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .navbar__cont {
@@ -168,8 +159,6 @@ body {
 .navbar__cont__logo {
   display: inline-block;
   width: 4rem;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .navbar__cont__logo svg {
@@ -204,18 +193,17 @@ body {
 .navbar__cont__list li {
   padding: 1rem 0;
   color: #E5DBDB;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .navbar__cont__list li:nth-of-type(2) {
   margin: 0 1rem;
 }
 
-.navbar__cont__list li.active {
-  border-bottom: 1px solid;
+.navbar__cont__list li a.active {
+  border-bottom: 2px solid;
   border-color: #016685;
   color: #016685;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -277,8 +265,6 @@ body {
 .footer__cont-logo {
   margin: 0 auto;
   max-width: 15rem;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .footer__cont-logo svg {
@@ -312,15 +298,11 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   font-size: 3rem;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .footer__cont-contact span {
   font-weight: 600;
   font-style: italic;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .footer__cont-arrow {
@@ -492,8 +474,6 @@ body {
   font-weight: 600;
   font-style: italic;
   letter-spacing: 1px;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .skill-holder button:nth-of-type(1) {
@@ -710,8 +690,6 @@ body {
   border-radius: 0.75rem;
   -webkit-box-shadow: 0px 3px 8px #00000025;
           box-shadow: 0px 3px 8px #00000025;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont__img img {
@@ -724,8 +702,6 @@ body {
 
 .home .hero__cont__img .status {
   visibility: hidden;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont h2 {
@@ -733,8 +709,6 @@ body {
   font-style: italic;
   color: #016685;
   margin-top: 1rem;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont__info {
@@ -760,16 +734,12 @@ body {
   font-family: "norwesterregular", sans-serif;
   color: #B5AAAA;
   text-transform: uppercase;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont__info span:nth-of-type(2) {
   font-family: "Open Sans", sans-serif;
   color: #E5DBDB;
   text-transform: capitalize;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont__buttons {
@@ -798,8 +768,6 @@ body {
   width: 5rem;
   border-color: #E5DBDB;
   color: #B5AAAA;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .hero__cont__buttons span.active {
@@ -838,8 +806,6 @@ body {
   color: #E5DBDB;
   margin-bottom: 4rem;
   letter-spacing: 1px;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .skill__cont__header svg {
@@ -857,8 +823,6 @@ body {
   margin: auto;
   border-radius: 50%;
   background: #091C31;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .skill__cont__body__title-svg svg {
@@ -924,16 +888,12 @@ body {
 .home .project__cont__header-title {
   font-family: "norwesterregular", sans-serif;
   margin-bottom: .5rem;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 .home .project__cont__header-info {
   text-transform: capitalize;
   font-style: italic;
   font-weight: 600;
-  -webkit-transition: 150ms all linear;
-  transition: 150ms all linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -1023,8 +983,8 @@ body {
     -ms-flex-line-pack: start;
         align-content: flex-start;
   }
-  .home .hero__cont__buttons span:nth-of-type(1) {
-    margin-right: 2rem;
+  .home .hero__cont__buttons span:nth-of-type(2) {
+    margin: 0 2rem;
   }
   .home .skill {
     height: 40rem;
@@ -1034,6 +994,9 @@ body {
   }
   .home .skill__cont__header svg #line {
     height: 8px;
+  }
+  .home .project {
+    padding: 7rem 0;
   }
   .home .project__cont {
     max-width: 50rem;

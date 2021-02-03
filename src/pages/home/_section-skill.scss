@@ -14,7 +14,7 @@
             color: getColors(secondary-light);
             margin-bottom: 4rem;
             letter-spacing: 1px;
-            transition: 150ms all linear;
+            
             svg{
                 fill: getColors(primary-semi-solid);
             }
@@ -28,7 +28,7 @@
                 margin: auto;
                 border-radius: 50%;
                 background: getColors(primary-semi-solid);
-                transition: 150ms all linear;
+                
                 &-svg{
                     svg{
                         max-width: 90%;

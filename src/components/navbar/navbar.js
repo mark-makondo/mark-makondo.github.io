@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 const Navbar = (props) => {
     let logo = props.logo;
@@ -13,12 +13,11 @@ const Navbar = (props) => {
                 <ul className="navbar__cont__list normal-1">
                     {list.map((item, i) => 
                         <li key={i}>
-                            <Link to={item === 'home' ? '' : `${item}`}> 
+                            <NavLink exact={true} to={item === 'home' ? '' : `${item}`} activeClassName='active'>  
                                 {item} 
-                            </Link>
+                            </NavLink>
                         </li>
                     )}
-                    <li> <a href="#contact">contact</a></li>
                 </ul>
             </div>
         </div>
