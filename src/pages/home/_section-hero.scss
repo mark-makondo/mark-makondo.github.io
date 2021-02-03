@@ -52,7 +52,7 @@
             }
             .status{
                 visibility: hidden;
-                
+                text-transform: capitalize;
             }
         }
         h2{
@@ -84,6 +84,7 @@
         &__buttons{
             @include setFlex(row, space-evenly, center);
             width: 100%;
+            cursor: pointer;
             span{
                 padding: .5rem .3rem;
                 border-radius: 1.875rem;
@@ -91,8 +92,13 @@
                 width: 5rem;
                 border-color: getColors(secondary-light);
                 color: getColors(secondary-solid);
-                
+                transition: 200ms all linear;
                 &.active{
+                    border-color: getColors(primary-light);
+                    color: getColors(secondary-light);
+                    background: getColors(primary-light);
+                }
+                &:hover{
                     border-color: getColors(primary-light);
                     color: getColors(secondary-light);
                     background: getColors(primary-light);

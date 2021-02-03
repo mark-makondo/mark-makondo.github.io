@@ -9,6 +9,15 @@
                         width: 9rem;
                     }
                 }
+                &__img{
+                    max-width: 15rem;
+                    .status{
+                        svg{
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+                }
             }
         } // end of section hero
         .skill{
@@ -106,6 +115,14 @@
                 &__buttons{
                     span{
                         width: 12rem;
+                    }
+                }
+                &__img{
+                    .status{
+                        svg{
+                            width: 3rem;
+                            height: 3rem;
+                        }
                     }
                 }
             }

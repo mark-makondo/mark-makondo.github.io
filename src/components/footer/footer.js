@@ -9,7 +9,7 @@ import Email from '../email/email_container.js';
 
 const Footer = () => {
     return(
-        <div className="footer">
+        <div className="footer" id="contact">
             <div className="footer__cont">
                 <div className="footer__cont-top">
                     <div className="footer__cont-logo"><Logo/></div>

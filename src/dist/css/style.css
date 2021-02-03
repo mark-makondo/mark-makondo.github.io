@@ -84,6 +84,13 @@ body {
   color: #016685;
   border-color: #016685;
   background: white;
+  -webkit-transition: 200ms background linear;
+  transition: 200ms background linear;
+}
+
+.email form input:nth-of-type(2):hover {
+  background: #E5DBDB;
+  color: #07192D;
 }
 
 .email form textarea {
@@ -300,6 +307,15 @@ body {
   font-size: 3rem;
 }
 
+.footer__cont-contact-icons a {
+  -webkit-transition: 200ms all linear;
+  transition: 200ms all linear;
+}
+
+.footer__cont-contact-icons a:hover {
+  color: #B5AAAA;
+}
+
 .footer__cont-contact span {
   font-weight: 600;
   font-style: italic;
@@ -421,11 +437,14 @@ body {
   height: 10rem;
   margin-bottom: 1rem;
   background: black;
+  overflow: hidden;
 }
 
 .project-holder__items img {
   max-width: 100%;
   height: 100%;
+  -webkit-transition: 300ms all linear;
+  transition: 300ms all linear;
 }
 
 .project-holder__items span {
@@ -437,6 +456,18 @@ body {
   right: 0;
   bottom: 0;
   padding: .3rem 0;
+  -webkit-transition: 300ms all linear;
+  transition: 300ms all linear;
+}
+
+.project-holder__items:hover img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.project-holder__items:hover span {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -702,6 +733,7 @@ body {
 
 .home .hero__cont__img .status {
   visibility: hidden;
+  text-transform: capitalize;
 }
 
 .home .hero__cont h2 {
@@ -759,6 +791,7 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .home .hero__cont__buttons span {
@@ -768,9 +801,17 @@ body {
   width: 5rem;
   border-color: #E5DBDB;
   color: #B5AAAA;
+  -webkit-transition: 200ms all linear;
+  transition: 200ms all linear;
 }
 
 .home .hero__cont__buttons span.active {
+  border-color: #016685;
+  color: #E5DBDB;
+  background: #016685;
+}
+
+.home .hero__cont__buttons span:hover {
   border-color: #016685;
   color: #E5DBDB;
   background: #016685;
@@ -903,6 +944,13 @@ body {
   .home .hero__cont__buttons span {
     width: 9rem;
   }
+  .home .hero__cont__img {
+    max-width: 15rem;
+  }
+  .home .hero__cont__img .status svg {
+    width: 2rem;
+    height: 2rem;
+  }
   .home .skill {
     height: 35rem;
   }
@@ -1015,6 +1063,10 @@ body {
   }
   .home .hero__cont__buttons span {
     width: 12rem;
+  }
+  .home .hero__cont__img .status svg {
+    width: 3rem;
+    height: 3rem;
   }
   .home .skill {
     height: 60rem;

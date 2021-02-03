@@ -5,7 +5,7 @@ import ProjectHolder from '../../components/p-item_holder/p-item_holderContainer
 
 const project = () => {
     return(
-        <section className="project">
+        <section className="project" id="project">
             <div className="project__cont">
                 <header className="project__cont__header">
                     <h1 className="project__cont__header-title">projects</h1>

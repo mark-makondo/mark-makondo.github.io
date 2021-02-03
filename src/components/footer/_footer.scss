@@ -32,7 +32,13 @@
             &-icons{
                 @include setFlex(row, space-evenly, center);
                 font-size: 3rem;
-                
+                a{
+                    transition: 200ms all linear;
+                    &:hover{
+                        color:getColors(secondary-solid);
+                    }
+                }
+               
             }
             span{
                 font-weight: 600;

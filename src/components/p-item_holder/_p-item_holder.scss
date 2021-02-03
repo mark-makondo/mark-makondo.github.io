@@ -8,9 +8,11 @@
         height: 10rem;
         margin-bottom: 1rem;
         background: black;
+        overflow: hidden;
         img{
             max-width: 100%;
             height: 100%;
+            transition: 300ms all linear;
         }
         span{
             position: absolute;
@@ -21,6 +23,15 @@
             right: 0;
             bottom: 0;
             padding: .3rem 0;
+            transition: 300ms all linear;
+        }
+        &:hover{
+            img{
+                transform: scale(1.3);
+            }
+            span{
+                transform: translateX(-100%);
+            }
         }
       
     }
