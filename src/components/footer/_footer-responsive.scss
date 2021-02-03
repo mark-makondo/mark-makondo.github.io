@@ -1,0 +1,70 @@
+// responsive medium screen //768px
+@include media-md{
+    .footer{
+        &__cont{
+            max-width: getMaxWidth(m);
+            &-logo{
+                max-width: 20rem;
+            }
+            &-arrow{
+                margin-top: 2rem;
+                width: 5rem;
+            }
+        }
+    } // end of footer
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .footer{
+        &__cont{
+            max-width: getMaxWidth(l);
+        }
+    } // end of footer
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .footer{
+        &__cont{
+            max-width: getMaxWidth(xl);
+            position: relative;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 3rem;
+            grid-column-gap: 3rem;
+
+            &-top{
+                order: 2;
+                height: 100%;
+                @include setFlex(column, space-between, center)
+
+            }
+            &-bottom{
+                order: 1;
+            }
+            &-logo{
+                max-width: 25rem;
+                width: 100%;
+            }
+            &-contact{
+                &-icons{
+                    @include setFlex(row, space-evenly, center);
+                    font-size: 5rem;
+                }
+                span{
+                    font-weight: 600;
+                    font-style: italic;
+                }
+            }
+            &-arrow{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 6rem;
+            }
+        }
+    } // end of footer
+}

@@ -1,0 +1,29 @@
+// responsive medium screen //768px
+@include media-md{
+    .email{
+        form{
+            input{
+                &:nth-of-type(2){
+                    width: 7rem;
+                }
+            }
+        }
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .email{
+        form{
+            input{
+                &:nth-of-type(2){
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}

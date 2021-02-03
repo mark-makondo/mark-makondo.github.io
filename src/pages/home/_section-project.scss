@@ -2,7 +2,7 @@
     position: relative;
     height: auto;
     background-color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
     &__cont{
         position: inherit;
         max-width: getMaxWidth(s);
@@ -11,15 +11,17 @@
         &__header{
             color: getColors(primary-light);
             letter-spacing: 1px;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             &-title{
                 font-family: $sub;
                 margin-bottom: .5rem;
+                transition: 150ms all linear;
             }
             &-info{
                 text-transform: capitalize;
                 font-style: italic;
                 font-weight: 600;
+                transition: 150ms all linear;
             }
         }
     }

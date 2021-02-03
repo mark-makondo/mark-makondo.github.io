@@ -4,7 +4,7 @@ import React from 'react';
 import NavbarUI from './navbar.js';
 
 // assets
-import {ReactComponent as Logo} from '../../assets/svg/logo.svg';
+import {ReactComponent as Logo} from '../../assets/svg/footer-logo.svg';
 
 const NavbarContainer = () => {
     let list = ['home', 'blog'];

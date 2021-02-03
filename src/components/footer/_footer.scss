@@ -10,10 +10,21 @@
         height: 100%;
         margin: auto;
         &-logo{
+            margin: 0 auto;
             max-width: 15rem;
+            transition: 150ms all linear;
             svg{
                 width: 100%;
                 fill: getColors(secondary-light);
+                #Logo{
+                    #mad{
+                        path{
+                            stroke: getColors(secondary-light);
+                            stroke-width: 2px;
+                        }
+                    }
+                   
+                }
             }
         }
         &-contact{
@@ -21,14 +32,21 @@
             &-icons{
                 @include setFlex(row, space-evenly, center);
                 font-size: 3rem;
+                transition: 150ms all linear;
             }
             span{
                 font-weight: 600;
                 font-style: italic;
+                transition: 150ms all linear;
             }
         }
         &-arrow{
             margin-top: 2rem;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
+@import 'footer-responsive';

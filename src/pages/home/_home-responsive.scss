@@ -1,0 +1,141 @@
+// responsive medium screen //768px
+@include media-md{
+    .home{
+        .hero{
+            &__cont{
+                max-width: getMaxWidth(m);
+                &__buttons{
+                    span{
+                        width: 9rem;
+                    }
+                }
+            }
+        } // end of section hero
+        .skill{
+            height: 35rem;
+            &__cont{
+                max-width: getMaxWidth(m);
+                &__header{
+                    svg{
+                        #line{
+                            height: 10px;
+                        }
+                    }
+                }
+                &__body{
+                    &__title{
+                        width: 15rem;
+                        height: 15rem;
+                    }
+                }
+            }
+        } // end of section skills
+        .project{
+            &__cont{
+                max-width: getMaxWidth(m);
+            }
+        } // end of section projects
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .home{
+        .hero{
+            &__cont{
+                @include setFlex(row, center, center);
+                max-width: getMaxWidth(l);
+                text-align: left;
+                &__img{
+                    margin-right: 2rem;
+                    max-width: 100%;
+                }
+                &__buttons{
+                    span{
+                        width: 9rem;
+                    }
+                }
+                &__info{
+                    @include setFlex(column, center, flex-start);
+                }
+                &__buttons{
+                    text-align: center;
+                    @include setFlex(row, flex-start, flex-start);
+                    span{
+                        &:nth-of-type(1){
+                            margin-right: 2rem;
+                        }
+                    }
+                }
+            }
+        } // end of section hero
+        .skill{
+            height: 40rem;
+            &__cont{
+                max-width: getMaxWidth(l);
+                &__header{
+                    svg{
+                        #line{
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        } // end of section skills
+        .project{
+            &__cont{
+                max-width: getMaxWidth(l);
+                &__header{
+                    text-align: left;
+                }
+            }
+        } // end of section projects
+    }
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .home{
+        .hero{
+            &__cont{
+                max-width: getMaxWidth(xl);
+                h2{
+                   max-width: 45rem;
+                }
+                &__buttons{
+                    span{
+                        width: 12rem;
+                    }
+                }
+            }
+        } // end of section hero
+        .skill{
+            height: 60rem;
+            &__cont{
+                max-width: getMaxWidth(xl);
+                &__header{
+                    letter-spacing: 5px;
+                    margin-top: 1rem;
+                    svg{
+                        #line{
+                            height: 5px;
+                        }
+                    }
+                }
+                &__body{
+                    max-width: 55rem;
+                    margin: auto;
+                    &__title{
+                        width: 25rem;
+                        height: 25rem;
+                    }
+                }
+            }
+        } // end of section skills
+        .project{
+            &__cont{
+                max-width: getMaxWidth(xl);
+            }
+        } // end of section projects
+    }
+}

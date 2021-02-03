@@ -1,0 +1,39 @@
+// responsive medium screen //768px
+@include media-md{
+    .navbar{
+        &__cont{
+            max-width: getMaxWidth(m);
+            &__logo{
+                width: 8rem;
+            }
+        }
+    } // end of navbar
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .navbar{
+        &__cont{
+            max-width: getMaxWidth(l);
+            &__list{
+                li{
+                    &:nth-of-type(2){
+                        margin: 0 2rem;
+                    }
+                }
+            }
+        }
+    } // end of navbar
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .navbar{
+        &__cont{
+            max-width: getMaxWidth(xl);
+            &__logo{
+                width: 10rem;
+            }
+        }
+    } // end of navbar
+}

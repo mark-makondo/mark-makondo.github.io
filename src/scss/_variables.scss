@@ -27,9 +27,9 @@ $font-size-xl: (
 // max width variables
 $max-width: (
     "s": 20rem,
-    "m": 0rem,
-    "l": 0rem,
-    "xl": 0rem,
+    "m": 40rem,
+    "l": 50rem,
+    "xl": 95rem,
 );
 
 // colors
@@ -37,6 +37,7 @@ $colors: (
     "primary-solid":#07192D,
     "primary-light":#016685,
     "primary-semi-solid": #091C31,
+    "primary-semi-light": #0D335D,
     "secondary-solid":#B5AAAA,
     "secondary-light":#E5DBDB,
     "white": #FFFFFF,

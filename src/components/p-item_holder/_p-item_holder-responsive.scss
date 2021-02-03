@@ -1,0 +1,24 @@
+// responsive medium screen //768px
+@include media-md{
+    .project-holder{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+        column-gap: 1rem;
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .project-holder{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .project-holder{
+        &__items{
+            height: 20rem;
+        }
+    }
+}
