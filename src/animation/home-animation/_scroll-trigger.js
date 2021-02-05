@@ -103,7 +103,7 @@ const scrollTrigger = () => {
             let customOne_action = 'play reverse play reset';
             let customTwo_action = 'play pause play pause';
 
-            scolllAnimationHandler('hero',helper.hero(),'top center', 'bottom-=100 center', false, true, customOne_action);
+            scolllAnimationHandler('hero',helper.hero(),'top center', 'bottom-=100 center', false, false, customOne_action);
             scolllAnimationHandler('skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
             scolllAnimationHandler('project', helper.project(),'top center', 'bottom center', false, false, customOne_action);
             scolllAnimationHandler('footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
