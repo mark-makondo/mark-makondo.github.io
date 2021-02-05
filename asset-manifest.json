@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c343cf7.chunk.css",
-    "main.js": "/static/js/main.26525f15.chunk.js",
-    "main.js.map": "/static/js/main.26525f15.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ea2caa95.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ea2caa95.js.map",
-    "static/js/2.a8aa33a1.chunk.js": "/static/js/2.a8aa33a1.chunk.js",
-    "static/js/2.a8aa33a1.chunk.js.map": "/static/js/2.a8aa33a1.chunk.js.map",
+    "main.css": "/static/css/main.c7d27fde.chunk.css",
+    "main.js": "/static/js/main.0a0f9650.chunk.js",
+    "main.js.map": "/static/js/main.0a0f9650.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b84a885d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b84a885d.js.map",
+    "static/js/2.8994ba33.chunk.js": "/static/js/2.8994ba33.chunk.js",
+    "static/js/2.8994ba33.chunk.js.map": "/static/js/2.8994ba33.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5c343cf7.chunk.css.map": "/static/css/main.5c343cf7.chunk.css.map",
-    "static/js/2.a8aa33a1.chunk.js.LICENSE.txt": "/static/js/2.a8aa33a1.chunk.js.LICENSE.txt",
-    "static/media/omni-with-img-filtered.5f31cc5e.gif": "/static/media/omni-with-img-filtered.5f31cc5e.gif",
-    "static/media/Style.css": "/static/media/space.5eb2e208.svg"
+    "static/css/main.c7d27fde.chunk.css.map": "/static/css/main.c7d27fde.chunk.css.map",
+    "static/js/2.8994ba33.chunk.js.LICENSE.txt": "/static/js/2.8994ba33.chunk.js.LICENSE.txt",
+    "static/media/arrow-art.b9111f2e.svg": "/static/media/arrow-art.b9111f2e.svg",
+    "static/media/cha-beauty.a2a56060.png": "/static/media/cha-beauty.a2a56060.png",
+    "static/media/circ-lines.bb4a1fdd.svg": "/static/media/circ-lines.bb4a1fdd.svg",
+    "static/media/circle.398f00dd.svg": "/static/media/circle.398f00dd.svg",
+    "static/media/footer-arrow.1593fd27.svg": "/static/media/footer-arrow.1593fd27.svg",
+    "static/media/footer-logo.142e4877.svg": "/static/media/footer-logo.142e4877.svg",
+    "static/media/hero-image.1762cf3a.png": "/static/media/hero-image.1762cf3a.png",
+    "static/media/stylesheet.css": "/static/media/norwester-webfont.b0f6019a.woff2",
+    "static/media/old-portfolio.9c3797d1.png": "/static/media/old-portfolio.9c3797d1.png",
+    "static/media/skill-book.38b5f33e.svg": "/static/media/skill-book.38b5f33e.svg",
+    "static/media/skill-line.c6af1878.svg": "/static/media/skill-line.c6af1878.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea2caa95.js",
-    "static/js/2.a8aa33a1.chunk.js",
-    "static/css/main.5c343cf7.chunk.css",
-    "static/js/main.26525f15.chunk.js"
+    "static/js/runtime-main.b84a885d.js",
+    "static/js/2.8994ba33.chunk.js",
+    "static/css/main.c7d27fde.chunk.css",
+    "static/js/main.0a0f9650.chunk.js"
   ]
 }
