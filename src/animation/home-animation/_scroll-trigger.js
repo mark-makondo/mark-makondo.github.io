@@ -5,7 +5,7 @@ import helper from '../../helper/query.js';
 gsap.registerPlugin(ScrollTrigger);
 
 //#region reusable animations
-const scolllAnimationHandler = (section, target, start, end, scrub, markers, toggleActions) => {
+const scolllAnimationHandler = (section, target, start, end, scrub, markers, toggleActions, targetEnd) => {
    
     let tl = gsap.timeline({
         defaults:{
@@ -13,6 +13,7 @@ const scolllAnimationHandler = (section, target, start, end, scrub, markers, tog
         },
         scrollTrigger:{
             trigger: target,
+            endTrigger: targetEnd,
             start: start, 
             end: end,
             scrub: scrub,
@@ -54,7 +55,7 @@ const heroSection_animate = (tl) => {
     let label = 'hero';
     let info = [helper.heroH2(), helper.heroInfoOne(), helper.heroInfoTwo()];
     
-    tl.to(helper.heroImgCont(), {duration: 1, scale: 1}, label);
+    tl.to(helper.heroImgCont(), {duration: .5, scale: 1}, label);
     tl.to(info, {stagger: .3, x: 0}, `${label}+=.5`);
     tl.to(helper.heroBtns(), {autoAlpha: 1});
     upDownInfinite_animate(tl, helper.heroArrow(), yPercent, ease, label);
@@ -98,10 +99,10 @@ const scrollTrigger = () => {
             let customOne_action = 'play reverse play reverse';
             let customTwo_action = 'play pause play pause';
 
-            scolllAnimationHandler('hero',helper.hero(),'top top+=101', 'bottom 500', false, false, customOne_action);
-            scolllAnimationHandler('skill', helper.skill(),'top top+=250', 'bottom top+=250', false, false, customTwo_action); 
-            scolllAnimationHandler('project', helper.project(),'top bottom-=200', 'bottom bottom-=300', false, false, customOne_action);
-            scolllAnimationHandler('footer',helper.footer(),'top top+=101', 'bottom-=100 500', false, false, customOne_action);
+            scolllAnimationHandler('hero',helper.navbar(),'top center', 'bottom-=100 center', false, false, customOne_action, helper.hero());
+            scolllAnimationHandler('skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
+            scolllAnimationHandler('project', helper.project(),'top center', 'bottom center', false, false, customOne_action);
+            scolllAnimationHandler('footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
         }
     })
 }

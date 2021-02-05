@@ -859,7 +859,7 @@ body {
   width: 100%;
   background: #07192D;
   border-radius: 10rem 10rem 0 0;
-  min-height: 4rem;
+  min-height: 8vh;
   bottom: -1px;
 }
 

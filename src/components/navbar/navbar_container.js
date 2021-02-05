@@ -14,11 +14,13 @@ const NavbarContainer = () => {
     // sticky nav on scroll
     const stickyNavScrollHandler = () =>{
         const offset = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         if(offset > 5){
             helper.navbar().classList.add('sticky-nav');
+            helper.hero().style.height='100vh'; 
         }else{
             helper.navbar().classList.remove('sticky-nav');
+            helper.hero().style.height='90vh'; 
         }
     }
 
