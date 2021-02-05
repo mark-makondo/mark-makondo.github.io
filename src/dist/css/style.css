@@ -138,7 +138,7 @@ body {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   font-family: "norwesterregular", sans-serif;
   height: 10vh;
   width: 100%;
@@ -147,8 +147,7 @@ body {
 }
 
 .navbar.sticky-nav {
-  position: fixed;
-  height: 8vh;
+  height: 7.5vh;
   z-index: 99;
   background: white;
   -webkit-box-shadow: 0px 3px 8px #00000025;
@@ -208,6 +207,7 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  text-transform: capitalize;
 }
 
 .navbar__cont__list li {
@@ -641,7 +641,7 @@ body {
 
 .home .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,7 +848,7 @@ body {
   width: 100%;
   background: #07192D;
   border-radius: 10rem 10rem 0 0;
-  min-height: 8vh;
+  height: 5rem;
   bottom: -1px;
 }
 

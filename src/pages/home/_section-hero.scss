@@ -1,6 +1,6 @@
 .hero{
     position: relative;
-    height: 90vh;
+    height: 100vh;
     @include setFlex(column, center, center);
     &__arrow{
         max-width: 5rem;
@@ -116,7 +116,7 @@
         width: 100%;
         background: getColors(primary-solid);
         border-radius: 10rem 10rem 0 0;
-        min-height: 8vh;
+        height: 5rem;
         bottom: -1px;
     }
 }

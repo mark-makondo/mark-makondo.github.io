@@ -3,6 +3,8 @@ const query = {
     sections: () =>  document.querySelectorAll('section'),
     // navbar
     navbar: () => document.querySelector('.navbar'),
+    // home
+    home: () => document.querySelector('.home'),
     // hero section used query
     heroBtns: () => document.querySelectorAll('.hero__cont__buttons span'),
     hero: () => document.querySelector('.hero'),

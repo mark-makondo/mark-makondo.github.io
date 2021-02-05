@@ -1,12 +1,11 @@
 .navbar{
-    position: relative;
+    position: fixed;
     font-family: $sub;
     height: 10vh;
     width: 100%;
     transition: 200ms all linear;
     &.sticky-nav{
-        position: fixed;
-        height: 8vh;
+        height: 7.5vh;
         z-index: 99;
         background: white;
         box-shadow: $little-shadow;
@@ -37,6 +36,7 @@
         }
         &__list{
             @include setFlex(row,center, center);
+            text-transform: capitalize;
             li{
                 padding: 1rem 0;
                 color: getColors(secondary-light);
