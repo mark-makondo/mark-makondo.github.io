@@ -743,8 +743,6 @@ body {
   -webkit-box-shadow: 0px 3px 8px #00000025;
           box-shadow: 0px 3px 8px #00000025;
   overflow: hidden;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
 
 .home .hero__cont__img img {
@@ -765,8 +763,6 @@ body {
   font-style: italic;
   color: #016685;
   margin-top: 1rem;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
 }
 
 .home .hero__cont__info {
@@ -786,11 +782,6 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 1.5rem 0;
-}
-
-.home .hero__cont__info span {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
 }
 
 .home .hero__cont__info span:nth-of-type(1) {
@@ -836,8 +827,6 @@ body {
   color: #B5AAAA;
   -webkit-transition: 200ms all linear;
   transition: 200ms all linear;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .home .hero__cont__buttons span.active {

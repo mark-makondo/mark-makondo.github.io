@@ -54,9 +54,13 @@ const heroSection_animate = (tl) => {
     let yPercent = -20;
     let label = 'hero';
     let info = [helper.heroH2(), helper.heroInfoOne(), helper.heroInfoTwo()];
-    
+
+    gsap.set(helper.heroImgCont(), {scale: 0});
+    gsap.set(info, {xPercent: -200});
+    gsap.set(helper.heroBtns(), {autoAlpha: 0});
+
     tl.to(helper.heroImgCont(), {duration: .5, scale: 1}, label);
-    tl.to(info, {stagger: .3, x: 0}, `${label}+=.5`);
+    tl.to(info, {stagger: .3, xPercent: 0}, `${label}+=.5`);
     tl.to(helper.heroBtns(), {autoAlpha: 1});
     upDownInfinite_animate(tl, helper.heroArrow(), yPercent, ease, label);
 }
@@ -96,10 +100,10 @@ const footerSection_animate = (tl) => {
 const scrollTrigger = () => {
     ScrollTrigger.matchMedia({
         "all": () => {
-            let customOne_action = 'play reverse play reverse';
+            let customOne_action = 'play reverse play reset';
             let customTwo_action = 'play pause play pause';
 
-            scolllAnimationHandler('hero',helper.navbar(),'top center', 'bottom-=100 center', false, false, customOne_action, helper.hero());
+            scolllAnimationHandler('hero',helper.hero(),'top center', 'bottom-=100 center', false, true, customOne_action);
             scolllAnimationHandler('skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
             scolllAnimationHandler('project', helper.project(),'top center', 'bottom center', false, false, customOne_action);
             scolllAnimationHandler('footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
