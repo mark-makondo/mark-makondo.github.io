@@ -8,18 +8,17 @@ import Navbar from './components/navbar/navbar_container.js';
 import Footer from './components/footer/footer.js';
 
 // page
-import Home from './pages/home/homeContainer.js';
-// import Blog from './pages/blog/blog.js';
+import Home from './pages/home/home-container.js';
+import Blog from './pages/blog/blog-container.js';
 
 function App() { 
-
   return (
     <Router>
       <div className="App">
           <Navbar/>
             <Switch>  
               <Route path="/" exact component={Home} />
-              {/* <Route path="/blog" component={Blog} /> */}
+              <Route path="/blog" component={Blog} />
             </Switch>
           <Footer/>
       </div>

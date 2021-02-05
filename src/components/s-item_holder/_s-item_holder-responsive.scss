@@ -5,16 +5,16 @@
             padding: 1rem;
             border-radius: 2rem;
             min-width: 10rem;
-            &:nth-of-type(1){
+            &:nth-of-type(2){
                 top: -4.8rem;
             }
             &:nth-of-type(5){
                 bottom: -4rem;
-                margin-left: 8rem;
-            }
-            &:nth-of-type(7){
-                bottom: -4rem;
                 margin-right: 8rem;
+            }
+            &:nth-of-type(6){
+                bottom: -4rem;
+                margin-left: 8rem;
             }
         }
     }
@@ -25,10 +25,10 @@
     .skill-holder{
         button{
             &:nth-of-type(5){
-                margin-left: 12rem;
-            }
-            &:nth-of-type(7){
                 margin-right: 12rem;
+            }
+            &:nth-of-type(6){
+                margin-left: 12rem;
             }
         }
     }
@@ -39,16 +39,16 @@
     .skill-holder{
         button{
             min-width: 15rem;
-            &:nth-of-type(1){
+            &:nth-of-type(2){
                 top: -8rem;
             }
             &:nth-of-type(5){
                 bottom: -7rem;
-                margin-left: 9rem;
-            }
-            &:nth-of-type(7){
-                bottom: -7rem;
                 margin-right: 9rem;
+            }
+            &:nth-of-type(6){
+                bottom: -7rem;
+                margin-left: 9rem;
             }
         }
     }

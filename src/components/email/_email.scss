@@ -31,9 +31,12 @@
                 border-color: getColors(primary-light);
                 background: white;
                 transition: 200ms background linear;
-                &:hover{
-                    background: getColors(secondary-light);
-                    color:getColors(primary-solid);
+                
+                @media(hover: hover){
+                    &:hover{
+                        background: getColors(secondary-light);
+                        color:getColors(primary-solid);
+                    }
                 }
             }
         }

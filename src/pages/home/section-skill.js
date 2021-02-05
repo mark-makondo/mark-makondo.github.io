@@ -10,7 +10,7 @@ import SkillHolder from '../../components/s-item_holder/s-item_holderContainer.j
 
 const skill = () => {
     return(
-        <div className="skill">
+        <section className="skill" id="skill">
             <div className="skill__cont">
                 <header className="skill__cont__header">
                     <h2>always aim high</h2>
@@ -29,7 +29,7 @@ const skill = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

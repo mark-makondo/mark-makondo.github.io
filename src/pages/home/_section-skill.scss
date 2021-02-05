@@ -9,12 +9,14 @@
         margin: auto;
         height: 100%;
         &__header{
-            text-transform: capitalize;
             text-align: center;
-            color: getColors(secondary-light);
+            color: white;
             margin-bottom: 4rem;
-            letter-spacing: 1px;
-            
+            h2{
+                letter-spacing: 6px;
+                font-family: $sub;
+                text-transform: lowercase;
+            }
             svg{
                 fill: getColors(primary-semi-solid);
             }
@@ -53,7 +55,7 @@
                 h1{
                     position: relative;
                     z-index: 3;
-                    color: getColors(secondary-light);
+                    color: white;
                     font-family: $sub;
                     display: flex;
                     align-items: center;

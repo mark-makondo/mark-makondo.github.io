@@ -1,7 +1,7 @@
 import React from 'react';
 
 // assets
-import Hero from '../../assets/img/hero-image.png';
+import HeroImage from '../../assets/img/hero-image.png';
 import {ReactComponent as Arrow} from '../../assets/svg/arrow-art.svg';
 
 // components
@@ -12,10 +12,10 @@ const hero = (props) => {
     let statusText = props.statusText;
 
     return(
-        <section className="hero">
+        <section className="hero" id="hero">
             <div className="hero__cont">
                 <picture className="hero__cont__img">
-                    <img src={Hero} alt="Hero Logo"/>
+                    <img src={HeroImage} alt="Hero Logo"/>
                     <Status 
                         statusColor = {statusColor}
                         statusText = {statusText}    
@@ -28,14 +28,13 @@ const hero = (props) => {
                         <span className="normal-2">front-end web developer</span>
                     </div>
                     <div className="hero__cont__buttons normal-2">
-                        <span>@status</span>
-                        <span>@projects</span>
-                        <span className="active">@contact</span>
+                        <span className="btn-status">@status</span>
+                        <span><a className="quick" href="#project">@projects</a></span>
+                        <span className="active"><a className="quick" href="#contact">@contact</a></span>
                     </div>
                 </div>
-                
             </div>
-            <div className="hero__arrow"><Arrow/></div>
+            <a href="#skill" className="quick hero__arrow"><Arrow/></a>
             <div className="hero__bottom">
             </div>
         </section>

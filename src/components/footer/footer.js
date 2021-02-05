@@ -9,7 +9,7 @@ import Email from '../email/email_container.js';
 
 const Footer = () => {
     return(
-        <div className="footer" id="contact">
+        <section className="footer" id="contact">
             <div className="footer__cont">
                 <div className="footer__cont-top">
                     <div className="footer__cont-logo"><Logo/></div>
@@ -25,9 +25,11 @@ const Footer = () => {
                 <div className="footer__cont-bottom">
                     <div className="footer__cont-email"><Email/></div>
                 </div>
-                <div className="footer__cont-arrow"><Arrow/></div>
+     
+                <a className="quick footer__cont-arrow" href="0"><Arrow/></a>
+               
             </div>
-        </div>
+        </section>
     )
 }
 

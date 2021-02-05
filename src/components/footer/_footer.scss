@@ -5,6 +5,7 @@
     height: 100vh;
     color: getColors(secondary-light);
     &__cont{
+        position: relative;
         @include setFlex(column, center, center);
         max-width: getMaxWidth(s);
         height: 100%;
@@ -34,8 +35,10 @@
                 font-size: 3rem;
                 a{
                     transition: 200ms all linear;
-                    &:hover{
-                        color:getColors(secondary-solid);
+                    @media(hover: hover){
+                        &:hover{
+                            color:getColors(secondary-solid);
+                        }
                     }
                 }
                
@@ -47,7 +50,12 @@
             }
         }
         &-arrow{
-            margin-top: 2rem;
+            position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 4rem;
             svg{
                 width: 100%;
                 height: 100%;

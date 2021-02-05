@@ -35,6 +35,9 @@
         max-width: getMaxWidth(s);
         margin: 0 auto;
         text-align: center;
+        &__body{
+            overflow: hidden;
+        }
         &__img{
             @include setFlex(column, center, center);
             background: getColors(white-pink);
@@ -43,7 +46,8 @@
             padding-bottom: .5rem;
             border-radius: 0.75rem;
             box-shadow: $little-shadow;           
-            
+            overflow: hidden;
+            transform: scale(0);
             img{
                 transform: translateY(10px);
                 max-width: 100%;
@@ -60,24 +64,25 @@
             font-style: italic;
             color: getColors(primary-light);
             margin-top: 1rem;
-            
-        
+            transform: translateX(-200%);
         }
         &__info{
             @include setFlex(column, center, center);
             margin: 1.5rem 0;
             span{
+                transform: translateX(-200%);
                 &:nth-of-type(1){
                     font-family: $sub;
                     color: getColors(secondary-solid);
                     text-transform: uppercase;
+                    letter-spacing: 2px;
                     
                 }
                 &:nth-of-type(2){
                     font-family: $main;
                     color: getColors(secondary-light);
                     text-transform: capitalize;
-                    
+                    letter-spacing: 1px;
                 }
             }   
         }     
@@ -93,26 +98,30 @@
                 border-color: getColors(secondary-light);
                 color: getColors(secondary-solid);
                 transition: 200ms all linear;
+                visibility: hidden;
+                opacity: 0;
                 &.active{
                     border-color: getColors(primary-light);
                     color: getColors(secondary-light);
                     background: getColors(primary-light);
                 }
-                &:hover{
-                    border-color: getColors(primary-light);
-                    color: getColors(secondary-light);
-                    background: getColors(primary-light);
+                @media(hover: hover){
+                    &:hover{
+                        border-color: getColors(primary-light);
+                        color: getColors(secondary-light);
+                        background: getColors(primary-light);
+                    }
                 }
+               
             }
         }
     }
     &__bottom{
         position: relative;
-        border-top: 5px solid black;
         width: 100%;
         background: getColors(primary-solid);
-        border-radius: 5rem 5rem 0 0;
-        min-height: 3rem;
+        border-radius: 10rem 10rem 0 0;
+        min-height: 4rem;
         bottom: -1px;
     }
 }

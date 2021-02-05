@@ -1,0 +1,12 @@
+.blog{
+    position: relative;
+    text-align: center;
+    height: 30vh;
+    @include setFlex(row, center, center);
+    &__cont{    
+       font-family: $sub;
+       text-transform: lowercase;
+       letter-spacing: 5px;
+       color: getColors(primary-light);
+    }
+}

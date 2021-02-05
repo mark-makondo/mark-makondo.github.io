@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = (props) => {
     let logo = props.logo;
@@ -10,7 +10,7 @@ const Navbar = (props) => {
         <div className="navbar">
             <div className="navbar__cont">
                 <div className="navbar__cont__logo">{logo}</div>
-                <ul className="navbar__cont__list normal-1">
+                <ul className="navbar__cont__list normal-2">
                     {list.map((item, i) => 
                         <li key={i}>
                             <NavLink exact={true} to={item === 'home' ? '' : `${item}`} activeClassName='active'>  
