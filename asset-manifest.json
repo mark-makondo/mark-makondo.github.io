@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7d27fde.chunk.css",
-    "main.js": "/static/js/main.0a0f9650.chunk.js",
-    "main.js.map": "/static/js/main.0a0f9650.chunk.js.map",
+    "main.css": "/static/css/main.e2a0a1c0.chunk.css",
+    "main.js": "/static/js/main.4d61f59b.chunk.js",
+    "main.js.map": "/static/js/main.4d61f59b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b84a885d.js",
     "runtime-main.js.map": "/static/js/runtime-main.b84a885d.js.map",
     "static/js/2.8994ba33.chunk.js": "/static/js/2.8994ba33.chunk.js",
     "static/js/2.8994ba33.chunk.js.map": "/static/js/2.8994ba33.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c7d27fde.chunk.css.map": "/static/css/main.c7d27fde.chunk.css.map",
+    "static/css/main.e2a0a1c0.chunk.css.map": "/static/css/main.e2a0a1c0.chunk.css.map",
     "static/js/2.8994ba33.chunk.js.LICENSE.txt": "/static/js/2.8994ba33.chunk.js.LICENSE.txt",
     "static/media/arrow-art.b9111f2e.svg": "/static/media/arrow-art.b9111f2e.svg",
     "static/media/cha-beauty.a2a56060.png": "/static/media/cha-beauty.a2a56060.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.b84a885d.js",
     "static/js/2.8994ba33.chunk.js",
-    "static/css/main.c7d27fde.chunk.css",
-    "static/js/main.0a0f9650.chunk.js"
+    "static/css/main.e2a0a1c0.chunk.css",
+    "static/js/main.4d61f59b.chunk.js"
   ]
 }
