@@ -4,10 +4,10 @@
     height: 10vh;
     width: 100%;
     transition: 200ms all linear;
+    z-index: 99;
+    background: white;
     &.sticky-nav{
         height: 7.5vh;
-        z-index: 99;
-        background: white;
         box-shadow: $little-shadow;
     }
     &__cont{

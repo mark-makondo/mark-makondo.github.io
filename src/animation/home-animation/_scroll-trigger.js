@@ -5,13 +5,38 @@ import helper from '../../helper/query.js';
 gsap.registerPlugin(ScrollTrigger);
 
 //#region reusable animations
-const scolllAnimationHandler = (section, target, start, end, scrub, markers, toggleActions, targetEnd) => {
-   
-    let tl = gsap.timeline({
-        defaults:{
-            overwrite: 'auto'
-        },
-        scrollTrigger:{
+const scolllAnimationHandler = (type, section, target, start, end, scrub, markers, toggleActions, targetEnd) => {
+    if(type === 1){
+        let tl_typeOne = gsap.timeline({
+            defaults:{
+                overwrite: 'auto'
+            },
+            scrollTrigger:{
+                trigger: target,
+                endTrigger: targetEnd,
+                start: start, 
+                end: end,
+                scrub: scrub,
+                markers: markers,
+                invalidateOnRefresh: true,
+                toggleActions: toggleActions
+            }
+        })
+        
+        if(section === 'hero'){
+            heroSection_animate(tl_typeOne);
+        }else if(section === 'skill'){
+            skillSection_animate(tl_typeOne);
+        }else if(section === 'project'){
+            projectSection_animate(tl_typeOne);
+        }else if(section === 'footer'){
+            footerSection_animate(tl_typeOne);
+        }
+    }else if(type === 2){
+        let tl_typeTwo = gsap.timeline({paused: true, defaults:{
+            overwrite: "auto"
+        }});
+        const scrollTriggerObj = {
             trigger: target,
             endTrigger: targetEnd,
             start: start, 
@@ -19,18 +44,28 @@ const scolllAnimationHandler = (section, target, start, end, scrub, markers, tog
             scrub: scrub,
             markers: markers,
             invalidateOnRefresh: true,
-            toggleActions: toggleActions
+
+            onEnter: () => {
+                onEnter(tl_typeTwo, section);
+            }, 
+            onLeave: () => {
+                onLeave(tl_typeTwo, section);
+            },
+            onEnterBack: () => {
+                onEnterBack(tl_typeTwo, section);
+            }, 
+            onLeaveBack: () => {
+                onLeaveBack(tl_typeTwo, section);
+            }
         }
-    })
-    
-    if(section === 'hero'){
-        heroSection_animate(tl);
-    }else if(section === 'skill'){
-        skillSection_animate(tl);
-    }else if(section === 'project'){
-        projectSection_animate(tl);
-    }else if(section === 'footer'){
-        footerSection_animate(tl);
+      
+        if(section === "hero"){
+            heroSection_animate(tl_typeTwo)
+            ScrollTrigger.create(scrollTriggerObj)
+        }else if(section === "project"){
+            projectSection_animate(tl_typeTwo)
+            ScrollTrigger.create(scrollTriggerObj)
+        }
     }
 } //scroll trigger handler for reuse
 
@@ -45,7 +80,37 @@ const rotateInfinite_animate = (tl, target, rotate, ease, label) => {
 const switchColorInifinite_animate = (tl, target, shadow, color, ease, label) => {
     tl.to(target, { stagger: .7, boxShadow: shadow,color: color, ease: ease, yoyo: true, repeat: -1}, label);
 } //inifinite switching colors
+//#endregion
 
+//#region type two scroll trigger animations
+const onEnter = (tl_typeTwo, section) =>{
+    if(section === "hero"){
+        tl_typeTwo.play();
+    }else if(section === "project"){
+        tl_typeTwo.play();
+    }
+}
+const onLeave = (tl_typeTwo, section) =>{
+    if(section === "hero"){
+        tl_typeTwo.reverse();
+    }else if(section === "project"){
+        tl_typeTwo.reverse();
+    }
+}
+const onEnterBack = (tl_typeTwo, section) =>{
+    if(section === "hero"){
+        tl_typeTwo.play();
+    }else if(section === "project"){
+        tl_typeTwo.play();
+    }
+}
+const onLeaveBack = (tl_typeTwo, section) =>{
+    if(section === "hero"){
+        tl_typeTwo.reverse();
+    }else if(section === "project"){
+        tl_typeTwo.reverse();
+    }
+}
 //#endregion
 
 //#region hero section animations
@@ -103,10 +168,10 @@ const scrollTrigger = () => {
             let customOne_action = 'play reverse play reset';
             let customTwo_action = 'play pause play pause';
 
-            scolllAnimationHandler('hero',helper.hero(),'top center', 'bottom-=100 center', false, false, customOne_action);
-            scolllAnimationHandler('skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
-            scolllAnimationHandler('project', helper.project(),'top center', 'bottom center', false, false, customOne_action);
-            scolllAnimationHandler('footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
+            scolllAnimationHandler(2,'hero',helper.hero(),'top+=100 center', 'bottom-=100 center', false, false);
+            scolllAnimationHandler(1,'skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
+            scolllAnimationHandler(2,'project', helper.project(),'top center', 'bottom center', false, false);
+            scolllAnimationHandler(1,'footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
         }
     })
 }

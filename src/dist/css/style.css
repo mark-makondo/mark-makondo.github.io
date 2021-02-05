@@ -144,12 +144,12 @@ body {
   width: 100%;
   -webkit-transition: 200ms all linear;
   transition: 200ms all linear;
+  z-index: 99;
+  background: white;
 }
 
 .navbar.sticky-nav {
   height: 7.5vh;
-  z-index: 99;
-  background: white;
   -webkit-box-shadow: 0px 3px 8px #00000025;
           box-shadow: 0px 3px 8px #00000025;
 }
