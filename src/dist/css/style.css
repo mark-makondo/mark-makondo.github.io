@@ -477,7 +477,7 @@ body {
   position: absolute;
   z-index: 2;
   background: #07192D;
-  color: #c3c3c3;
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
@@ -644,8 +644,6 @@ body {
 .status span {
   color: #016685;
   padding-left: .25rem;
-  border-left: 2px solid;
-  border-color: #016685;
   font-style: italic;
 }
 
@@ -745,7 +743,7 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background: #FEF8F8;
+  background: white;
   max-width: 11.5rem;
   min-height: 13rem;
   padding-bottom: .5rem;
