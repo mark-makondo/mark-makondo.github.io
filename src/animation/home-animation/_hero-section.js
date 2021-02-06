@@ -10,15 +10,17 @@ const animation = ( tl) => {
     let heroInfoTwo = helper.heroInfoTwo();
 
     let activeColor = '#016685';
-    let semiActiveColor = '#B5AAAA';
-    let notActiveColor = '#E5DBDB';
+    let semiActiveColor = '#7b7b7b';
+    let notActiveColor = '#c3c3c3';
     let label = 'status';
+    let regularWeight = '300';
+    let semiStrongWeight = '600';
 
     tl.to(heroImg, {y: 0});
     tl.to(heroStatus, {autoAlpha: 1}, label);
-    tl.to(heroH2, {color: notActiveColor}, label);
+    tl.to(heroH2, {fontWeight: regularWeight, color: notActiveColor}, label);
     tl.to(heroInfoOne, {color: activeColor}, label);
-    tl.to(heroInfoTwo, {color: semiActiveColor}, label);
+    tl.to(heroInfoTwo, {fontWeight: semiStrongWeight, color: semiActiveColor}, label);
 }
 
 const heroAnimate = () => {

@@ -33,27 +33,33 @@
             grid-template-columns: auto auto;
             column-gap: 3rem;
             grid-column-gap: 3rem;
-
             &-top{
                 order: 2;
                 height: 100%;
                 @include setFlex(column, space-between, center)
-
             }
             &-bottom{
                 order: 1;
             }
             &-logo{
+                margin: unset;
+                margin-right: auto;
                 max-width: 25rem;
                 width: 100%;
             }
             &-contact{
                 &-icons{
-                    @include setFlex(row, space-evenly, center);
-                    font-size: 5rem;
+                    @include setFlex(row, flex-start, center);
+                    font-size: 4.5rem;
+                    margin-bottom: 1rem;
+                    a{
+                        &:nth-of-type(2){
+                            padding: 0 2rem;
+                        }
+                    }
                 }
                 span{
-                    font-weight: 600;
+                    font-weight: 300;
                     font-style: italic;
                 }
             }

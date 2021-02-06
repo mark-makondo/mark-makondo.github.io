@@ -62,6 +62,9 @@ const scolllAnimationHandler = (type, section, target, start, end, scrub, marker
         if(section === "hero"){
             heroSection_animate(tl_typeTwo)
             ScrollTrigger.create(scrollTriggerObj)
+        }else if(section === "skill"){
+            skillSection_animate(tl_typeTwo)
+            ScrollTrigger.create(scrollTriggerObj)
         }else if(section === "project"){
             projectSection_animate(tl_typeTwo)
             ScrollTrigger.create(scrollTriggerObj)
@@ -86,6 +89,8 @@ const switchColorInifinite_animate = (tl, target, shadow, color, ease, label) =>
 const onEnter = (tl_typeTwo, section) =>{
     if(section === "hero"){
         tl_typeTwo.play();
+    }else if(section === "skill"){
+        tl_typeTwo.play();
     }else if(section === "project"){
         tl_typeTwo.play();
     }
@@ -93,12 +98,16 @@ const onEnter = (tl_typeTwo, section) =>{
 const onLeave = (tl_typeTwo, section) =>{
     if(section === "hero"){
         tl_typeTwo.reverse();
+    }else if(section === "skill"){
+        tl_typeTwo.pause();
     }else if(section === "project"){
         tl_typeTwo.reverse();
     }
 }
 const onEnterBack = (tl_typeTwo, section) =>{
     if(section === "hero"){
+        tl_typeTwo.play();
+    }else if(section === "skill"){
         tl_typeTwo.play();
     }else if(section === "project"){
         tl_typeTwo.play();
@@ -107,6 +116,8 @@ const onEnterBack = (tl_typeTwo, section) =>{
 const onLeaveBack = (tl_typeTwo, section) =>{
     if(section === "hero"){
         tl_typeTwo.reverse();
+    }else if(section === "skill"){
+        tl_typeTwo.pause();
     }else if(section === "project"){
         tl_typeTwo.reverse();
     }
@@ -138,6 +149,7 @@ const skillSection_animate = (tl) => {
     let yPercent = -10;
     let color = 'white';
     let shadow = '0px 3px 8px #00000025';
+    gsap.set(helper.skillHolder(), { color: "#c3c3c3"});
 
     rotateInfinite_animate(tl, helper.skillSvgCircLines(), rotate, 'none', label);
     upDownInfinite_animate(tl, helper.skillHolder(), yPercent, 'power1.inOut', label);
@@ -166,10 +178,10 @@ const scrollTrigger = () => {
     ScrollTrigger.matchMedia({
         "all": () => {
             let customOne_action = 'play reverse play reset';
-            let customTwo_action = 'play pause play pause';
+            // let customTwo_action = 'play pause play pause';
 
             scolllAnimationHandler(2,'hero',helper.hero(),'top+=100 center', 'bottom-=100 center', false, false);
-            scolllAnimationHandler(1,'skill', helper.skill(),'top center', 'bottom center', false, false, customTwo_action); 
+            scolllAnimationHandler(2,'skill', helper.skill(),'top center', 'bottom center', false, false); 
             scolllAnimationHandler(2,'project', helper.project(),'top center', 'bottom center', false, false);
             scolllAnimationHandler(1,'footer',helper.footer(),'top center', 'bottom-=100 center', false, false, customOne_action);
         }

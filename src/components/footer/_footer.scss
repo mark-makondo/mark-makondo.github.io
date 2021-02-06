@@ -3,7 +3,7 @@
     background: getColors(primary-solid);
     text-align: center;
     height: 100vh;
-    color: getColors(secondary-light);
+    color: white;
     &__cont{
         position: relative;
         @include setFlex(column, center, center);
@@ -16,11 +16,11 @@
             
             svg{
                 width: 100%;
-                fill: getColors(secondary-light);
+                fill: white;
                 #Logo{
                     #mad{
                         path{
-                            stroke: getColors(secondary-light);
+                            stroke: white;
                             stroke-width: 2px;
                         }
                     }

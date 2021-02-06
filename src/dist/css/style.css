@@ -90,7 +90,7 @@ body {
 
 @media (hover: hover) {
   .email form input:nth-of-type(2):hover {
-    background: #E5DBDB;
+    background: #c3c3c3;
     color: #07192D;
   }
 }
@@ -212,7 +212,8 @@ body {
 
 .navbar__cont__list li {
   padding: 1rem 0;
-  color: #E5DBDB;
+  color: #c3c3c3;
+  letter-spacing: 2px;
 }
 
 .navbar__cont__list li:nth-of-type(2) {
@@ -242,6 +243,9 @@ body {
   .navbar__cont__list li:nth-of-type(2) {
     margin: 0 2rem;
   }
+  .navbar__cont__list li a.active {
+    border-bottom: 5px solid;
+  }
 }
 
 @media screen and (min-width: 1900px) {
@@ -258,7 +262,7 @@ body {
   background: #07192D;
   text-align: center;
   height: 100vh;
-  color: #E5DBDB;
+  color: white;
 }
 
 .footer__cont {
@@ -290,11 +294,11 @@ body {
 
 .footer__cont-logo svg {
   width: 100%;
-  fill: #E5DBDB;
+  fill: white;
 }
 
 .footer__cont-logo svg #Logo #mad path {
-  stroke: #E5DBDB;
+  stroke: white;
   stroke-width: 2px;
 }
 
@@ -328,7 +332,7 @@ body {
 
 @media (hover: hover) {
   .footer__cont-contact-icons a:hover {
-    color: #B5AAAA;
+    color: #7b7b7b;
   }
 }
 
@@ -409,6 +413,8 @@ body {
             order: 1;
   }
   .footer__cont-logo {
+    margin: unset;
+    margin-right: auto;
     max-width: 25rem;
     width: 100%;
   }
@@ -420,18 +426,22 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    font-size: 5rem;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+  }
+  .footer__cont-contact-icons a:nth-of-type(2) {
+    padding: 0 2rem;
   }
   .footer__cont-contact span {
-    font-weight: 600;
+    font-weight: 300;
     font-style: italic;
   }
   .footer__cont-arrow {
@@ -467,7 +477,7 @@ body {
   position: absolute;
   z-index: 2;
   background: #07192D;
-  color: #E5DBDB;
+  color: #c3c3c3;
   left: 0;
   right: 0;
   bottom: 0;
@@ -517,7 +527,7 @@ body {
   outline: none;
   border: none;
   border-radius: 1rem;
-  color: #B5AAAA;
+  color: #7b7b7b;
   background: #091C31;
   font-weight: 600;
   font-style: italic;
@@ -665,7 +675,7 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1rem;
   z-index: 10;
 }
 
@@ -763,6 +773,7 @@ body {
   font-style: italic;
   color: #016685;
   margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .home .hero__cont__info {
@@ -786,14 +797,14 @@ body {
 
 .home .hero__cont__info span:nth-of-type(1) {
   font-family: "norwesterregular", sans-serif;
-  color: #B5AAAA;
+  color: #7b7b7b;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .home .hero__cont__info span:nth-of-type(2) {
   font-family: "Open Sans", sans-serif;
-  color: #E5DBDB;
+  color: #c3c3c3;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
@@ -823,22 +834,22 @@ body {
   border-radius: 1.875rem;
   border: 3px solid;
   width: 5rem;
-  border-color: #E5DBDB;
-  color: #B5AAAA;
+  border-color: #c3c3c3;
+  color: #7b7b7b;
   -webkit-transition: 200ms all linear;
   transition: 200ms all linear;
 }
 
 .home .hero__cont__buttons span.active {
   border-color: #016685;
-  color: #E5DBDB;
+  color: white;
   background: #016685;
 }
 
 @media (hover: hover) {
   .home .hero__cont__buttons span:hover {
     border-color: #016685;
-    color: #E5DBDB;
+    color: #c3c3c3;
     background: #016685;
   }
 }
@@ -909,12 +920,24 @@ body {
   margin: 0 auto;
 }
 
+.home .skill__cont__body__title-svg svg:nth-of-type(1) .cls-1 {
+  fill: #c3c3c3;
+}
+
+.home .skill__cont__body__title-svg svg:nth-of-type(1) .cls-2 {
+  fill: none;
+}
+
 .home .skill__cont__body__title-svg svg:nth-of-type(2) {
   position: absolute;
   z-index: 2;
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.home .skill__cont__body__title-svg svg:nth-of-type(2) .cls-1 {
+  fill: #c3c3c3;
 }
 
 .home .skill__cont__body__title h1 {
@@ -1062,6 +1085,7 @@ body {
   }
   .home .hero__cont h2 {
     max-width: 45rem;
+    margin-bottom: unset;
   }
   .home .hero__cont__buttons {
     text-align: center;
@@ -1128,12 +1152,12 @@ body {
     height: 5px;
   }
   .home .skill__cont__body {
-    max-width: 55rem;
+    max-width: 50rem;
     margin: auto;
   }
   .home .skill__cont__body__title {
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
   }
   .home .project__cont {
     max-width: 95rem;
@@ -1222,10 +1246,10 @@ h2 {
     font-size: 3.125rem;
   }
   .normal-1 {
-    font-size: 2.8125rem;
+    font-size: 2.5rem;
   }
   .normal-2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

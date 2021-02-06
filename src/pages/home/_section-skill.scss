@@ -42,6 +42,12 @@
                             left: 0;
                             right: 0;
                             margin: 0 auto;
+                            .cls-1{
+                                fill: getColors(secondary-light);
+                            }
+                            .cls-2{
+                                fill: none;
+                            }
                         }
                         &:nth-of-type(2){
                             position: absolute;
@@ -49,6 +55,9 @@
                             left: 0;
                             right: 0;
                             margin: 0 auto;
+                            .cls-1{
+                                fill: getColors(secondary-light);
+                            }
                         }
                     }
                 }
