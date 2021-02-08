@@ -217,7 +217,7 @@ body {
 }
 
 .navbar__cont__list li:nth-of-type(2) {
-  margin: 0 1rem;
+  margin-left: 1rem;
 }
 
 .navbar__cont__list li a.active {
@@ -645,6 +645,119 @@ body {
   color: #016685;
   padding-left: .25rem;
   font-style: italic;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content .post {
+  margin: 1rem 0;
+  width: 100%;
+  min-height: 145px;
+  background: #07192D;
+  border-radius: 1rem;
+}
+
+.content .post__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  border-bottom: 1px solid;
+  border-color: #7b7b7b;
+  margin: .8rem;
+}
+
+.content .post__cont-image {
+  padding-left: .5rem;
+  padding-right: 1rem;
+  max-width: 100%;
+}
+
+.content .post__cont-image img {
+  width: 40px;
+  border-radius: 100%;
+}
+
+.content .post__cont-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content .post__cont-body__info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 100%;
+}
+
+.content .post__cont-body__info span {
+  color: #016685;
+  font-family: "norwesterregular", sans-serif;
+}
+
+.content .post__cont-body__info p {
+  color: #c3c3c3;
+}
+
+.content .post__cont-body span.normal-2 {
+  color: #7b7b7b;
 }
 
 .home .hero {
@@ -1164,8 +1277,52 @@ body {
 
 .blog {
   position: relative;
-  text-align: center;
-  height: 30vh;
+  max-width: 20rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.blog .profile {
+  margin-top: 5rem;
+  position: relative;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-style: italic;
+  color: #7b7b7b;
+  letter-spacing: 1px;
+  border-bottom: 1px solid;
+  border-color: #c3c3c3;
+}
+
+.blog .profile__cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1183,11 +1340,90 @@ body {
       align-content: center;
 }
 
-.blog__cont {
-  font-family: "norwesterregular", sans-serif;
-  text-transform: lowercase;
-  letter-spacing: 5px;
+.blog .profile__cont__info {
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.blog .profile__cont__info span {
+  text-align: right;
+}
+
+.blog .profile__cont__info span:nth-of-type(1) {
+  font-weight: 600;
   color: #016685;
+}
+
+.blog .profile__cont__info span:nth-of-type(2) {
+  max-width: 7rem;
+}
+
+.blog .profile__cont img {
+  max-width: 100%;
+  width: 80px;
+  border-radius: 100%;
+  margin: 0 .5rem;
+}
+
+.blog .profile__cont button {
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  text-transform: capitalize;
+  margin-right: 2rem;
+  font-style: italic;
+  color: white;
+  background: #016685;
+  letter-spacing: 1px;
+}
+
+.blog .profile__contact {
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.blog .profile__contact a {
+  -webkit-transition: 200ms color linear;
+  transition: 200ms color linear;
+}
+
+.blog .profile__contact a span {
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+  .blog .profile__contact a:hover {
+    color: #016685;
+  }
 }
 
 h1 {

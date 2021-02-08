@@ -6,7 +6,7 @@ import {ReactComponent as CircLines} from '../../assets/svg/circ-lines.svg';
 import {ReactComponent as SkillLine} from '../../assets/svg/skill-line.svg';
 
 // components
-import SkillHolder from '../../components/s-item_holder/s-item_holderContainer.js';
+import SkillHolder from '../../components/s-item_holder/s-item_holder-container.js';
 
 const skill = () => {
     return(

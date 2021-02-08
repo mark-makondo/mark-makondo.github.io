@@ -1,0 +1,51 @@
+.content{
+    position: relative;
+    width: 100%;
+    @include setFlex(column, center, center);
+
+    .post{
+        margin: 1rem 0;
+        width: 100%;
+        min-height: 145px;
+        background: getColors(primary-solid);
+        border-radius: 1rem;
+        &__cont{
+            @include setFlex(row, flex-start, flex-start);
+            border-bottom: 1px solid;
+            border-color: getColors(secondary-solid);
+            margin: .8rem;
+            &-image{
+                padding-left: .5rem;
+                padding-right: 1rem;
+                max-width: 100%;
+                img{
+                    width: 40px;
+                    border-radius: 100%;
+                }
+            }
+            &-body{
+                @include setFlex(column, flex-start, center);
+                &__info{
+                    flex-grow: 1;
+                    @include setFlex(column, center, flex-start);
+                    width: 100%;
+                    span{
+                        color: getColors(primary-light);
+                        font-family: $sub;
+                    }
+                    p{
+                        color: getColors(secondary-light);
+                    }
+                }
+                span.normal-2{
+                    color: getColors(secondary-solid);
+                }
+                
+            }
+        }
+    
+    }
+}
+
+
+@import 'blog-post_holder-responsive';

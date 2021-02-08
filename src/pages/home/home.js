@@ -4,6 +4,7 @@ import React from 'react';
 import Hero from './section-hero.js';
 import Skill from './section-skill.js';
 import Project from './section-project.js';
+import Footer from '../../components/footer/footer.js';
 
 // animations
 import Animation from '../../animation/home-animation/home-animation.js';
@@ -23,6 +24,7 @@ const Home = (props) => {
             />
             <Skill/>
             <Project/>
+            <Footer/>
         </div>
     )
 }

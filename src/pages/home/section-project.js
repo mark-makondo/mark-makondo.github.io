@@ -1,7 +1,7 @@
 import React from 'react';
 
 //components
-import ProjectHolder from '../../components/p-item_holder/p-item_holderContainer.js'
+import ProjectHolder from '../../components/p-item_holder/p-item_holder-container.js'
 
 const project = () => {
     return(

@@ -5,7 +5,6 @@ import './fonts/stylesheet.css';
 
 // components
 import Navbar from './components/navbar/navbar_container.js';
-import Footer from './components/footer/footer.js';
 
 // page
 import Home from './pages/home/home-container.js';
@@ -20,7 +19,6 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/blog" component={Blog} />
             </Switch>
-          <Footer/>
       </div>
     </Router>
   );

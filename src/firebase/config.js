@@ -1,9 +1,10 @@
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/firestore'; // database
+import 'firebase/analytics'; // database
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyD4E7IKoh-BZOdMOhDHHe9cpPUrFscp4Qk",
     authDomain: "portfolio-blog-f7a26.firebaseapp.com",
     projectId: "portfolio-blog-f7a26",
@@ -14,8 +15,11 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
+
 // initialize Firestore
 const database = firebase.firestore();
+// const analytics = firebase.analytics();
+const timestamp = firebase.firestore.FieldValue.serverTimeStamp;
 
-export { database };
+export { database, timestamp};

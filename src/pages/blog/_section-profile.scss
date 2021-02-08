@@ -1,0 +1,66 @@
+.profile{
+    margin-top: 5rem;
+    position: relative;
+    display: block;
+    @include setFlex(column, center, center);
+    font-style: italic;
+    color: getColors(secondary-solid);
+    letter-spacing: 1px;
+    border-bottom: 1px solid;
+    border-color: getColors(secondary-light);
+    &__cont{
+        @include setFlex(row, center, center);
+
+        &__info{
+            text-transform: capitalize;
+            @include setFlex(column, center, flex-end);
+            span{
+                text-align: right;
+                &:nth-of-type(1){
+                    font-weight: 600;
+                    color: getColors(primary-light);
+                }
+                &:nth-of-type(2){
+                    max-width: 7rem;
+                }
+            }
+        }
+        img{
+            max-width: 100%;
+            width: 80px;
+            border-radius: 100%;
+            margin: 0 .5rem;
+        }
+        button{
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: 2rem;
+            text-transform: capitalize;
+            margin-right: 2rem;
+            font-style: italic;
+            color: white;
+            background: getColors(primary-light);
+            letter-spacing: 1px;
+        }
+
+    }
+
+    &__contact{
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+        @include setFlex(row, space-around, center);
+        width: 100%;
+        a{
+            transition: 200ms color linear;
+            span{
+                text-decoration: underline;
+            }
+            @media(hover:hover){
+                &:hover{
+                    color: getColors(primary-light);
+                }
+            }
+        }
+        
+    }
+}

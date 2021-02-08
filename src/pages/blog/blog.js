@@ -1,11 +1,14 @@
 import React from 'react';
 
+// sections
+import Profile from './section-profile.js';
+import BlogContent from './section-content.js';
+
 const Blog = () => {
     return(
         <div className="blog">
-            <div className="blog__cont">
-                <h2>Not Yet Available.</h2>
-            </div>
+            <Profile/>
+            <BlogContent/>
         </div>
     )
 }
