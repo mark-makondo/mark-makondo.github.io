@@ -24,7 +24,7 @@ const hero = (props) => {
                 <div className="hero__cont__body">
                     <h2> Being able to design &amp; create something is fun.</h2>
                     <div className="hero__cont__info">
-                        <span className="normal-1">mark albert d. makondo</span>
+                        <span className="normal-0">mark albert d. makondo</span>
                         <span className="normal-2">front-end web developer</span>
                     </div>
                     <div className="hero__cont__buttons normal-2">

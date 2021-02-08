@@ -28,4 +28,5 @@ const query = {
     footer: () => document.querySelector('.footer'),
     footerArrow: () => document.querySelector('.footer__cont-arrow')
 }
+
 export default query;

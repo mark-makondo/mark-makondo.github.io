@@ -19,7 +19,7 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/in/mark-makondo/"><i className="fab fa-linkedin-in"/></a>
                             <a href="https://www.facebook.com/markalbert.d.makondo/"><i className="fab fa-facebook"/></a>
                         </div>
-                        <span className="normal-1">markalbert.makondo@gmail.com</span>
+                        <span className="normal-0">markalbert.makondo@gmail.com</span>
                     </div>
                 </div>
                 <div className="footer__cont-bottom">

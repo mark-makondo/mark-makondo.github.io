@@ -19,6 +19,9 @@
     h2{
         font-size: getFontSize($type, h2);
     }
+    .normal-0{
+        font-size: getFontSize($type, normal-0);
+    }
     .normal-1{
         font-size: getFontSize($type, normal-1);
     }

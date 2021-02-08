@@ -36,7 +36,7 @@
         }
         &__list{
             @include setFlex(row,center, center);
-            text-transform: capitalize;
+            text-transform: uppercase;
             li{
                 padding: 1rem 0;
                 color: getColors(secondary-light);
