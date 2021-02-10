@@ -1,0 +1,9 @@
+.content{
+    position: relative;
+    width: 100%;
+    @include setFlex(column, center, center);
+    &-arrow{
+        position: relative;
+        margin: 2rem 0;
+    }
+}

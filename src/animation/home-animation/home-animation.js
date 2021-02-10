@@ -3,13 +3,13 @@ import helper from '../../helper/query.js';
 
 // animations 
 import scrollTrigger from './_scroll-trigger.js';
-import smoothScroll from './_smooth-scroll.js';
+import smoothScroll from '../_smooth-scroll.js';
 
 // section animations
 import heroAnimate from './_hero-section.js';
 import skillAnimate from './_skill-section.js'; 
 
-const Animation = () => {
+const HomeAnimation = () => {
     useEffect(() => {
         // scroll
         scrollTrigger()
@@ -20,4 +20,4 @@ const Animation = () => {
     }, [])    
 }
 
-export default Animation;
+export default HomeAnimation;

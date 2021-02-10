@@ -647,7 +647,7 @@ body {
   font-style: italic;
 }
 
-.content {
+.content__cont {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -667,15 +667,16 @@ body {
       align-content: center;
 }
 
-.content .post {
+.content__cont .post {
   margin: 1rem 0;
-  width: 100%;
-  min-height: 145px;
+  padding: 0 1rem;
   background: #07192D;
   border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
 }
 
-.content .post__cont {
+.content__cont .post__cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,21 +694,20 @@ body {
       align-content: flex-start;
   border-bottom: 1px solid;
   border-color: #7b7b7b;
-  margin: .8rem;
 }
 
-.content .post__cont-image {
+.content__cont .post__cont-image {
   padding-left: .5rem;
   padding-right: 1rem;
   max-width: 100%;
 }
 
-.content .post__cont-image img {
+.content__cont .post__cont-image img {
   width: 40px;
   border-radius: 100%;
 }
 
-.content .post__cont-body {
+.content__cont .post__cont-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -723,9 +723,11 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.content .post__cont-body__info {
+.content__cont .post__cont-body__info {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -736,9 +738,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -747,17 +749,20 @@ body {
   width: 100%;
 }
 
-.content .post__cont-body__info span {
+.content__cont .post__cont-body__info span {
   color: #016685;
   font-family: "norwesterregular", sans-serif;
 }
 
-.content .post__cont-body__info p {
+.content__cont .post__cont-body__info p {
+  margin-top: .5rem;
   color: #c3c3c3;
 }
 
-.content .post__cont-body span.normal-2 {
+.content__cont .post__cont-body span.normal-2 {
   color: #7b7b7b;
+  margin-left: auto;
+  margin-top: 1rem;
 }
 
 .home .hero {
@@ -1424,6 +1429,31 @@ body {
   .blog .profile__contact a:hover {
     color: #016685;
   }
+}
+
+.blog .content {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.blog .content-arrow {
+  position: relative;
+  margin: 2rem 0;
 }
 
 h1 {
