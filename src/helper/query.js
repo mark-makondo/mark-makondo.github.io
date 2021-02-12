@@ -26,7 +26,11 @@ const query = {
     projectHolder: () =>  document.querySelectorAll('.project-holder__items'),
     // footer section used query
     footer: () => document.querySelector('.footer'),
-    footerArrow: () => document.querySelector('.footer__cont-arrow')
+    footerArrow: () => document.querySelector('.footer__cont-arrow'),
+
+    // blog
+    blogContent: () => document.querySelector('.content__cont'),
+    blogPostHolder: () => document.querySelectorAll('.content__cont .post')
 }
 
 export default query;

@@ -765,6 +765,30 @@ body {
   margin-top: 1rem;
 }
 
+.content__cont-circles {
+  position: relative;
+}
+
+.content__cont-arrow {
+  visibility: hidden;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.content__cont-arrow.active {
+  visibility: visible;
+}
+
+.content__cont-arrow svg {
+  -webkit-filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+.content__cont span.up-to-date {
+  margin-bottom: 2rem;
+}
+
 .home .hero {
   position: relative;
   height: 100vh;

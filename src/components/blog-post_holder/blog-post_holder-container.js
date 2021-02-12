@@ -4,45 +4,30 @@ import { database } from '../../firebase/config.js';
 // component UI
 import PostUI from './blog-post_holder.js';
 
+// custom hooks
+import { useScrollListener } from '../../hooks/scroll-listener.js';
+import { useScrollPosition } from '../../hooks/scroll-position.js';
+
 const BlogPostContainer = () => {
+    // use state
     const [docs, setDoc] = useState([]);
     const [lastKey, setLastKey] = useState('');
-    const [postLoading, setPostLoading] = useState(false);
 
-    const nextPost = (target) => {
-        database.collection('posts')
-            .orderBy('datePosted', 'desc')
-            .startAfter(target)
-            .limit(3)
-            .onSnapshot((snap) => {
-                let documents = [];
-                let key = '';
+    // custom hooks
+    const [scrolled] = useScrollListener();
+    const [scrolledPosition] = useScrollPosition('y');
 
-                snap.forEach((doc) => {
-                    documents.push({...doc.data(), id: doc.id});
-                    key = doc.data().datePosted;
-                });
-                setLastKey(key);
-                setDoc(docs.concat(documents));
-                setPostLoading(false);
-            })
-    }
-
-    const morePost = (key) => {
-        if(key > 0){
-            setPostLoading(true);
-            nextPost(key);
-        }else{
-            setLastKey('');
-            setPostLoading(false);
+    const morePost = (targetKey) => {
+        if(targetKey > 0){
+            nextPost(targetKey);
         }
     }
 
-    useEffect(() => {
-        
-        const post = database.collection('posts')
+    const nextPost = (targetKey) => {
+        database.collection('posts')
             .orderBy('datePosted', 'desc')
-            .limit(3)
+            .startAfter(targetKey)
+            .limit(4)
             .onSnapshot((snap) => {
                 let documents = [];
                 let key = '';
@@ -51,21 +36,53 @@ const BlogPostContainer = () => {
                     documents.push({...doc.data(), id: doc.id});
                     key = doc.data().datePosted;
                 });
+               
+                setLastKey(key);
+                setDoc(docs.concat(documents));
+                
+            })
+    }
+
+    const initialPost = () => {
+        database.collection('posts')
+            .orderBy('datePosted', 'desc')
+            .limit(4)
+            .onSnapshot((snap) => {
+                let documents = [];
+                let key = '';
+
+                snap.forEach((doc) => {
+                    documents.push({...doc.data(), id: doc.id});
+                    key = doc.data().datePosted;
+                });
+
                 setLastKey(key);
                 setDoc(documents);
             })
+    }
 
-        return () => {
-            post();
-        } //release when done using
+    const arrowHandler = () => {
+        let arrow = document.querySelector('.content__cont-arrow');
+        if(arrow){
+            if(scrolledPosition.value > 0){
+                arrow.classList.add('active');
+            }else{
+                arrow.classList.remove('active');
+            }
+        }
+    } 
+    arrowHandler();
+   
+    useEffect(() => {
+        initialPost();
     }, [])
-
+    
     return(
         <PostUI
             posts = {docs}
             morePost = {morePost}
             lastKey = {lastKey}
-            postLoading = {postLoading}
+            scrolled = {scrolled.position}
         />
     )
 }

@@ -10,13 +10,13 @@ const profile = () => {
                     <span>mark makondo</span>
                     <span>front-end web developer</span>
                 </div>
-                <img src={Profile} alt="Profile Picture"/>
+                <img src={Profile} alt="Owner Profile"/>
                 <button>contact</button>
             </div>
             <div className="profile__contact">
-                  <a href="#">@<span>facebook</span></a>
-                  <a href="#">@<span>github</span></a>
-                  <a href="#">@<span>linkedin</span></a>
+                  <a href="https://www.facebook.com/markalbert.d.makondo/">@<span>facebook</span></a>
+                  <a href="https://www.github.com/mark-makondo">@<span>github</span></a>
+                  <a href="https://www.linkedin.com/in/mark-makondo/">@<span>linkedin</span></a>
                 </div>
         </section>
     )

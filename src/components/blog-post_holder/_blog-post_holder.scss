@@ -9,7 +9,7 @@
         border-radius: 1rem;
         padding: 1rem;
         width: 100%;
-        
+
         &__cont{
             @include setFlex(row, flex-start, flex-start);
             border-bottom: 1px solid;
@@ -50,7 +50,28 @@
         }
     
     }
-}
+    &-circles{
+        position: relative;
+    }
 
+    &-arrow{
+       visibility: hidden;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+
+        &.active{
+            visibility: visible;
+        }
+
+        svg{
+            filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+        }
+    }
+    
+    span.up-to-date{
+        margin-bottom: 2rem;
+    }
+}
 
 @import 'blog-post_holder-responsive';
