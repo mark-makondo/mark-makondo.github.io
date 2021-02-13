@@ -3,6 +3,7 @@
     width: 100%;
     @include setFlex(column, center, center);
     .post{
+        position: relative;
         margin: 1rem 0;
         padding: 0 1rem;
         background: getColors(primary-solid);
@@ -19,8 +20,9 @@
                 padding-right: 1rem;
                 max-width: 100%;
                 img{
-                    width: 40px;
+                    width: 2.5rem;
                     border-radius: 100%;
+                    mix-blend-mode: luminosity;
                 }
             }
             &-body{
@@ -34,6 +36,7 @@
                     span{
                         color: getColors(primary-light);
                         font-family: $sub;
+                        text-transform: uppercase;
                     }
                     p{
                         margin-top: .5rem;
@@ -52,10 +55,14 @@
     }
     &-circles{
         position: relative;
+        visibility: hidden;
+        &.active{
+            visibility: hidden;
+        }
     }
 
     &-arrow{
-       visibility: hidden;
+        visibility: hidden;
         position: fixed;
         bottom: 1rem;
         right: 1rem;

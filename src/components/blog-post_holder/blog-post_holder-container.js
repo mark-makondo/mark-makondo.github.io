@@ -8,6 +8,9 @@ import PostUI from './blog-post_holder.js';
 import { useScrollListener } from '../../hooks/scroll-listener.js';
 import { useScrollPosition } from '../../hooks/scroll-position.js';
 
+//utils
+import query from '../../helper/query.js';
+
 const BlogPostContainer = () => {
     // use state
     const [docs, setDoc] = useState([]);
@@ -21,6 +24,7 @@ const BlogPostContainer = () => {
         if(targetKey > 0){
             nextPost(targetKey);
         }
+       
     }
 
     const nextPost = (targetKey) => {
@@ -39,7 +43,6 @@ const BlogPostContainer = () => {
                
                 setLastKey(key);
                 setDoc(docs.concat(documents));
-                
             })
     }
 
@@ -61,8 +64,11 @@ const BlogPostContainer = () => {
             })
     }
 
-    const arrowHandler = () => {
-        let arrow = document.querySelector('.content__cont-arrow');
+    const postDecorationHandler = () => {
+        let arrow = query.blogPostArrow();
+        let circles = query.blogPostCircles();
+        let upToDate = query.blogPostUpToDate();
+
         if(arrow){
             if(scrolledPosition.value > 0){
                 arrow.classList.add('active');
@@ -70,8 +76,19 @@ const BlogPostContainer = () => {
                 arrow.classList.remove('active');
             }
         }
+
+        if(circles && upToDate){
+            if(docs.length > 4){
+                circles.classList.add('active');
+                upToDate.innerHTML = "You are up to date."
+            } else {
+                circles.classList.remove('active');
+                upToDate.innerHTML = ""
+            }
+        }
+       
     } 
-    arrowHandler();
+    postDecorationHandler();
    
     useEffect(() => {
         initialPost();

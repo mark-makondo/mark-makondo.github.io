@@ -1,0 +1,54 @@
+// responsive medium screen //768px
+@include media-md{
+    .content__cont{
+        .post{
+            &__cont{
+                &-image{
+                    img{
+                        width: 3.75rem;
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .content__cont{
+        .post{
+            &__cont{
+                &-image{
+                    img{
+                        width: 4.6875rem;
+                    }
+                }
+            }
+        
+        }
+    
+        &-arrow{
+            right: 8rem;
+        }
+    }
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .content__cont{
+        .post{
+            &:nth-of-type(1){
+                margin-top: unset;
+            }
+            &__cont{
+                &-image{
+                    img{
+                        width: 6.25rem;
+                    }
+                }
+            }
+        
+        }
+    }
+}

@@ -30,7 +30,10 @@ const query = {
 
     // blog
     blogContent: () => document.querySelector('.content__cont'),
-    blogPostHolder: () => document.querySelectorAll('.content__cont .post')
+    blogPostHolder: () => document.querySelectorAll('.content__cont .post'),
+    blogPostCircles: () => document.querySelector('.content__cont-circles'),
+    blogPostArrow: () => document.querySelector('.content__cont-arrow'),
+    blogPostUpToDate: () => document.querySelector('.up-to-date')
 }
 
 export default query;

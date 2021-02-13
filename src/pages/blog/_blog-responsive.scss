@@ -1,0 +1,100 @@
+// responsive medium screen //768px
+@include media-md{
+    .blog{
+        max-width: getMaxWidth(m);
+        .profile{
+            padding-top: 10rem;
+            &__cont{
+                &__info{
+                    span{
+                        &:nth-of-type(2){
+                            max-width: 8rem;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+                img{
+                    width: 6.875rem;
+                }
+            }
+        }
+        .content{
+            max-width: 35rem;
+        }
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+    .blog{
+        max-width: getMaxWidth(l);
+        .profile{
+            &__cont{
+                &__info{
+                    span{
+                        &:nth-of-type(2){
+                            max-width: 10rem;
+                        }
+                    }
+                }
+                img{
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}
+
+// responsive large screen //1900px
+@include media-xl{
+    .blog{
+        max-width: getMaxWidth(xl);
+        @include setFlex(row, center, flex-start);
+        padding-top: 10rem;
+
+        .profile{
+            @include setFlex(column, flex-end, flex-end);
+            border-right: 1px solid;
+            border-bottom: none;
+            width: unset;
+            margin-bottom: 1rem;
+            padding-top: unset;
+            padding-right: 1rem;
+
+            &__cont{
+                @include setFlex(column, center, center);
+                margin-bottom: 2rem;
+                &__info{
+                    @include setFlex(column, flex-end, flex-end);
+                    margin-bottom: 2rem;
+                    span{
+                        &:nth-of-type(2){
+                            max-width: 15rem;
+                        }
+                    }
+                }
+                img{
+                    width: 10rem;
+                }
+                button{
+                    margin-top: 1rem;
+                    margin-right: unset;
+                }
+        
+            }
+        
+            &__contact{
+                padding-left: 2rem;
+                @include setFlex(column, flex-start, flex-start);
+            }
+        }
+
+        .content{
+           flex-grow: 1;
+           max-width: 100%;
+           &__cont{
+               max-width: 40rem;
+           }
+        }
+    }
+}

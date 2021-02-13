@@ -1,13 +1,15 @@
 .profile{
-    margin-top: 5rem;
     position: relative;
-    display: block;
     @include setFlex(column, center, center);
     font-style: italic;
     color: getColors(secondary-solid);
     letter-spacing: 1px;
     border-bottom: 1px solid;
     border-color: getColors(secondary-light);
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 7rem;
+    
     &__cont{
         @include setFlex(row, center, center);
 
@@ -27,7 +29,7 @@
         }
         img{
             max-width: 100%;
-            width: 80px;
+            width: 5rem;
             border-radius: 100%;
             margin: 0 .5rem;
         }
@@ -41,6 +43,7 @@
             color: white;
             background: getColors(primary-light);
             letter-spacing: 1px;
+            outline: none;
         }
 
     }

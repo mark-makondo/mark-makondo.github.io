@@ -26,10 +26,10 @@ const blogPost = ({posts, morePost, lastKey, scrolled}) => {
                     </div>
                 </div>
             ): (<p>Loading . . .</p>)}
-
+            
             { lastKey > 0 && scrolled === 1 ? ( morePost(lastKey) ) 
             : lastKey > 0 ? ( <div className="content__cont-circles"> <Circles/> </div> ) 
-            : ( <span className="up-to-date normal-2">You are up to date.</span> ) }
+            : ( <span className="up-to-date normal-2"></span> ) }
 
             <a className="quick content__cont-arrow" href="0"><Arrow/></a>
 
