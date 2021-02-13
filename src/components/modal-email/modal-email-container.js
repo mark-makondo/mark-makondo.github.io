@@ -7,25 +7,24 @@ import ModalEmailUI from './modal-email.js';
 //utils
 import Query from '../../helper/query.js';
 
-const ModalEmailContainer = ({ isActive, setIsActive}) => {
-
-    // states - set msg text empty
+const ModalEmailContainer = ({ isActive, setIsActive }) => {
+    
     const [msgContent, setMsgContent] = useState('');
 
     //#region EmailJs Event Handlers
-    const emailJs_init = (target) => {
-        EmailJs.sendForm('service_u42oleh', 'template_tyjup4j', target.target, 'user_gr1f018CTjT0uaHTHKdiV')
-            .then((result) => {
-                if(result.text === 'OK'){
-                    setMsgContent("");
-                    alert('Message Sent!');
-                }else{
-                    alert('Message Failed!');
-                }
-            }, (error) => {
-                alert(error.text);
+    const emailJs_init = async (target) => {
+        try {
+            let email = await EmailJs.sendForm('service_u42oleh', 'template_tyjup4j', target.target, 'user_gr1f018CTjT0uaHTHKdiV');
+
+            if(email.text === 'OK'){
+                setMsgContent("");
+                alert('Message Sent!');
+            }else{
+                alert('Message Failed!');
             }
-        );
+        } catch (error) {
+            alert(error.response.data.message);
+        }
     }// initialize emailjs
 
     const sendEmailTo = (e) =>{
@@ -49,10 +48,10 @@ const ModalEmailContainer = ({ isActive, setIsActive}) => {
     }// event handler on change
     //#endregion
 
-    //#region Modal Event Handler - if active it fires
+    //#region Modal Event Handler - 
     const isModalActive = (isActive) => {
+
         let modalEmail =  Query.modalEmail();
-        let formContainer = Query.modalEmailFormContainer();
 
         if(isActive){
             modalEmail.classList.add('active');
@@ -60,16 +59,20 @@ const ModalEmailContainer = ({ isActive, setIsActive}) => {
             modalEmail.classList.remove('active');
         }
 
-        modalEmail.addEventListener('click', () => {
-            setIsActive(false);
+        modalEmail.addEventListener('click', (e) => {
+            if(e.target === modalEmail){
+                setIsActive(false);
+            }
         })
-    }
 
+    } //if is active is true from the profile section it fires
+    //#endregion
+    
     useEffect(() => {
         isModalActive(isActive);
 
     }, [isActive])
-    //#endregion
+    
     return(
         <ModalEmailUI
             handleTextOnChange = {handleTextOnChange}

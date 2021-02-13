@@ -89,6 +89,8 @@
             width: 100%;
             cursor: pointer;
             span{
+                visibility: hidden;
+                opacity: 0;
                 padding: .5rem .3rem;
                 border-radius: 1.875rem;
                 border: 3px solid;
