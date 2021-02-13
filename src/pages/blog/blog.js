@@ -1,7 +1,7 @@
 import React from 'react';
 
 // sections
-import Profile from './section-profile.js';
+import Profile from './section-profile-container.js';
 import BlogContent from './section-content.js';
 
 // animations

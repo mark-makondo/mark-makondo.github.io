@@ -27,13 +27,15 @@ const query = {
     // footer section used query
     footer: () => document.querySelector('.footer'),
     footerArrow: () => document.querySelector('.footer__cont-arrow'),
-
     // blog
     blogContent: () => document.querySelector('.content__cont'),
     blogPostHolder: () => document.querySelectorAll('.content__cont .post'),
     blogPostCircles: () => document.querySelector('.content__cont-circles'),
     blogPostArrow: () => document.querySelector('.content__cont-arrow'),
-    blogPostUpToDate: () => document.querySelector('.up-to-date')
+    blogPostUpToDate: () => document.querySelector('.up-to-date'),
+    //modal email
+    modalEmail: () => document.querySelector('.modal-email'),
+    modalEmailFormContainer: () => document.querySelector('.form-container')
 }
 
 export default query;
