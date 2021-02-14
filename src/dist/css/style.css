@@ -1440,8 +1440,8 @@ body {
     width: 12rem;
   }
   .home .hero__cont__img .status svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
   }
   .home .skill {
     height: 40rem;
@@ -1466,6 +1466,10 @@ body {
 @media screen and (min-width: 1900px) {
   .home .hero__cont {
     max-width: 95rem;
+  }
+  .home .hero__cont__img .status svg {
+    width: 3rem;
+    height: 3rem;
   }
   .home .skill {
     height: 100vh;
