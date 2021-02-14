@@ -21,22 +21,22 @@
         @include setFlex(column, center, center);
         position: relative;
         width: 60vmin;
-        height: 60vmin;
+        height: auto;
         background: white;
         border-radius: 1rem;
         padding: 2rem;
-
+        margin-top: 1rem;
         &__title{
             color: getColors(primary-light);
             text-align: center;
             font-weight: 600;
+            margin-bottom: 1rem;
         }
         form{
             position: relative;
             @include setFlex(column, center, center);
             width: 100%;
             height: 100%;
-
             input{
                 outline: none;
                 &::placeholder{
@@ -94,3 +94,4 @@
         }
     }
 }
+@import './modal-email-responsive';

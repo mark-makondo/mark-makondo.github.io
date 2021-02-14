@@ -875,16 +875,18 @@ body {
       align-content: center;
   position: relative;
   width: 60vmin;
-  height: 60vmin;
+  height: auto;
   background: white;
   border-radius: 1rem;
   padding: 2rem;
+  margin-top: 1rem;
 }
 
 .modal-email .form-container__title {
   color: #016685;
   text-align: center;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .modal-email .form-container form {
