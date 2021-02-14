@@ -1,11 +1,11 @@
 .navbar{
     position: fixed;
     font-family: $sub;
-    height: 10vh;
+    height: 2.5rem;
     width: 100%;
     transition: 200ms all linear;
     z-index: 99;
-    background: white;
+    background: #fff;
     &.sticky-nav{
         height: 7.5vh;
         box-shadow: $little-shadow;
@@ -45,7 +45,7 @@
                     margin-left: 1rem;
                 }
                 a.active{
-                    border-bottom: 2px solid;
+                    border-bottom: 1px solid;
                     border-color: getColors(primary-light);;
                     color: getColors(primary-light);
                     padding-bottom: 10px;

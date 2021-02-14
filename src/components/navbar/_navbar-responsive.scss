@@ -1,6 +1,7 @@
 // responsive medium screen //768px
 @include media-md{
     .navbar{
+        height: 3.5rem;
         &__cont{
             max-width: getMaxWidth(m);
             &__logo{
@@ -21,7 +22,7 @@
                         margin: 0 2rem;
                     }
                     a.active{
-                        border-bottom: 5px solid;
+                        border-bottom: 2px solid;
                     }
                 }
             }

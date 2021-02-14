@@ -3,14 +3,29 @@
     .home{
         .hero{
             &__cont{
+                @include setFlex(row, center, center);
                 max-width: getMaxWidth(m);
+                text-align: left;
+                h2{
+                    max-width: 45rem;
+                    margin-bottom: unset;
+                }
                 &__buttons{
+                    text-align: center;
+                    @include setFlex(row, flex-start, flex-start);
                     span{
                         width: 9rem;
+                        &:nth-of-type(2){
+                            margin: 0 2rem;
+                        }
                     }
                 }
+                &__info{
+                    @include setFlex(column, center, flex-start);
+                }
                 &__img{
-                    max-width: 15rem;
+                    margin-right: 2rem;
+                    max-width: 100%;
                     .status{
                         svg{
                             width: 2rem;
@@ -55,8 +70,20 @@
     .home{
         .hero{
             &__cont{
-                @include setFlex(column, center, center);
                 max-width: getMaxWidth(l);
+                &__buttons{
+                    span{
+                        width: 12rem;
+                    }
+                }
+                &__img{
+                    .status{
+                        svg{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                    }
+                }
             }
         } // end of section hero
         .skill{
@@ -89,36 +116,7 @@
     .home{
         .hero{
             &__cont{
-                @include setFlex(row, center, center);
                 max-width: getMaxWidth(xl);
-                text-align: left;
-                h2{
-                   max-width: 45rem;
-                   margin-bottom: unset;
-                }
-                &__buttons{
-                    text-align: center;
-                    @include setFlex(row, flex-start, flex-start);
-                    span{
-                        width: 12rem;
-                        &:nth-of-type(2){
-                            margin: 0 2rem;
-                        }
-                    }
-                }
-                &__info{
-                    @include setFlex(column, center, flex-start);
-                }
-                &__img{
-                    margin-right: 2rem;
-                    max-width: 100%;
-                    .status{
-                        svg{
-                            width: 3rem;
-                            height: 3rem;
-                        }
-                    }
-                }
             }
         } // end of section hero
         .skill{
