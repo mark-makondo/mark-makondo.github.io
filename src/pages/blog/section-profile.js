@@ -15,7 +15,7 @@ const profile = ({ clickContactHandler, isActive, setIsActive}) => {
                     <span>front-end web developer</span>
                 </div>
                 <img src={Profile} alt="Owner Profile"/>
-                <button onClick = {() => clickContactHandler()}>contact</button>
+                <button className="normal-2" onClick = {() => clickContactHandler()}>contact</button>
             </div>
             <div className="profile__contact">
                 <a href="https://www.facebook.com/markalbert.d.makondo/">@<span>facebook</span></a>
