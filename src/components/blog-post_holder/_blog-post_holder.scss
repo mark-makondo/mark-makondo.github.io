@@ -34,7 +34,7 @@
                     @include setFlex(column, flex-start, flex-start);
                     width: 100%;
                     span{
-                        color: getColors(primary-light);
+                        color: getColors(primary-more-light);
                         font-family: $sub;
                         text-transform: uppercase;
                     }
