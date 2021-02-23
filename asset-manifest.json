@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4ac0298e.chunk.css",
-    "main.js": "/static/js/main.6cb08e88.chunk.js",
-    "main.js.map": "/static/js/main.6cb08e88.chunk.js.map",
+    "main.js": "/static/js/main.84bade48.chunk.js",
+    "main.js.map": "/static/js/main.84bade48.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b84a885d.js",
     "runtime-main.js.map": "/static/js/runtime-main.b84a885d.js.map",
     "static/js/2.99666d72.chunk.js": "/static/js/2.99666d72.chunk.js",
@@ -11,6 +11,7 @@
     "static/css/main.4ac0298e.chunk.css.map": "/static/css/main.4ac0298e.chunk.css.map",
     "static/js/2.99666d72.chunk.js.LICENSE.txt": "/static/js/2.99666d72.chunk.js.LICENSE.txt",
     "static/media/arrow-art.b9111f2e.svg": "/static/media/arrow-art.b9111f2e.svg",
+    "static/media/blog-post-manager.06158d97.png": "/static/media/blog-post-manager.06158d97.png",
     "static/media/cha-beauty.a2a56060.png": "/static/media/cha-beauty.a2a56060.png",
     "static/media/circ-lines.bb4a1fdd.svg": "/static/media/circ-lines.bb4a1fdd.svg",
     "static/media/circle.398f00dd.svg": "/static/media/circle.398f00dd.svg",
@@ -29,6 +30,6 @@
     "static/js/runtime-main.b84a885d.js",
     "static/js/2.99666d72.chunk.js",
     "static/css/main.4ac0298e.chunk.css",
-    "static/js/main.6cb08e88.chunk.js"
+    "static/js/main.84bade48.chunk.js"
   ]
 }
