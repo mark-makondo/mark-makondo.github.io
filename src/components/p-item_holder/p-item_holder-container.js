@@ -5,7 +5,7 @@ import ProjectHolderUi from './p-item_holder.js';
 import ProjectOne from  '../../assets/img/img-projects/old-portfolio.png';
 import ProjectTwo from  '../../assets/img/img-projects/cha-beauty.png';
 import ProjectThree from  '../../assets/img/img-projects/github-api-fetch.png';
-import ProjectFour from  '../../assets/img/img-projects/github-api-fetch.png';
+import ProjectFour from  '../../assets/img/img-projects/blog-post-manager.png';
 
 const ProjectHolderContianer = () => {
     let projects = [
