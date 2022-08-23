@@ -1,0 +1,37 @@
+.r-section-box-tag {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    max-width: 45rem;
+    min-width: 20rem;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    height: auto;
+    gap: .5rem;
+    min-height: 7rem;
+    box-shadow: 0 5px 3px 1px rgba(0,0,0,0.57);
+}
+
+.r-section-box-tag__left {
+    height: 100%;
+}
+
+.r-section-box-tag__right {
+    width: 2.5rem;
+}
+.r-section-box-tag__tags-container {
+    margin-top: .5rem;
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.r-section-box-tag__tags-item {
+    position: relative;
+}
+
+.r-section-box-tag:last-child .r-section-box-tag__right {
+    width: 4rem
+}
