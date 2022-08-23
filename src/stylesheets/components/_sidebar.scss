@@ -1,0 +1,68 @@
+.pf-sidebar {
+    position: relative;
+    z-index: 10;
+
+    &__herologo,
+    &__herologo-decoration {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        width: clamp(16rem, 30vw + 1rem, 35rem);
+        height: min-content;
+        left: 2rem;
+    }
+
+    &__herologo-decoration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -1rem;
+        z-index: -1;
+        
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            animation: pulsOut 1.8s ease-in-out infinite;
+            filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+        }
+        &:before {
+            width: 100%;
+            padding-bottom: 100%;
+            box-shadow: inset 0 0 0 1rem #fff;
+            animation-name: pulsIn;
+        }
+
+        &:after {
+            width: calc(100% - 2rem);
+            padding-bottom: calc(100% - 2rem);
+            box-shadow: 0 0 0 0 #fff;
+        }
+    }
+}
+
+
+@keyframes pulsIn {
+    0% {
+        box-shadow: inset 0 0 0 1rem #000;
+        opacity: 1;
+    }
+    50%, 100% {
+        box-shadow: inset 0 0 0 0 #000;
+        opacity: 0;
+    }
+}
+
+@keyframes pulsOut {
+    0%, 50% {
+        box-shadow: 0 0 0 0 #000;
+        opacity: 0;
+    }
+    100% {
+        box-shadow: 0 0 0 1rem #000;
+        opacity: 1;
+    }
+}

@@ -3,7 +3,42 @@
 
 .secondary-font {
     font-family: $secondary-font;
+    letter-spacing: 3px;
 }
+
+/*
+*   @title: COLORS
+*/
+
+.no-attention-color {
+    color: getColors(primary-dark);
+}
+
+.attention-color {
+    color: getColors(secondary);
+}
+
+.normal-color {
+    color: getColors(primary-light)
+}
+
+.bg-color {
+    background-color: getColors(background)
+}
+
+.bg-color2 {
+    background-color: getColors(tertiary-dark)
+}
+
+/*
+*   @title: GLOBAL FONT SIZE
+*/
+
+@include setFontSize(s); 
+
+/*
+* @title: OTHERS
+*/
 
 .flex {
     display: flex;
@@ -17,4 +52,51 @@
     &-column {
         flex-direction: column;
     }
+}
+
+.heading {
+    margin-bottom: 1.5rem;
+}
+
+.right-shadow {
+    -webkit-box-shadow: 9px 4px 23px -4px rgba(0,0,0,0.57);
+    -moz-box-shadow: 9px 4px 23px -4px rgba(0,0,0,0.57);
+    box-shadow: 9px 4px 23px -4px rgba(0,0,0,0.57);
+}
+
+.bottom-shadow {
+    -webkit-box-shadow: 1px 8px 23px -4px rgba(0,0,0,0.57);
+    -moz-box-shadow: 1px 8px 23px -4px rgba(0,0,0,0.57);
+    box-shadow: 1px 8px 23px -4px rgba(0,0,0,0.57);
+}
+
+.btn-custom {
+    border: 1px solid getColors(primary-dark);
+    padding: 0.3rem;
+    border-radius: 8px;
+    background: transparent;
+    color: getColors(primary-dark);
+    font-weight: bold;
+
+    &-primary {
+        background: #0a6682;
+        color: #ffffffc4;
+        border-color: transparent;
+    }
+
+    &-nav-outline {
+        &:hover {
+            border-color: transparent;
+            color: #098fb8;
+            transition: .25s color ease-in-out;
+        }
+    }
+    &:not(.btn-custom-nav-outline):hover {
+        scale: 1.1;
+        transition: .25s scale ease-in-out;
+    }
+}
+
+.no-mt {
+    margin-top: 0;
 }

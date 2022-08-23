@@ -1,0 +1,54 @@
+@forward '../../stylesheets/abstracts/'; 
+@use '../../stylesheets/abstracts/' as *; 
+
+.pf-main {
+    &-container {
+        display: flex;
+        height: calc(100vh - 60px);
+
+        // content
+        & > :last-child {
+            flex: 1;
+        }
+    }
+        
+    .pf-home-common {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-left: 20rem;
+        background: #000000c9;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+        min-height: inherit;
+    }
+
+    .pf-left-half {
+        width: clamp(10rem, 16vw + 1rem, 20rem);
+    }
+
+    .pf-home {
+        overflow: hidden auto;
+        background: #000000de;
+
+        &-content {
+            height: calc(100vh - 60px);
+            min-height: calc(100vh - 60px);
+        }
+
+        &-section-header {
+            h1 {
+                font-family: $secondary-font;
+                letter-spacing: 3px;
+            }
+        }
+
+        &-section-body {
+            height: 100%;
+        }
+    }
+}

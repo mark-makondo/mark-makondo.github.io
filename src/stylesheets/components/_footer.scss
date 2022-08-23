@@ -1,3 +1,32 @@
-.p-footer {
+.pf-footer {
     position: relative;
+    height: 5rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &__right {
+        &-icons {
+            display: flex;
+            gap: .5rem;
+            justify-content: flex-end;
+
+            svg {
+                &:hover {
+                    color: white;
+                    transition: .5s color linear;
+                }
+            }
+            
+        }
+    }
+
+    &-icon {
+        &-main {
+            width: 7rem;
+        }
+
+        width: 10%;
+    }
 }
