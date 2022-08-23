@@ -1,0 +1,33 @@
+@forward '../../stylesheets/abstracts/'; 
+@use '../../stylesheets/abstracts/' as *; 
+
+.pf-about {
+    position: relative;
+
+    &__header {
+        text-align: justify;
+        letter-spacing: 1px;
+
+        ul {
+            list-style: bengali;
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+    }
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+
+        &-sections {
+            background-color: #1D1D1D;
+
+            p {
+                color: getColors(primary-dark);
+            }
+        }
+    }
+}

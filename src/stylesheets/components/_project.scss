@@ -1,3 +1,44 @@
 .pf-projects {
     position: relative;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        cursor: pointer;
+
+        &-top {
+            flex: 1;
+            position: relative;
+            pointer-events: none;
+
+            img {
+                position: absolute;
+                z-index: 2;
+                opacity: .5;
+            }
+        }
+
+        &-description {
+            z-index: 3;
+            position: absolute;
+            color: white;
+            padding: 1rem;
+            background: #000000a6;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        &-bottom {
+            padding: .5rem 1rem;
+            cursor: pointer;
+
+            a {
+                font-weight: bold;
+                text-decoration: overline;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
 }

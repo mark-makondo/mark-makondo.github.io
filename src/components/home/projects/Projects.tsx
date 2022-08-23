@@ -1,18 +1,33 @@
 import React from 'react';
 import { SectionProps } from '../../../types/common.type';
+import projectData from './project.data';
 
 // reusable
 import GridBox from '../../reusable/gridBox/GridBox';
-
-const sample = [
-    { id: 1, title: 'Project 1', description: 'Description 1' },
-    { id: 2, title: 'Project 2', description: 'Description 2' },
-    { id: 3, title: 'Project 3', description: 'Description 3' },
-    { id: 4, title: 'Project 4', description: 'Description 4' },
-    { id: 5, title: 'Project 5', description: 'Description 5' },
-];
+import { ItemTypes } from '../../reusable/gridBox/gridBox.type';
 
 const Projects = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
+    const renderProjectItem = (item: ItemTypes) => {
+        return (
+            <div
+                className="pf-projects__item no-attention-color"
+                onClick={() => (window.location.href = `${item.link}`)}
+            >
+                <div className="pf-projects__item-top">
+                    <img src={item.SourceImage} alt={`Project ${item.id}`} />
+                    <div className="pf-projects__item-description small">
+                        <p>{item.description}</p>
+                    </div>
+                </div>
+                <div className="pf-projects__item-bottom">
+                    <a title={`Goto ${item.title}`} href={`${item.link}`} target="_blank" rel="noreferrer">
+                        {item.title}
+                    </a>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <section ref={ref} id={id} className="pf-projects pf-home-common">
             <div className="pf-home-section-header pf-projects__header">
@@ -22,12 +37,7 @@ const Projects = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =>
                 </p>
             </div>
             <div className="pf-home-section-body pf-projects__body">
-                <GridBox
-                    items={sample}
-                    renderItem={(item) => {
-                        return <div className="pf-projects__item">{item.description}</div>;
-                    }}
-                />
+                <GridBox items={projectData.data} renderItem={(item) => renderProjectItem(item)} />
             </div>
         </section>
     );
