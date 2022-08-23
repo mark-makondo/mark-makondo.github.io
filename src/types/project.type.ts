@@ -1,4 +1,4 @@
-export interface projectDataType {
+export interface ProjectDataType {
     id: string | number;
     title: string;
     description: string;
@@ -6,8 +6,8 @@ export interface projectDataType {
     link: string;
 }
 
-export interface projectType {
+export interface ProjectType {
     title: string;
     description: string;
-    data: projectDataType[];
+    data: ProjectDataType[];
 }

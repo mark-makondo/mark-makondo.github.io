@@ -1,19 +1,19 @@
-export interface skillData {
+export interface SkillData {
     label: string;
     description?: string;
     data?: string[];
     SVG?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-export interface skillsType {
-    frontEnd: skillData;
-    backEnd: skillData;
-    frameWorks: skillData;
-    versionControl: skillData;
+export interface SkillsType {
+    frontEnd: SkillData;
+    backEnd: SkillData;
+    frameWorks: SkillData;
+    versionControl: SkillData;
 }
 
-export interface dataType {
+export interface AboutDataType {
     title: string;
     description: string[];
-    skills: skillsType;
+    skills: SkillsType;
 }

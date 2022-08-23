@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionProps } from '../../../types/common.type';
-import projectData from './project.data';
+import { projectData } from '../../../constants/constants';
 
 // reusable
 import GridBox from '../../reusable/gridBox/GridBox';

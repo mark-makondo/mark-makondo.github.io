@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionProps } from '../../../types/common.type';
-import data from './about.data';
-import { skillsType } from '../../../types/about.type';
+import { aboutData as data } from '../../../constants/constants';
+import { SkillsType } from '../../../types/about.type';
 
 // reusable
 import SectionBoxTag from '../../reusable/sectionBoxTag/SectionBoxTag';
@@ -25,10 +25,10 @@ const About = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
                 {Object.keys(data.skills).map((skill) => (
                     <SectionBoxTag
                         key={skill}
-                        title={data.skills[skill as keyof skillsType].label}
-                        description={data.skills[skill as keyof skillsType].description}
-                        tags={data.skills[skill as keyof skillsType].data}
-                        SVG={data.skills[skill as keyof skillsType].SVG}
+                        title={data.skills[skill as keyof SkillsType].label}
+                        description={data.skills[skill as keyof SkillsType].description}
+                        tags={data.skills[skill as keyof SkillsType].data}
+                        SVG={data.skills[skill as keyof SkillsType].SVG}
                         color="#159BC4"
                         className="pf-about__body-sections"
                     />
