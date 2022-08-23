@@ -315,8 +315,54 @@ template {
 }
 .secondary-font {
   font-family: "norwesterregular", sans-serif;
+  letter-spacing: 3px;
 }
 
+/*
+*   @title: COLORS
+*/
+.no-attention-color {
+  color: #b2aeae;
+}
+
+.attention-color {
+  color: #098FB8;
+}
+
+.normal-color {
+  color: #FFFFFF;
+}
+
+.bg-color {
+  background-color: #000000;
+}
+
+.bg-color2 {
+  background-color: #0E0F10;
+}
+
+/*
+*   @title: GLOBAL FONT SIZE
+*/
+.big-head {
+  font-size: 2.5rem;
+}
+
+.normal-head {
+  font-size: 1.25rem;
+}
+
+.normal {
+  font-size: 1rem;
+}
+
+.small {
+  font-size: 0.75rem;
+}
+
+/*
+* @title: OTHERS
+*/
 .flex {
   display: flex;
   flex-direction: row;
@@ -329,9 +375,53 @@ template {
   flex-direction: column;
 }
 
+.heading {
+  margin-bottom: 1.5rem;
+}
+
+.right-shadow {
+  -webkit-box-shadow: 9px 4px 23px -4px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 9px 4px 23px -4px rgba(0, 0, 0, 0.57);
+  box-shadow: 9px 4px 23px -4px rgba(0, 0, 0, 0.57);
+}
+
+.bottom-shadow {
+  -webkit-box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
+  box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
+}
+
+.btn-custom {
+  border: 1px solid #b2aeae;
+  padding: 0.3rem;
+  border-radius: 8px;
+  background: transparent;
+  color: #b2aeae;
+  font-weight: bold;
+}
+.btn-custom-primary {
+  background: #0a6682;
+  color: rgba(255, 255, 255, 0.768627451);
+  border-color: transparent;
+}
+.btn-custom-nav-outline:hover {
+  border-color: transparent;
+  color: #098fb8;
+  transition: 0.25s color ease-in-out;
+}
+.btn-custom:not(.btn-custom-nav-outline):hover {
+  scale: 1.1;
+  transition: 0.25s scale ease-in-out;
+}
+
+.no-mt {
+  margin-top: 0;
+}
+
 :root {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  color: white;
 }
 
 * {
@@ -349,12 +439,229 @@ ul {
   list-style: none;
 }
 
-.p-footer {
+svg {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(9, 143, 184, 0.4) #0E0F10;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0E0F10;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(9, 143, 184, 0.4);
+  border-radius: 10px;
+  border: none;
+}
+
+.pf-main-container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+.pf-main-container > :last-child {
+  flex: 1;
+}
+.pf-main .pf-home-common {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 20rem;
+  background: rgba(0, 0, 0, 0.7882352941);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  min-height: inherit;
+}
+.pf-main .pf-left-half {
+  width: clamp(10rem, 16vw + 1rem, 20rem);
+}
+.pf-main .pf-home {
+  overflow: hidden auto;
+  background: rgba(0, 0, 0, 0.8705882353);
+}
+.pf-main .pf-home-content {
+  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+}
+.pf-main .pf-home-section-header h1 {
+  font-family: "norwesterregular", sans-serif;
+  letter-spacing: 3px;
+}
+.pf-main .pf-home-section-body {
+  height: 100%;
+}
+
+.pf-navbar {
+  position: relative;
+  display: flex;
+  height: 3.75rem;
+  align-items: center;
+  justify-content: center;
+}
+.pf-navbar__left {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pf-navbar__left .logo-container {
+  width: 50%;
+}
+.pf-navbar__right {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+.pf-navbar__right ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  height: 100%;
+}
+.pf-navbar__right ul li {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pf-navbar__right ul li span {
+  pointer-events: none;
+}
+.pf-navbar__right ul li:hover {
+  color: #098FB8;
+  transition: 0.25s color ease-in-out;
+}
+
+.pf-sidebar {
+  position: relative;
+  z-index: 10;
+}
+.pf-sidebar__herologo, .pf-sidebar__herologo-decoration {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  width: clamp(16rem, 30vw + 1rem, 35rem);
+  height: min-content;
+  left: 2rem;
+}
+.pf-sidebar__herologo-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -1rem;
+  z-index: -1;
+}
+.pf-sidebar__herologo-decoration:before, .pf-sidebar__herologo-decoration:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.pf-sidebar__herologo-decoration:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #fff;
+  animation-name: pulsIn;
+}
+.pf-sidebar__herologo-decoration:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #000;
+    opacity: 1;
+  }
+  50%, 100% {
+    box-shadow: inset 0 0 0 0 #000;
+    opacity: 0;
+  }
+}
+@keyframes pulsOut {
+  0%, 50% {
+    box-shadow: 0 0 0 0 #000;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #000;
+    opacity: 1;
+  }
+}
+.pf-hero .pf-hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.pf-hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.pf-hero__info-heading {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.pf-hero__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pf-projects {
   position: relative;
 }
 
-.p-navbar {
+.pf-footer {
   position: relative;
+  height: 5rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.pf-footer__right-icons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.pf-footer__right-icons svg:hover {
+  color: white;
+  transition: 0.5s color linear;
+}
+.pf-footer-icon {
+  width: 10%;
+}
+.pf-footer-icon-main {
+  width: 7rem;
 }
 
 /*# sourceMappingURL=main.css.map */
