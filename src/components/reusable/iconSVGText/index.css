@@ -1,0 +1,6 @@
+.r-icon-text {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

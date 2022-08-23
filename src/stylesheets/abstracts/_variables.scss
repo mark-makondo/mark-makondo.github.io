@@ -12,8 +12,14 @@ $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'norwesterregular', sans-serif;
 
 $colors: (
-    'primary': black,
-    'secondary': white
+    'primary-light': #FFFFFF,
+    // 'primary-dark': #9C9999,
+    'primary-dark': #b2aeae,
+    'secondary': #098FB8,
+    'tertiary-light': #7A7A7A,
+    'tertiary-dark':#0E0F10,
+    'background': #000000
+
 );
 
 $font-size-s: (
