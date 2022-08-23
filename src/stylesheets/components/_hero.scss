@@ -1,0 +1,26 @@
+.pf-hero {
+    .pf-hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+
+        &-heading {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}

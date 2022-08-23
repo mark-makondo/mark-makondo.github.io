@@ -1,3 +1,49 @@
-.p-navbar {
+.pf-navbar {
     position: relative;
+    display: flex;
+    height: 3.75rem; // 60px
+    align-items: center;
+    justify-content: center;
+
+    &__left {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo-container {
+            width: 50%;
+        }
+    }
+
+    &__right {
+        position: relative;
+        flex: 1;
+        height: 100%;
+        padding: 0 1.5rem;
+        
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+            height: 100%;
+
+            li {
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+                
+                span {
+                    pointer-events: none;
+                }
+                
+                &:hover {
+                    color: #098FB8;
+                    transition: .25s color ease-in-out;
+                }
+            }
+        }
+    }
 }
