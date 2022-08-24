@@ -26,7 +26,7 @@ export const aboutData: AboutDataType = {
     skills: {
         frontEnd: {
             label: 'Front-End',
-            data: ['HTML', 'JS', 'CSS', 'SCSS', 'AdobeXD'],
+            data: ['HTML', 'JavaScript', 'CSS', 'SCSS', 'AdobeXD'],
             description: 'Mastering basic web dev skills is key to advancement.',
             SVG: FrontEndIcon,
         },

@@ -36,6 +36,7 @@
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 5px 3px 1px rgba(0,0,0,0.57);
+    margin: 1rem;
 }
 
 .r-custom-modal-overlay {

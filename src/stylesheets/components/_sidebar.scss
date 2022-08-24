@@ -1,3 +1,6 @@
+@forward '../../stylesheets/abstracts/'; 
+@use '../../stylesheets/abstracts/' as *; 
+
 .pf-sidebar {
     position: relative;
     z-index: 10;
@@ -9,7 +12,8 @@
         margin-bottom: auto;
         top: 0;
         bottom: 0;
-        width: clamp(16rem, 30vw + 1rem, 35rem);
+        // width: clamp(16rem, 30vw + 1rem, 35rem);
+        width: clamp(10rem, 30vw + 1rem, 35rem);
         height: min-content;
         left: 2rem;
     }
@@ -65,4 +69,10 @@
         box-shadow: 0 0 0 1rem #000;
         opacity: 1;
     }
+}
+
+@include media-sm {
+  .pf-sidebar {
+      display: none;
+  }
 }

@@ -414,9 +414,10 @@ template {
   color: #098fb8;
   transition: 0.25s color ease-in-out;
 }
-.btn-custom:not(.btn-custom-nav-outline):hover {
-  scale: 1.1;
-  transition: 0.25s scale ease-in-out;
+.btn-custom-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .no-mt {
@@ -504,7 +505,7 @@ textarea {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-left: 20rem;
+  padding-left: 27%;
   background: rgba(0, 0, 0, 0.7882352941);
   display: flex;
   flex-direction: column;
@@ -515,7 +516,7 @@ textarea {
   min-height: inherit;
 }
 .pf-main .pf-left-half {
-  width: clamp(10rem, 16vw + 1rem, 20rem);
+  width: clamp(5rem, 16vw + 1rem, 20rem);
 }
 .pf-main .pf-home {
   overflow: hidden auto;
@@ -528,11 +529,29 @@ textarea {
 .pf-main .pf-home-section-header h1 {
   font-weight: bold;
   letter-spacing: 3px;
+  text-align: left;
 }
 .pf-main .pf-home-section-body {
   height: 100%;
 }
 
+@media screen and (max-width: 34.6875em) {
+  .big-head {
+    font-size: 2rem;
+  }
+  .normal-head {
+    font-size: 1.25rem;
+  }
+  .normal {
+    font-size: 1rem;
+  }
+  .small {
+    font-size: 0.75rem;
+  }
+  .pf-main .pf-home-common {
+    padding: 2.5rem;
+  }
+}
 .pf-navbar {
   position: relative;
   display: flex;
@@ -549,6 +568,11 @@ textarea {
 }
 .pf-navbar__left .logo-container {
   width: 50%;
+  min-width: 5rem;
+  max-width: 8rem;
+}
+.pf-navbar__container {
+  height: 100%;
 }
 .pf-navbar__right {
   position: relative;
@@ -575,7 +599,60 @@ textarea {
   color: #098FB8;
   transition: 0.25s color ease-in-out;
 }
+.pf-navbar-burger-hide {
+  display: none;
+}
+.pf-navbar-nav-hide {
+  display: none;
+}
 
+@media screen and (max-width: 34.6875em) {
+  .pf-navbar__container {
+    position: absolute;
+    top: 0;
+    z-index: 1500;
+    background: rgba(14, 15, 16, 0.7019607843);
+    border: 1px solid #1a1a1a;
+    right: 0;
+    padding-right: 2.33rem;
+    padding-top: 4.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    border-bottom-left-radius: 10px;
+    box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
+    overflow: hidden;
+    transition: 0.35s all ease-in-out;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .pf-navbar__container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .pf-navbar__mobile-open {
+    height: 15rem;
+    width: 100vw;
+    visibility: visible;
+    pointer-events: all;
+    transition: 0.35s all ease-in-out;
+  }
+  .pf-navbar-burger-hide {
+    display: block;
+  }
+  .pf-navbar .bg-color {
+    background-color: #0E0F10;
+  }
+  .pf-navbar__left {
+    width: 8rem !important;
+    background: #0e0f10 !important;
+    box-shadow: unset;
+    border: none;
+    padding-left: 2.5rem;
+  }
+}
 .pf-sidebar {
   position: relative;
   z-index: 10;
@@ -586,7 +663,7 @@ textarea {
   margin-bottom: auto;
   top: 0;
   bottom: 0;
-  width: clamp(16rem, 30vw + 1rem, 35rem);
+  width: clamp(10rem, 30vw + 1rem, 35rem);
   height: min-content;
   left: 2rem;
 }
@@ -636,6 +713,11 @@ textarea {
     opacity: 1;
   }
 }
+@media screen and (max-width: 34.6875em) {
+  .pf-sidebar {
+    display: none;
+  }
+}
 .pf-hero .pf-hero-container {
   display: flex;
   justify-content: center;
@@ -662,7 +744,6 @@ textarea {
   position: relative;
 }
 .pf-about__header {
-  text-align: justify;
   letter-spacing: 1px;
 }
 .pf-about__header ul {
@@ -670,6 +751,9 @@ textarea {
   margin: 0;
   padding: 0;
   list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .pf-about__body {
   position: relative;
@@ -726,11 +810,19 @@ textarea {
 
 .pf-footer {
   position: relative;
-  height: 5rem;
   display: flex;
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 5rem;
+}
+.pf-footer__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 .pf-footer__right-icons {
   display: flex;
@@ -742,7 +834,12 @@ textarea {
   transition: 0.3s color linear;
 }
 .pf-footer-icon {
-  width: 10%;
+  min-width: 1.5rem;
+}
+.pf-footer-icon a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 .pf-footer-icon-main {
   width: 7rem;
@@ -776,6 +873,22 @@ textarea {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+@media screen and (max-width: 34.6875em) {
+  .pf-contact__header-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .pf-contact__header-title h1 {
+    order: 2;
+  }
+  .pf-contact__header p {
+    text-align: center;
+  }
+  .pf-contact__form-btn span, .pf-contact__form-btn u {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

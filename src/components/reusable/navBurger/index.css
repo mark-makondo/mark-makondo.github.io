@@ -1,0 +1,107 @@
+.r-nav-burger {
+    position: relative;
+    z-index: 2000;
+}
+
+.r-nav-burger .visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+
+.r-nav-burger .r-nav-burger__base {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translate(-50%,50%);
+}
+
+.r-nav-burger .r-nav-burger__base .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    /* background-color: maroon; */
+    background-color: #f0f0f0e3;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.r-nav-burger .bar1 {
+    top: 0;
+}
+
+.r-nav-burger .bar2,
+.r-nav-burger .bar3 {
+    top: 13.5px;
+}
+
+.r-nav-burger .bar3 {
+    right: 0;
+}
+
+.r-nav-burger .bar4 {
+    bottom: 0;
+}
+
+
+.r-nav-burger .hamburger2 .bar2,
+.r-nav-burger .hamburger3 .bar3,
+.r-nav-burger .r-nav-burger__base--animate .bar4 {
+    top: 13.5px;
+}
+
+.r-nav-burger .r-nav-burger__base--animate .bar5 {
+    bottom: 0px;
+}
+
+.r-nav-burger .r-nav-burger__base--animate .bar {
+    transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.r-nav-burger .r-nav-burger__base--animate .bar2 {
+    width: 1px;
+    transform: rotate(90deg);
+    left: 13.5px;
+}
+
+.r-nav-burger .r-nav-burger__base--animate .bar3 {
+    width: 1px;
+    left: 13.5px;
+    
+}
+
+.r-nav-burger .checkbox4:checked + label > .r-nav-burger__base--animate > .bar1{
+    top: 13.5px;
+    background-color: transparent;
+}
+
+.r-nav-burger .checkbox4:checked + label > .r-nav-burger__base--animate > .bar2{
+    left: 0px;
+    width: 30px;
+    transform: rotate(45deg);
+}
+
+.r-nav-burger .checkbox4:checked + label > .r-nav-burger__base--animate > .bar3{
+    left: 0;
+    width: 30px;
+    transform: rotate(-45deg);
+}
+
+.r-nav-burger .checkbox4:checked + label > .r-nav-burger__base--animate > .bar4{
+    background-color: transparent;
+}
+
+.r-nav-burger .checkbox4:checked + label > .r-nav-burger__base--animate > .bar5{
+    bottom: 13.5px;
+    background-color: transparent; 
+}

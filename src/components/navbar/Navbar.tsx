@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import context from '../../context/Context';
 import { KeyValueType } from '../../types/common.type';
 
@@ -12,8 +12,10 @@ import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
 // reusable
 import CustomModal from '../reusable/customModal/CustomModal';
 import Contact from '../contact/Contact';
+import NavBurger from '../reusable/navBurger/NavBurger';
 
 const Navbar = () => {
+    const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
     const { currentScrollTarget, HERO_ELEMENT, ABOUT_ELEMENT, PROJECTS_ELEMENT, isContactOpen, setIsContactOpen } =
         useContext(context);
 
@@ -46,20 +48,24 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="pf-navbar__right bg-color2 bottom-shadow">
-                    <ul>
-                        {navbarValues.map((item) => (
-                            <li
-                                className={`${activeCondition(item.key)} ${
-                                    item.key == 'contact' ? 'btn-custom btn-custom-nav-outline' : ''
-                                }`}
-                                key={item.key}
-                                data-key={item.key}
-                                onClick={(e) => onNavClick(e, item)}
-                            >
-                                <span>{item.value}</span>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className={`pf-navbar__container ${isBurgerOpen ? 'pf-navbar__mobile-open' : ''}`}>
+                        <ul>
+                            {navbarValues.map((item) => (
+                                <li
+                                    className={`${activeCondition(item.key)} ${
+                                        item.key == 'contact' ? 'btn-custom btn-custom-nav-outline' : ''
+                                    }`}
+                                    key={item.key}
+                                    data-key={item.key}
+                                    onClick={(e) => onNavClick(e, item)}
+                                >
+                                    <span>{item.value}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <NavBurger onChange={(isOpen) => setIsBurgerOpen(isOpen)} className="pf-navbar-burger-hide" />
                 </div>
             </div>
             <CustomModal

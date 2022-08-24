@@ -29,7 +29,14 @@ const Home = () => {
                 <Hero />
             </DottedSectionWrapper>
 
-            <DottedSectionWrapper id="about" ref={ABOUT_ELEMENT} total={3} current={2} className="pf-home-content">
+            <DottedSectionWrapper
+                id="about"
+                ref={ABOUT_ELEMENT}
+                total={3}
+                current={2}
+                className="pf-home-content"
+                style={{ height: 'auto' }}
+            >
                 <About />
             </DottedSectionWrapper>
 

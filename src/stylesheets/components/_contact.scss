@@ -1,3 +1,6 @@
+@forward '../../stylesheets/abstracts/'; 
+@use '../../stylesheets/abstracts/' as *; 
+
 .pf-contact {
     position: relative;
 
@@ -34,4 +37,30 @@
             align-items: center;
         }
     }
+}
+
+@include media-sm {
+    .pf-contact {
+        &__header {
+            &-title {
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    order: 2;
+                }
+            }
+            p {
+                text-align: center;
+            }
+        }
+
+        &__form {
+            &-btn {
+                span,u {
+                    display: none;
+                }
+            }
+        }
+    }
+    
 }

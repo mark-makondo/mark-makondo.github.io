@@ -97,9 +97,15 @@
             transition: .25s color ease-in-out;
         }
     }
-    &:not(.btn-custom-nav-outline):hover {
-        scale: 1.1;
-        transition: .25s scale ease-in-out;
+    // &:not(.btn-custom-nav-outline):hover {
+    //     scale: 1.1;
+    //     transition: .25s scale ease-in-out;
+    // }
+
+    &-disabled {
+        opacity: .5;
+        pointer-events: none;
+        cursor: not-allowed;
     }
 }
 
