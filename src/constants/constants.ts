@@ -52,7 +52,7 @@ export const aboutData: AboutDataType = {
 };
 
 export const projectData: ProjectType = {
-    title: 'MY WORKS',
+    title: 'My Works',
     description: 'I Build Anything, To Master My Craft.',
     data: [
         {

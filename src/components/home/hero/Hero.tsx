@@ -10,7 +10,7 @@ import IconSVGText from '../../reusable/iconSVGText/IconSVGText';
 import { gotoSmoothScroll } from '../../../helper/utilities';
 
 const Hero = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
-    const { ABOUT_ELEMENT, PROJECTS_ELEMENT } = useContext(context);
+    const { ABOUT_ELEMENT, PROJECTS_ELEMENT, setIsContactOpen } = useContext(context);
 
     return (
         <section ref={ref} id={id} className="pf-hero pf-home-common">
@@ -35,12 +35,16 @@ const Hero = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
                         <button
                             onClick={(e) => gotoSmoothScroll(e.target, [PROJECTS_ELEMENT.current])}
                             type="button"
-                            className="btn-custom"
+                            className="btn-custom btn-custom-nav-outline"
                             data-key="projects"
                         >
                             Projects
                         </button>
-                        <button type="button" className="btn-custom">
+                        <button
+                            type="button"
+                            className="btn-custom btn-custom-nav-outline"
+                            onClick={() => setIsContactOpen((prevVal) => !prevVal)}
+                        >
                             Contact
                         </button>
                     </div>

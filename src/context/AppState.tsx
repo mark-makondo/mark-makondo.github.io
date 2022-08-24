@@ -6,6 +6,8 @@ import { CommonReusableProps } from '../types/common.type';
 import useObserveElements from '../hooks/useObserveElements';
 
 const AppState: React.FC<CommonReusableProps> = ({ children }) => {
+    const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
     const [setCurrentScrollTarget] = useState<HTMLDivElement>({} as HTMLDivElement);
 
     const MAIN_ELEMENT = useRef<HTMLDivElement>({} as HTMLDivElement);
@@ -24,6 +26,8 @@ const AppState: React.FC<CommonReusableProps> = ({ children }) => {
         HERO_ELEMENT,
         ABOUT_ELEMENT,
         PROJECTS_ELEMENT,
+        isContactOpen,
+        setIsContactOpen,
     };
 
     return <Context.Provider value={stateValues}>{children}</Context.Provider>;

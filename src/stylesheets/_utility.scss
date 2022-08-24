@@ -82,6 +82,12 @@
         background: #0a6682;
         color: #ffffffc4;
         border-color: transparent;
+        transition: .25s background ease-in-out;
+
+        &:hover {
+            background: #0a4e62;
+            transition: .25s background ease-in-out;
+        }
     }
 
     &-nav-outline {
@@ -99,4 +105,8 @@
 
 .no-mt {
     margin-top: 0;
+}
+
+.w-100 {
+    width: 100%
 }

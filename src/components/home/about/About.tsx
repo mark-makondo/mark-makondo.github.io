@@ -10,9 +10,7 @@ const About = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
     return (
         <section ref={ref} id={id} className="pf-about pf-home-common">
             <div className="pf-home-section-header pf-about__header">
-                <h1 className="attention-color" style={{ textTransform: 'uppercase' }}>
-                    {data.title}
-                </h1>
+                <h1 className="attention-color">{data.title}</h1>
                 <ul className="no-attention-color">
                     {data.description.map((item, i) => (
                         <li key={i}>
