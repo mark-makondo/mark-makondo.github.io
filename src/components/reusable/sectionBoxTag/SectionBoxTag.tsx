@@ -16,9 +16,9 @@ const SectionBoxTag: React.FC<Props> = ({
     return (
         <div className={`r-section-box-tag ${className}`}>
             <div className="r-section-box-tag__left">
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <div className="r-section-box-tag__tags-container">
+                <h1 className="normal-head">{title}</h1>
+                <p className="normal">{description}</p>
+                <div className="r-section-box-tag__tags-container small">
                     {tags.map((tag) => (
                         <CustomTag key={tag} label={tag} className="r-section-box-tag__tags-item" color={color} />
                     ))}

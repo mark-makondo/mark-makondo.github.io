@@ -16,6 +16,13 @@
 };
 
 // responsive mixin
+
+@mixin media-sm{ // 555px
+    @media screen and (max-width: 34.6875em){
+        @content;
+    }
+};
+
 @mixin media-md{ // 768px
     @media screen and (min-width: 48em){
         @content;

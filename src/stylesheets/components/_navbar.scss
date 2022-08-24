@@ -1,3 +1,6 @@
+@forward '../../stylesheets/abstracts/'; 
+@use '../../stylesheets/abstracts/' as *; 
+
 .pf-navbar {
     position: relative;
     display: flex;
@@ -14,7 +17,13 @@
 
         .logo-container {
             width: 50%;
+            min-width: 5rem;
+            max-width: 8rem;
         }
+    }
+
+    &__container {
+        height: 100%
     }
 
     &__right {
@@ -45,5 +54,70 @@
                 }
             }
         }
+    }
+
+    &-burger-hide {
+        display: none;  
+    }
+
+    &-nav-hide {
+        display: none;
+    }
+}
+
+@include media-sm {
+    .pf-navbar {
+        &__container {
+            position: absolute;
+            top: 0;
+            z-index: 1500;
+            background: #0e0f10b3;
+            border: 1px solid #1a1a1a;
+            right: 0;
+            padding-right: 2.33rem;
+            padding-top: 4.5rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            border-bottom-left-radius: 10px;
+            box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
+            overflow: hidden;
+            transition: .35s all ease-in-out;
+
+            height: 0px;
+            width: 0px;
+            visibility: hidden;
+            pointer-events: none;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+
+        &__mobile-open {
+            height: 15rem;
+            width: 100vw;
+            visibility: visible;
+            pointer-events: all;
+            transition: .35s all ease-in-out;
+        }
+
+        &-burger-hide {
+            display: block;  
+        }
+
+        .bg-color {
+            background-color: #0E0F10
+        }
+
+        &__left {
+            width: 8rem !important;
+            background: #0e0f10 !important;
+            box-shadow: unset;
+            border: none;
+            padding-left: 2.5rem;
+        }
+    
     }
 }

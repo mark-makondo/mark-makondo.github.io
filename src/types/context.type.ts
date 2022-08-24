@@ -4,4 +4,6 @@ export default interface ContextProps {
     HERO_ELEMENT: React.MutableRefObject<HTMLDivElement>;
     ABOUT_ELEMENT: React.MutableRefObject<HTMLDivElement>;
     PROJECTS_ELEMENT: React.MutableRefObject<HTMLDivElement>;
+    isContactOpen: boolean;
+    setIsContactOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }

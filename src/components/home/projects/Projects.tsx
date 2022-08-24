@@ -31,9 +31,9 @@ const Projects = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =>
     return (
         <section ref={ref} id={id} className="pf-projects pf-home-common">
             <div className="pf-home-section-header pf-projects__header">
-                <h1 className="attention-color">MY WORKS</h1>
-                <p className="no-attention-color">
-                    <i>I Build Anything, To Master My Craft.</i>
+                <h1 className="attention-color big-head">{projectData.title}</h1>
+                <p className="no-attention-color normal">
+                    <i>{projectData.description}</i>
                 </p>
             </div>
             <div className="pf-home-section-body pf-projects__body">

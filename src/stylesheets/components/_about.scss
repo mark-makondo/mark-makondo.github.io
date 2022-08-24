@@ -5,7 +5,6 @@
     position: relative;
 
     &__header {
-        text-align: justify;
         letter-spacing: 1px;
 
         ul {
@@ -13,6 +12,9 @@
             margin: 0;
             padding: 0;
             list-style-position: inside;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
         }
     }
     &__body {
