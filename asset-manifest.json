@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.39a8c9ea.css",
+    "main.js": "/static/js/main.018f49a8.js",
+    "static/media/hero-logo.svg": "/static/media/hero-logo.ed4cf18f0e58234741f5c92a1a19b03e.svg",
+    "static/media/background.jpg": "/static/media/background.6394bf28104f0480cad4.jpg",
+    "static/media/github-api-fetch.png": "/static/media/github-api-fetch.aa68aa845cec9e156330.png",
+    "static/media/norwester-webfont.woff": "/static/media/norwester-webfont.0dfa97cfa883f8001b65.woff",
+    "static/media/simple-chat-app.png": "/static/media/simple-chat-app.7d051027e19a28f0e1b3.png",
+    "static/media/logo.svg": "/static/media/logo.170ed1d26000ebd947d0ae4e7f981850.svg",
+    "static/media/norwester-webfont.woff2": "/static/media/norwester-webfont.b0f6019adb2b061a1948.woff2",
+    "static/media/frontend-icon.svg": "/static/media/frontend-icon.7e9d081e566e6555c484623f8343ccea.svg",
+    "static/media/backend-icon.svg": "/static/media/backend-icon.57bd53e11df1b4cfcec6d4911877a8e6.svg",
+    "static/media/framework-icon.svg": "/static/media/framework-icon.b529cac6e1ddbe3c9ab4d450903ff1ed.svg",
+    "static/media/version-control-icon.svg": "/static/media/version-control-icon.583bb8672cc66b7b3c2eb8b7974b146e.svg",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.22e65707326e3e1e37afd21c5334995a.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.2eda7bddaacee15c44494bb63ca94165.svg",
+    "static/media/location-icon.svg": "/static/media/location-icon.2a6dd740ad7ce165bc54cbae23163369.svg",
+    "static/media/facebook.svg": "/static/media/facebook.4d4460260f64103d8da4a91d8e856d36.svg",
+    "main.39a8c9ea.css.map": "/static/css/main.39a8c9ea.css.map",
+    "main.018f49a8.js.map": "/static/js/main.018f49a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39a8c9ea.css",
+    "static/js/main.018f49a8.js"
+  ]
+}
