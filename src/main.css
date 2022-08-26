@@ -633,7 +633,7 @@ textarea {
   .pf-navbar__container ul {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
   }
   .pf-navbar__mobile-open {
     height: 15rem;
