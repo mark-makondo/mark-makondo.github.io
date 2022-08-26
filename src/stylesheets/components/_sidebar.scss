@@ -4,6 +4,7 @@
 .pf-sidebar {
     position: relative;
     z-index: 10;
+    margin-right: -2px;
 
     &__herologo,
     &__herologo-decoration {

@@ -19,6 +19,7 @@
     cursor: pointer;
     color: #838383;
     transition: .3s color ease-in-out;
+    font-weight: bold;
 }
 
 .r-custom-modal-exit:hover {
@@ -37,6 +38,8 @@
     border-radius: 5px;
     box-shadow: 0 5px 3px 1px rgba(0,0,0,0.57);
     margin: 1rem;
+
+    margin-bottom: 3.75rem;
 }
 
 .r-custom-modal-overlay {

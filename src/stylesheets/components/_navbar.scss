@@ -6,7 +6,9 @@
     display: flex;
     height: 3.75rem; // 60px
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: getColors(tertiary-dark);
+    margin-bottom: -2px;
 
     &__left {
         position: relative;
@@ -58,10 +60,12 @@
 
     &-burger-hide {
         display: none;  
+        opacity: 0;
     }
 
     &-nav-hide {
         display: none;
+        opacity: 0;
     }
 }
 
@@ -81,7 +85,6 @@
             border-bottom-left-radius: 10px;
             box-shadow: 1px 8px 23px -4px rgba(0, 0, 0, 0.57);
             overflow: hidden;
-            transition: .35s all ease-in-out;
 
             height: 0px;
             width: 0px;
@@ -99,21 +102,23 @@
             height: 15rem;
             width: 100vw;
             visibility: visible;
+            opacity: 1;
             pointer-events: all;
             transition: .35s all ease-in-out;
         }
 
         &-burger-hide {
             display: block;  
+            opacity: 1;
         }
 
         .bg-color {
-            background-color: #0E0F10
+            background-color: getColors(tertiary-dark);
         }
 
         &__left {
             width: 8rem !important;
-            background: #0e0f10 !important;
+            background: getColors(tertiary-dark) !important;
             box-shadow: unset;
             border: none;
             padding-left: 2.5rem;
