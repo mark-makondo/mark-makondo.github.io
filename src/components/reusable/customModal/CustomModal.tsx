@@ -19,7 +19,7 @@ const CustomModal: React.FC<Props> = ({
             <div className="r-custom-modal-overlay" onClick={(e) => handleOnClose(e)}></div>
             <div className={`r-custom-modal-body ${className}`}>
                 <div className="r-custom-modal-exit" onClick={(e) => handleOnClose(e)}>
-                    🗙
+                    x
                 </div>
                 {renderBody()}
             </div>

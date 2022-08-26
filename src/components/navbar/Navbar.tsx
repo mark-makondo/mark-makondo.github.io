@@ -47,7 +47,7 @@ const Navbar = () => {
                         <Logo />
                     </div>
                 </div>
-                <div className="pf-navbar__right bg-color2 bottom-shadow">
+                <div className="pf-navbar__right bg-color2">
                     <div className={`pf-navbar__container ${isBurgerOpen ? 'pf-navbar__mobile-open' : ''}`}>
                         <ul>
                             {navbarValues.map((item) => (
