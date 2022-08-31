@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.72243791.css",
-    "main.js": "/static/js/main.03f83c22.js",
+    "main.css": "/static/css/main.8d63d0e8.css",
+    "main.js": "/static/js/main.cf630b76.js",
+    "static/media/socialform.png": "/static/media/socialform.1a5ae535c66562728eca.png",
     "static/media/hero-logo.svg": "/static/media/hero-logo.ed4cf18f0e58234741f5c92a1a19b03e.svg",
     "static/media/background.jpg": "/static/media/background.6394bf28104f0480cad4.jpg",
-    "static/media/github-api-fetch.png": "/static/media/github-api-fetch.aa68aa845cec9e156330.png",
     "static/media/norwester-webfont.woff": "/static/media/norwester-webfont.0dfa97cfa883f8001b65.woff",
-    "static/media/simple-chat-app.png": "/static/media/simple-chat-app.7d051027e19a28f0e1b3.png",
     "static/media/logo.svg": "/static/media/logo.170ed1d26000ebd947d0ae4e7f981850.svg",
     "static/media/norwester-webfont.woff2": "/static/media/norwester-webfont.b0f6019adb2b061a1948.woff2",
     "static/media/frontend-icon.svg": "/static/media/frontend-icon.7e9d081e566e6555c484623f8343ccea.svg",
@@ -18,11 +17,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.2eda7bddaacee15c44494bb63ca94165.svg",
     "static/media/location-icon.svg": "/static/media/location-icon.2a6dd740ad7ce165bc54cbae23163369.svg",
     "static/media/facebook.svg": "/static/media/facebook.4d4460260f64103d8da4a91d8e856d36.svg",
-    "main.72243791.css.map": "/static/css/main.72243791.css.map",
-    "main.03f83c22.js.map": "/static/js/main.03f83c22.js.map"
+    "main.8d63d0e8.css.map": "/static/css/main.8d63d0e8.css.map",
+    "main.cf630b76.js.map": "/static/js/main.cf630b76.js.map"
   },
   "entrypoints": [
-    "static/css/main.72243791.css",
-    "static/js/main.03f83c22.js"
+    "static/css/main.8d63d0e8.css",
+    "static/js/main.cf630b76.js"
   ]
 }
