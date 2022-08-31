@@ -2,7 +2,7 @@ export interface ProjectDataType {
     id: string | number;
     title: string;
     description: string;
-    SourceImage: string;
+    SourceImage?: string;
     link: string;
 }
 

@@ -6,8 +6,8 @@ import { ReactComponent as FrontEndIcon } from '../assets/svg/frontend-icon.svg'
 import { ReactComponent as BackEndIcon } from '../assets/svg/backend-icon.svg';
 import { ReactComponent as FrameWorksIcon } from '../assets/svg/framework-icon.svg';
 import { ReactComponent as VersionControlIcon } from '../assets/svg/version-control-icon.svg';
-import ChatApp from '../assets/img/img-projects/simple-chat-app.png';
-import GithubAPIFetch from '../assets/img/img-projects/github-api-fetch.png';
+
+import Socialform from '../assets/img/img-projects/socialform.png';
 
 export const navbarValues: KeyValueType[] = [
     { key: 'hero', value: 'home' },
@@ -57,16 +57,17 @@ export const projectData: ProjectType = {
     data: [
         {
             id: 1,
-            title: 'ChatApp',
-            description: 'A project for practicing realtime data using NextJs.',
-            SourceImage: ChatApp,
-            link: 'https://mark-makondo.github.io/',
+            title: 'Socialform',
+            description:
+                'A project for practicing realtime data using NextJs. Not yet finished you may see the work in progress vercel app.',
+            SourceImage: Socialform,
+            link: 'http://socialform.vercel.app/',
         },
         {
             id: 2,
-            title: 'Github API Fetch',
-            description: 'A project for learning github API.',
-            SourceImage: GithubAPIFetch,
+            title: 'Soon',
+            description: 'I am still converting my previous project to NextJs React.',
+            // SourceImage: Socialform,
             link: 'https://mark-makondo.github.io/',
         },
     ],
