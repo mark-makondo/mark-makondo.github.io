@@ -1,21 +1,13 @@
 import React, { useContext } from 'react';
-import context from '../../context/Context';
-
-// components
-import Hero from './hero/Hero';
-import About from './about/About';
-import Projects from './projects/Projects';
-import Footer from '../footer/Footer';
-
-// reusable
-import DottedSectionWrapper from '../reusable/dottedSectionWrapper/DottedSectionWrapper';
-
-// assets
+import context from '../context/Context';
+import Hero from '../components/home/hero/Hero';
+import About from '../components/home/about/About';
+import Projects from '../components/home/projects/Projects';
+import Footer from '../components/footer/Footer';
+import DottedSectionWrapper from '../components/reusable/dottedSectionWrapper/DottedSectionWrapper';
 import background from '../../assets/img/background.jpg';
-
 const Home = () => {
     const { MAIN_ELEMENT, HERO_ELEMENT, ABOUT_ELEMENT, PROJECTS_ELEMENT } = useContext(context);
-
     return (
         <div className="pf-home" ref={MAIN_ELEMENT}>
             <DottedSectionWrapper
@@ -28,7 +20,6 @@ const Home = () => {
             >
                 <Hero />
             </DottedSectionWrapper>
-
             <DottedSectionWrapper
                 id="about"
                 ref={ABOUT_ELEMENT}
@@ -39,7 +30,6 @@ const Home = () => {
             >
                 <About />
             </DottedSectionWrapper>
-
             <DottedSectionWrapper
                 id="projects"
                 ref={PROJECTS_ELEMENT}
@@ -51,7 +41,6 @@ const Home = () => {
             >
                 <Projects />
             </DottedSectionWrapper>
-
             <Footer id="footer" />
         </div>
     );
